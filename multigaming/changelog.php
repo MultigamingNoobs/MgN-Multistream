@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<link href="../multigaming/css/design.css" type="text/css" rel="stylesheet">
+		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
 		<?php
 			include 'api/media.php';
 			include 'api/streams.php';
@@ -16,7 +16,7 @@
 				$all = getArr();
 				echoHead($all); 
 				echo '<div id="content" style="width:75%;">';
-					include '../multigaming/files/changes.php';
+					include '../multigaming/pages/changes.php';
 				echo '</div>';
 			?>
 		</div>
