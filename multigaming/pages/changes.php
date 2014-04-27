@@ -15,7 +15,14 @@
 	</li>
 	<br>
 	<hr>
-	<li><?php include './version.php'; ?>
+	<li>BETA v.0.2.11
+		<ul>
+		<li>changed: Struktur der Daten wurde verändert</li>
+		<li>changed: Header als IFrame, separates neuladen möglich</li>
+		<li></li>
+		</ul>
+	</li>
+	<li>BETA v.0.2.10
 		<ul>
 		<li>added: Workaround - bei mehr als 2 Streams wird die höhe nicht auf maximal 100% der Seite angepasst</li>
 		<li>changed: bis zu 8 Streams ohne Scrollen, vorher waren es bis zu 10</li>
@@ -31,11 +38,16 @@
 		<li>added: Hilfe und Changelog</li>
 		</ul>
 	</li>
-	<li>BETA v.0.2.x
+	<li>BETA v.0.2.8-
 		<ul>
 		<li>changed: Keine html-Tabellen mehr!</li>
 		<li>fixed: Die Räume die im IRC eingetragen werden sind nun auch vorhanden</li>
 		<li>added: Test Modus, Streams anzeigen, auch wenn diese offline sind (?beta=offline)</li>
+		</ul>
+	</li>
+	<li>BETA v.0.1.0
+		<ul>
+		<li>Erste simple Testversion mit html-Tabelle</li>
 		</ul>
 	</li>
 </ul>

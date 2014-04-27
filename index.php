@@ -9,7 +9,6 @@
 			include 'multigaming/api/media.php';
 			include 'multigaming/api/streams.php';
 			include 'multigaming/content.php';
-			include 'multigaming/head.php';
 			$all = getArr();
 			$online = getOnlineStreams($all);
 		?>
@@ -22,36 +21,37 @@
 					<?php include 'multigaming/menu.php'; ?>
 				</div>
 				<div id="pngs">
-					<iframe name="pngs" src="multigaming/root/head/pngs.php" width=100%, height=100%>Keine IFrame unterstützung in deinem Browser :/</iframe>
-					
+					<?php echo '<iframe name="pngs" src="multigaming/root/head/pngs.php?streams='.$_REQUEST['streams'].'" width=100% height=99%></iframe>'; ?>
 				</div>
 				<div id="upperright">
 					<?php include 'multigaming/root/head/upperright.php' ?>
 				</div>
 			</div>
 			<div id="content">
-				<div id="head">
-					<?php  ?>
+				<div id="streams">
+					<iframe name="streams" src="multigaming/root/content/streams.php" width=100%, height=99%></iframe>
 				</div>
-				<div id="head">
-					<?php  ?>
+				<div id="chat">
+					<?php 
+						
+						$rooms = getRooms($online);
+						echo '<iframe src="https://kiwiirc.com/client/IRC.glados.tv/?nick=hitboxuser?&theme=basic'.$rooms.'" style="border:0; width:100%; height:100%;"></iframe>';
+					?>
+					
 				</div>
 			</div>
 			<!--<div id="footer" -->
 				<?php //include 'multigaming/root/footer/footer.php'; ?>
 			<!--</div> -->
 			<?php
-				include 'multigaming/menu.php';
-				
-				echoHead($all); 
-				
+				$debug = $_REQUEST['debug'];
+				$streams = $_REQUEST['streams'];
 				$beta= split(',',(strtolower($_GET['beta'])));
 				if($beta[0] == "offline"){
-					echoContent($all);
+					echoStreams($all);
 				}else{
-					echoContent($online);
+					echoStreams($online);
 				}
-				//echoFooter(); 
 			?>
 		</div>
 	 </body>
