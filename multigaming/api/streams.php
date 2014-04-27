@@ -21,7 +21,7 @@
 	}
 	function getArr(){
 		$teamMembers = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020');
-		$input= split(',',(strtolower($_GET['streams'])));
+		$input= split(',',(strtolower($_REQUEST['streams'])));
 		if($input[0] != ''){
 			$arr = array_unique(array_merge($teamMembers,$input));
 		}else{
