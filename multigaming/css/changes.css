@@ -3,7 +3,7 @@ ul#changes {
     width: 100	%;
     margin: 0; padding: 0.8em;
     border: 1px solid black;
-    background-color: #CCCCFF;
+    background-color: #E3E3E3;
   }
   * html ul#changes {
     width: 11.6em;

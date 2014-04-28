@@ -1,4 +1,4 @@
-<link href="../multigaming/css/changes.css" type="text/css" rel="stylesheet">
+<link href="../css/changes.css" type="text/css" rel="stylesheet">
 <ul id="changes">
 	<li>Probleme? Teilt sie mir mit!
 		<ul>
@@ -19,7 +19,8 @@
 		<ul>
 		<li>changed: Struktur der Daten wurde verändert</li>
 		<li>changed: Header als IFrame, separates neuladen möglich</li>
-		<li></li>
+		<li>changed: Content als IFrame, schnelleres Laden der Seiten, da PNG laden entfällt</li>
+		<li>changed: ?beta wird zu ?debug, warum auch immer es ?beta war</li>
 		</ul>
 	</li>
 	<li>BETA v.0.2.10
