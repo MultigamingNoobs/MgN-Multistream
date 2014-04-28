@@ -9,8 +9,7 @@
 	<br>
 	<li>Geplante Funktionen
 		<ul>
-		<li>Hitbox-Chat anzeigen</li>
-		<li>Streamliste aktualisieren, ohne IRC neu zu laden</li>
+		<li>Hitbox-Chat anzeigen (auf eine schönere Art)</li>
 		</ul>
 	</li>
 	<br>
@@ -21,6 +20,7 @@
 		<li>changed: Header als IFrame, separates neuladen möglich</li>
 		<li>changed: Content als IFrame, schnelleres Laden der Seiten, da PNG laden entfällt</li>
 		<li>changed: ?beta wird zu ?debug, warum auch immer es ?beta war</li>
+		<li>added: debug=hitboxchat wurde hinzugefügt. Die Anzeige wird später anders gestaltet</li>
 		</ul>
 	</li>
 	<li>BETA v.0.2.10

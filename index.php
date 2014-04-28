@@ -15,7 +15,7 @@
 					<?php include 'multigaming/menu.php'; ?>
 				</div>
 				<div id="pngs">
-					<?php echo '<iframe name="pngs" src="multigaming/root/head/pngs.php'.makeList(getAllStreams()).'" width=100% height=67px></iframe>'; ?>
+					<?php echo '<iframe name="pngs" src="multigaming/root/head/pngs.php?streams='.makeList(getAllStreams()).'" width=100% height=67px></iframe>'; ?>
 				</div>
 				<div id="upperright">
 					<?php include 'multigaming/root/head/upperright.php' ?>
@@ -23,17 +23,7 @@
 			</div>
 			<div id="content">
 				<div id="streams">
-					<?php 
-						$online = '';
-						if(count(getOnlineStreams()) > 0){
-							$online = '&online=' . makeList(getOnlineStreams());
-						}						
-						$debug = '';
-						if(strlen($_REQUEST['debug']) > 0){
-							$debug = '&debug=' . $_GET['debug'];
-						}
-						echo '<iframe name="content" src="multigaming/root/content/streams.php'. makeList(getAllStreams()). $online . $debug .'" width=100%, height=100%></iframe>'; 
-					?>
+					<?php echo '<iframe name="content" src='.getStreamString().' width=100%, height=100%></iframe>'; ?>
 				</div>
 				<div id="chat">
 					<?php echo '<iframe src="https://kiwiirc.com/client/IRC.glados.tv/?nick=hitboxuser?&theme=basic'.getRooms(getOnlineStreams()).'" style="border:0; width:100%; height:100%;"></iframe>';	?>
