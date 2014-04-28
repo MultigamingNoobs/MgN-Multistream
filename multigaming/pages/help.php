@@ -1,4 +1,4 @@
-<link href="../multigaming/css/changes.css" type="text/css" rel="stylesheet">
+<link href="../css/changes.css" type="text/css" rel="stylesheet">
 <ul id="changes">
 	<li>Die Hilfe - Inhalt
 		<ul>

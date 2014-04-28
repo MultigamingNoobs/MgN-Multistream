@@ -2,15 +2,9 @@
 <html lang="de">
 	<head>
 		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
-		
 		<?php
 			$v = "BETA v.0.2.11";
-			
-			include 'multigaming/api/media.php';
-			include 'multigaming/api/streams.php';
-			include 'multigaming/content.php';
-			$all = getArr();
-			$online = getOnlineStreams($all);
+			include 'multigaming/api/api.php';
 		?>
 		<title>MultiGaming</title>
 	</head>
@@ -21,7 +15,7 @@
 					<?php include 'multigaming/menu.php'; ?>
 				</div>
 				<div id="pngs">
-					<?php echo '<iframe name="pngs" src="multigaming/root/head/pngs.php?streams='.$_REQUEST['streams'].'" width=100% height=99%></iframe>'; ?>
+					<?php echo '<iframe name="pngs" src="multigaming/root/head/pngs.php'.makeList(getAllStreams()).'" width=100% height=67px></iframe>'; ?>
 				</div>
 				<div id="upperright">
 					<?php include 'multigaming/root/head/upperright.php' ?>
@@ -29,30 +23,26 @@
 			</div>
 			<div id="content">
 				<div id="streams">
-					<iframe name="streams" src="multigaming/root/content/streams.php" width=100%, height=99%></iframe>
+					<?php 
+						$online = '';
+						if(count(getOnlineStreams()) > 0){
+							$online = '&online=' . makeList(getOnlineStreams());
+						}						
+						$debug = '';
+						if(strlen($_REQUEST['debug']) > 0){
+							$debug = '&debug=' . $_GET['debug'];
+						}
+						echo '<iframe name="content" src="multigaming/root/content/streams.php'. makeList(getAllStreams()). $online . $debug .'" width=100%, height=100%></iframe>'; 
+					?>
 				</div>
 				<div id="chat">
-					<?php 
-						
-						$rooms = getRooms($online);
-						echo '<iframe src="https://kiwiirc.com/client/IRC.glados.tv/?nick=hitboxuser?&theme=basic'.$rooms.'" style="border:0; width:100%; height:100%;"></iframe>';
-					?>
+					<?php echo '<iframe src="https://kiwiirc.com/client/IRC.glados.tv/?nick=hitboxuser?&theme=basic'.getRooms(getOnlineStreams()).'" style="border:0; width:100%; height:100%;"></iframe>';	?>
 					
 				</div>
 			</div>
-			<!--<div id="footer" -->
+			<!--<div id="footer" 
 				<?php //include 'multigaming/root/footer/footer.php'; ?>
-			<!--</div> -->
-			<?php
-				$debug = $_REQUEST['debug'];
-				$streams = $_REQUEST['streams'];
-				$beta= split(',',(strtolower($_GET['beta'])));
-				if($beta[0] == "offline"){
-					echoStreams($all);
-				}else{
-					echoStreams($online);
-				}
-			?>
+			</div> -->
 		</div>
 	 </body>
 </html>
