@@ -14,6 +14,12 @@
 	</li>
 	<br>
 	<hr>
+	<li>BETA v.0.2.11B
+		<ul>
+		<li>fixxed: PNG refresh Link-Fehler behoben.
+		</ul>
+	</li>
+	<br>
 	<li>BETA v.0.2.11
 		<ul>
 		<li>changed: Struktur der Daten wurde verändert</li>
