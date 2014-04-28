@@ -47,7 +47,6 @@
 		}
 		return $ret;
 	}
-	
 	function getRooms($online){
 		//create list of chatroom
 		$rooms = "#liveroom";
@@ -59,11 +58,22 @@
 	function makeList($inp){
 		$t='';
 		if(count($inp) > 0){
-			$t='?streams='.$inp[0];
+			$t=$inp[0];
 			for($i=1;$i<count($inp);$i++){
 				$t = $t . ',' .$inp[$i];
 			}
 		}
 		return $t;
+	}
+	function getStreamString(){
+		$online = '';
+		if(count(getOnlineStreams()) > 0){
+			$online = '&online=' . makeList(getOnlineStreams());
+		}						
+		$debug = '';
+		if(strlen($_REQUEST['debug']) > 0){
+			$debug = '&debug=' . $_GET['debug'];
+		}
+		return '"multigaming/root/content/streams.php?streams='. makeList(getAllStreams()). $online . $debug .'"';
 	}
 ?>

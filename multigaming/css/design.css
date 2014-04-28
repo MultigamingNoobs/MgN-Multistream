@@ -26,7 +26,7 @@ body{
 	vertical-align:		middle;
 }
 #content{
-	height: 			854px;
+	height: 			100%;
 	width:				100%;
 }
 #pngs{
@@ -48,7 +48,7 @@ body{
 	float:				left;
 	height: 			100%;
 	width:				75%;
-	overflow-y:			auto;
+
 }
 #stream_left{
 	float:				left;
