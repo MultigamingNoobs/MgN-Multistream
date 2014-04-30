@@ -38,6 +38,7 @@
 			$c = 2;
 			if(contains($debug,"hitboxchat")){
 				$c = 1;
+				$h = $h/2;
 			}
 			for($i=0 ; $i < count($streams) ; $i = $i + $c){
 				echo '<div id="stream_left" style="height:'.$h.'%;">';

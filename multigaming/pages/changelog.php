@@ -14,9 +14,16 @@
 	</li>
 	<br>
 	<hr>
+	<li>BETA v.0.2.12
+		<ul>
+		<li>added: Tooltips bei Menülinks</li>
+		<li>fixed: Streamhöhe bei hitboxchat</li>
+		</ul>
+	</li>
+	<br>
 	<li>BETA v.0.2.11B
 		<ul>
-		<li>fixxed: PNG refresh Link-Fehler behoben.
+		<li>fixxed: PNG refresh Link-Fehler behoben.<li>
 		</ul>
 	</li>
 	<br>
