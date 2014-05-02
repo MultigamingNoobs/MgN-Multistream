@@ -16,10 +16,10 @@
 		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="1" style="display: inline;"></iframe>';
 	}
 	function displayStreams($streams,$debug){
-		if(count($streams) == 0){
+		if($streams[0] == ''){
 			echo '<h1 id=noone>Keiner online :\ </h1>';
 		} 
-		if(count($streams) == 1){
+		else if(count($streams) == 1){
 			if(contains($debug,"hitboxchat")){
 				echo '<div id="stream_left" style="height:'.$h.'%;">';
 					displayHitboxStream($streams[0]);
@@ -32,8 +32,8 @@
 			}
 		} else{
 			$h = ceil(100 / ceil((count($streams)/2)));
-			if($h < 8){
-				$h = 8;
+			if($h < 25){
+				$h = 25;
 			}
 			$c = 2;
 			if(contains($debug,"hitboxchat")){

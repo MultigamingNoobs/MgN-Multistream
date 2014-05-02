@@ -14,6 +14,13 @@
 	</li>
 	<br>
 	<hr>
+	<li>BETA v.0.2.13
+		<ul>
+		<li><p>fixxed: Seite ist nun nicht mehr größer als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, können diese separat gescrollt werden.</p></li>
+		<li><p>fixxed: Streamgröße bei 8+ gleichtig</p></li>
+		</ul>
+	</li>
+	<hr>
 	<li>BETA v.0.2.12
 		<ul>
 		<li>added: Tooltips bei Menülinks</li>
