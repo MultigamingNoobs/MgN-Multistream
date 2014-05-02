@@ -13,7 +13,7 @@
 		return false;
 	}
 	function displayHitboxChat($stream){
-		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="1" style="display: inline;"></iframe>';
+		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';
 	}
 	function displayStreams($streams,$debug){
 		if($streams[0] == ''){
@@ -38,7 +38,10 @@
 			$c = 2;
 			if(contains($debug,"hitboxchat")){
 				$c = 1;
-				$h = $h/2;
+				$h = ceil($h/2);
+				if($h < 30){
+					$h = 30;
+				}
 			}
 			for($i=0 ; $i < count($streams) ; $i = $i + $c){
 				echo '<div id="stream_left" style="height:'.$h.'%;">';
