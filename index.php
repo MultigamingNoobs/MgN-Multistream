@@ -3,7 +3,7 @@
 	<head>
 		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
 		<?php
-			$v = "BETA v.0.2.13B";
+			$v = "BETA v.0.2.14";
 			include 'multigaming/api/api.php';
 		?>
 		<title>MultiGaming</title>
