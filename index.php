@@ -6,14 +6,6 @@
 			$v = "BETA v.0.2.13";
 			include 'multigaming/api/api.php';
 		?>
-		
-		<script type="text/javascript"> 
-			function Check(){ 
-				return window.innerHeight} 
-		</script> 
-
-
-		
 		<title>MultiGaming</title>
 	</head>
 	<body>

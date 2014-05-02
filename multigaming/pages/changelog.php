@@ -18,6 +18,7 @@
 		<ul>
 		<li><p>fixxed: Seite ist nun nicht mehr größer als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, können diese separat gescrollt werden.</p></li>
 		<li><p>fixxed: Streamgröße bei 8+ gleichtig</p></li>
+		<li><p>fixxed: Anzeige bei keiner online</p></li>
 		</ul>
 	</li>
 	<hr>
