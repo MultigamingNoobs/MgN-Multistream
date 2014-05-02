@@ -66,14 +66,10 @@
 		return $t;
 	}
 	function getStreamString(){
-		$online = '';
-		if(count(getOnlineStreams()) > 0){
-			$online = '&online=' . makeList(getOnlineStreams());
-		}						
 		$debug = '';
 		if(strlen($_REQUEST['debug']) > 0){
 			$debug = '&debug=' . $_GET['debug'];
 		}
-		return '"multigaming/root/content/streams.php?streams='. makeList(getAllStreams()). $online . $debug .'"';
+		return '"multigaming/root/content/streams.php?streams='. makeList(getAllStreams()). $debug .'"';
 	}
 ?>

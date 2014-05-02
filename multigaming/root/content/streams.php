@@ -1,9 +1,9 @@
 <link href="../../css/design.css" type="text/css" rel="stylesheet">
 <?php
 	$all   = array_unique(split(',',$_GET['streams']));
-	$online= array_unique(split(',',$_GET['online']));
 	$debug = array_unique(split(',',$_GET['debug']));
-
+	include '../../api/api.php';
+	$online = getOnlineStreams($all);
 	function contains($arr,$str){
 		for($i=0;$i<count($arr);$i++){
 			if($arr[$i] == $str){

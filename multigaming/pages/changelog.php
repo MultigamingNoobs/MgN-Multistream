@@ -15,6 +15,11 @@
 	<br>
 	<hr>
 	<br>
+	<li><b>BETA v.0.2.14</b>
+		<ul>
+		<li><i>fixxed:</i> Kleine Änderungen, sodass online Streams aktualisiert werden, wenn man die Streamseite neu lädt.</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.2.13B</b>
 		<ul>
 		<li><i>changed:</i> PNG refresh ist nun im Menü</li>
