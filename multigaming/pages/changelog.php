@@ -14,6 +14,13 @@
 	</li>
 	<br>
 	<hr>
+	<br>
+	<li><b>BETA v.0.2.13B</b>
+		<ul>
+		<li><i>changed:</i> PNG refresh ist nun im Menü</li>
+		<li><i>fixxed:</i> ein paar kleine Dinge im Hintergrund</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.2.13</b>
 		<ul>
 		<li><i>fixxed:</i> Seite ist nun nicht mehr größer als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, können diese separat gescrollt werden.</li>
@@ -21,7 +28,6 @@
 		<li><i>fixxed:</i> Anzeige bei keiner online</li>
 		</ul>
 	</li>
-	<br>
 	<li><b>BETA v.0.2.12</b>
 		<ul>
 		<li><i>added:</i> Tooltips bei Menülinks</li>
