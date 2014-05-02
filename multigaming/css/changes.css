@@ -1,17 +1,13 @@
 ul#changes {
 	color:				black;
-	width:				100%;
+	width:				99	%;
 	margin: 			0;
-	padding: 			0.8em;
-	border: 			1px solid black;
 	background-color:	#E3E3E3;
 }
 * html ul#changes {
 	font:				bold;
-	width: 				11.6em;
-	width: 				10em;
-	padding-left:		0;
-	padding-left:		0.8em;
+	width: 				2.6em;
+	width: 				1em;
 }
 ul#changes li {
 	font: 				bold;

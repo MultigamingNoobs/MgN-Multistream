@@ -21,10 +21,10 @@
 		} 
 		else if(count($streams) == 1){
 			if(contains($debug,"hitboxchat")){
-				echo '<div id="stream_left" style="height:'.$h.'%;">';
+				echo '<div id="stream_left" style="height:100%;">';
 					displayHitboxStream($streams[0]);
 				echo '</div>';
-				echo '<div id="stream_right" style="height:'.$h.'%;">';
+				echo '<div id="stream_right" style="height:100%;">';
 					displayHitboxChat($streams[0]);
 				echo '</div>';
 			}else{
@@ -60,7 +60,7 @@
 	}
 	
 	function displayHitboxStream($stream){
-		echo '<iframe width=100% height=100% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
+		echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
 	}
 	
 	
