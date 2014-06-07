@@ -18,7 +18,7 @@
 			return false;
 		}
 	}
-	function isOnline($mediaName)
+	function isOnlineHitbox($mediaName)
 	{
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$mediaName)) {
@@ -26,50 +26,41 @@
 			return $onlineStatus;
 		}
 	}
-	function getAllStreams(){
-		$teamMembers = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020');
-		$input= split(',',(strtolower($_REQUEST['streams'])));
+	function getAllHitboxStreams(){
+		$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');
+		$input= split(',',(strtolower($_REQUEST['hitbox'])));
 		if($input[0] != ''){
-			$arr = array_unique(array_merge($teamMembers,$input));
+			$arr = array_unique(array_merge($teamMembersHitbox,$input));
 		}else{
-			$arr = $teamMembers;
+			$arr = $teamMembersHitbox;
 		}
 		sort($arr);
 		return $arr;
 	}
-	function getOnlineStreams(){
-		$arr = getAllStreams();
+		function getOnlineHitboxStreams(){
+		$arr = getAllHitboxStreams();
 		$ret = array();
 		for($i=0;$i<count($arr);$i++){
-			if(isOnline($arr[$i])){
+			if(isOnlineHitbox($arr[$i])){
 				$ret[count($ret)] = $arr[$i];
 			}
 		}
 		return $ret;
 	}
-	function getRooms($online){
-		//create list of chatroom
-		$rooms = "#liveroom";
-		for($i=0;$i<count($online);$i++){
-			$rooms = $rooms.",#".$online[$i];
-		}
-		return $rooms = strtolower($rooms);
+	
+	function getHitboxStreamString(){
+		return makeList(getAllHitboxStreams());
 	}
-	function makeList($inp){
-		$t='';
-		if(count($inp) > 0){
-			$t=$inp[0];
-			for($i=1;$i<count($inp);$i++){
-				$t = $t . ',' .$inp[$i];
-			}
-		}
-		return $t;
+	
+	function displayHitboxStream($stream,$site,$h){
+		echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
+		echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
+		echo '</div>';
 	}
-	function getStreamString(){
-		$debug = '';
-		if(strlen($_REQUEST['debug']) > 0){
-			$debug = '&debug=' . $_GET['debug'];
-		}
-		return '"multigaming/root/content/streams.php?streams='. makeList(getAllStreams()). $debug .'"';
+	function displayHitboxChat($stream,$h){
+		echo '<div id="stream_right" style="height:'.$h.'%;">';
+		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';				
+		echo '</div>';
+		
 	}
 ?>

@@ -1,9 +1,14 @@
 <link href="../../css/design.css" type="text/css" rel="stylesheet">
 <?php
-	$all   = array_unique(split(',',$_GET['streams']));
+	$hitbox   = array_unique(split(',',$_GET['hitbox']));
+	$twitch   = array_unique(split(',',$_GET['twitch']));
 	$debug = array_unique(split(',',$_GET['debug']));
-	include '../../api/api.php';
-	$online = getOnlineStreams($all);
+	include '../../api/streamApi.php';
+	include '../../api/hitboxApi.php';
+	include '../../api/twitchApi.php';
+	$hitbox_online = getOnlineHitboxStreams($hitbox);
+	$twitch_online = getOnlineTwitchStreams($twitch);
+	
 	function contains($arr,$str){
 		for($i=0;$i<count($arr);$i++){
 			if($arr[$i] == $str){
@@ -12,65 +17,75 @@
 		}
 		return false;
 	}
-	function displayHitboxChat($stream){
-		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';
-	}
-	function displayStreams($streams,$debug){
-		if($streams[0] == ''){
+
+	function displayStreams($hitbox,$twitch,$debug){
+		if($hitbox[0] == '' and $twitch[0] == ''){
 			echo '<h1 id=noone>Keiner online :\ </h1>';
-		} 
-		else if(count($streams) == 1){
-			if(contains($debug,"hitboxchat")){
-				echo '<div id="stream_left" style="height:100%;">';
-					displayHitboxStream($streams[0]);
-				echo '</div>';
-				echo '<div id="stream_right" style="height:100%;">';
-					displayHitboxChat($streams[0]);
-				echo '</div>';
+		}elseif(count($hitbox)+count($twitch) == 1){
+			if(count($hitbox) == 1){
+				if(contains($debug,"chat")){
+					displayHitboxStream($hitbox[0],"left",100);
+					displayHitboxChat($hitbox[0],100);
+				}else{
+					displayHitboxStream($hitbox[0],"",100);
+				}
 			}else{
-				displayHitboxStream($streams[0]);
+				if(contains($debug,"chat")){
+					displayTwitchStream($twitch[0],"left",100);
+					displayTwitchChat($twitch[0],100);
+				}else{
+					displayTwitchStream($twitch[0],"",100);
+				}
 			}
 		} else{
-			$h = ceil(100 / ceil((count($streams)/2)));
+			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
 			if($h < 25){
 				$h = 25;
 			}
 			$c = 2;
-			if(contains($debug,"hitboxchat")){
+			if(contains($debug,"chat")){
 				$c = 1;
-				$h = ceil($h/2);
-				if($h < 30){
-					$h = 30;
-				}
+				$h = 50;
 			}
-			for($i=0 ; $i < count($streams) ; $i = $i + $c){
-				echo '<div id="stream_left" style="height:'.$h.'%;">';
-					displayHitboxStream($streams[$i]);
-				echo '</div>';
-				if(contains($debug,"hitboxchat")){
-					echo '<div id="stream_right" style="height:'.$h.'%;">';
-						displayHitboxChat($streams[$i]);
-					echo '</div>';
-				}else{
-					if($i+1 < count($streams)){
-						echo '<div id="stream_right" style="height:'.$h.'%;">';
-							displayHitboxStream($streams[$i+1]);
-						echo '</div>';
-					}
-				}
-			}	
+			displayHitboxStreams($hitbox,$debug,$h,$c);
+			displayTwitchStreams($twitch,$debug,$h,$c,count($hitbox));
 		}
 	}
-	
-	function displayHitboxStream($stream){
-		echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
+	function displayHitboxStreams($hitbox,$debug,$h,$c){
+		for($i=0 ; $i < count($hitbox) ; $i = $i + $c){
+			displayHitboxStream($hitbox[$i],"left",$h);
+			if(contains($debug,"chat")){
+				displayHitboxChat($hitbox[$i],$h);
+			}else{
+				if($i+1 < count($hitbox)){
+					displayHitboxStream($hitbox[$i+1],"right",$h);
+				}
+			}
+		}
 	}
-	
-	
+	function displayTwitchStreams($twitch,$debug,$h,$c,$a){
+		if($a % 2 == 0 or contains($debug,"chat")){
+			$a=0;
+		}else{
+			$a=1;
+			displayTwitchStream($twitch[0],"right",$h);
+		}
+		for($i=0+$a ; $i < count($twitch) ; $i = $i + $c){
+			displayTwitchStream($twitch[$i],"left",$h);
+			if(contains($debug,"chat")){
+				displayTwitchChat($twitch[$i],$h);
+			}else{
+				if($i+1 < count($twitch)){
+					displayTwitchStream($twitch[$i+1],"right",$h);
+				}
+			}
+		}
+	}
+		
 	
 	if(contains($debug,"offline")){
-		displayStreams($all,$debug);
+		displayStreams($hitbox,$twitch,$debug);
 	}else{
-		displayStreams($online,$debug);
+		displayStreams($hitbox_online,$twitch_online,$debug);
 	}
 ?>
