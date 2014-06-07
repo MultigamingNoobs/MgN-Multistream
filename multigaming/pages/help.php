@@ -47,21 +47,23 @@
 			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet. Darauf folgen ein paar Beispiele.></li>
 			<li><u>debug</u>
 				<ul>
-					<li>hitboxchat - zeigt den Hitboxchat zum Stream an</li>
+					<li>chat - zeigt den Chat zum Stream an</li>
 					<li>offline - zeigt alle Streams an, auch wenn diese gerade nicht online sind.</li>
 				</ul>
 			</li>
 			<li><u>streams</u>
 				<ul>
+					<li>twitch - Liste f&uuml;r twitch Streams</li>
+					<li>hitbox - Liste f&uuml;r hitbox Streams</li>
 					<li>hier kann eine durch Kommata getrennte Liste an Streams angegeben werden, die zus&auml;tzlich angezeigt werden sollen. Duplikate werden ignoriert!</li>
 				</ul>
 			</li>
 			<li><u>Beispiele</u>
 				<ul>
-					<li>?streams=user,user1,user2 - Zeigt zus&auml;tzlich die Streams der Streamer user, user1 und user2 an.</li>
-					<li>?streams=user&debug=offline - zeigt alle Streams an, sowie den des Streamer user.</li>
-					<li>?streams=user&debug=hitboxchat - zeigt Streams an, sofern diese online sind. Au&szlig;erdem wird der Hitbox Chat des Streams angezeigt.</li>
-					<li>?streams=user,user2&debug=hitboxchat,offline - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein und verbunden sind.</li>
+					<li>?hitbox=user,user1,user2 - Zeigt zus&auml;tzlich die Streams der Streamer user, user1 und user2 von Hitbox an.</li>
+					<li>?twitch=user&debug=offline - zeigt alle Streams an, sowie den des Streamer user auf Twitch.</li>
+					<li>?hitbox=user&debug=chat - zeigt Streams an, sofern diese online sind. Au&szlig;erdem wird der Hitbox/Twitch Chat des Streams angezeigt.</li>
+					<li>?hitbox=user,user2&twitch=user3,user4&debug=hitboxchat,offline - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein und verbunden sind.</li>
 				</ul>
 			</li>
 		</ul>

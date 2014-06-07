@@ -9,12 +9,22 @@
 	<br>
 	<li><b>Geplante Funktionen</b>
 		<ul>
+		<li>Eingabefeld auf der <b>Startseite</b> zur Suche nach Streams auf Hitbox und Twitch</li>
 		<li>Hitbox-Chat anzeigen (auf eine sch&ouml;nere Art)</li>
 		</ul>
 	</li>
 	<br>
 	<hr>
 	<br>
+	<li><b>BETA v.0.3.0</b>
+		<ul>
+		<li><i>added:</i> Twitch suport</li>
+		<li><i>changed:</i> height = 50% when debug chat is activated</li>
+		<li><i>added:</i> TwitchBox in menu indicates that hitbox and twitch streams are possible</li>
+		<li><i>changed:</i> new commands for input line actions</li>
+		<li><i>changed:</i> some other changes and fixes</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.2.16</b>
 		<ul>
 		<li><i>changed:</i> Startseite umbenannt zu Streams</li>
