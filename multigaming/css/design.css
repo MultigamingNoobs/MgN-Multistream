@@ -15,7 +15,7 @@ body{
 	height: 			100%;
 }
 #head{
-	height: 			100px;
+	height: 			80px;
 }
 #footer{
 	color:				white;
@@ -28,11 +28,12 @@ body{
 #content{
 	width:				100%;
 }
-#pngs{
+#headMarquee{
+	font-size:			3.0em;
 	vertical-align:		top;
 	float:				left;
 	height:				68px;
-
+	color:				#33CC33;
 	width:				75%;
 	background-color:	white;
 }

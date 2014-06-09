@@ -9,6 +9,5 @@
 		<li><a href="multigaming/pages/changelog.php" target="content" title="Zeigt Ver&auml;nderungen an der Seite">Changelog</a></li>
 		<li>MultiGaming by MarderLP</li>
 		<li><?php echo $v; ?></li>
-		<li>TwitchBox</li>
 	</ul>
 </div>
