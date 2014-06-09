@@ -19,20 +19,18 @@
 	}
 
 	function displayStreams($hitbox,$twitch,$debug){
-		if($hitbox[0] == '' and $twitch[0] == ''){
-			echo '<h1 id=noone>Keiner online :\ </h1>';
-		}elseif(count($hitbox)+count($twitch) == 1){
+		if(count($hitbox)+count($twitch) == 1){
 			if(count($hitbox) == 1){
 				if(contains($debug,"chat")){
 					displayHitboxStream($hitbox[0],"left",100);
-					displayHitboxChat($hitbox[0],100);
+					displayHitboxChat($hitbox[0],100,true);
 				}else{
 					displayHitboxStream($hitbox[0],"",100);
 				}
 			}else{
 				if(contains($debug,"chat")){
 					displayTwitchStream($twitch[0],"left",100);
-					displayTwitchChat($twitch[0],100);
+					displayTwitchChat($twitch[0],100,true);
 				}else{
 					displayTwitchStream($twitch[0],"",100);
 				}
@@ -55,7 +53,7 @@
 		for($i=0 ; $i < count($hitbox) ; $i = $i + $c){
 			displayHitboxStream($hitbox[$i],"left",$h);
 			if(contains($debug,"chat")){
-				displayHitboxChat($hitbox[$i],$h);
+				displayHitboxChat($hitbox[$i],$h,true);
 			}else{
 				if($i+1 < count($hitbox)){
 					displayHitboxStream($hitbox[$i+1],"right",$h);
@@ -73,7 +71,7 @@
 		for($i=0+$a ; $i < count($twitch) ; $i = $i + $c){
 			displayTwitchStream($twitch[$i],"left",$h);
 			if(contains($debug,"chat")){
-				displayTwitchChat($twitch[$i],$h);
+				displayTwitchChat($twitch[$i],$h,true);
 			}else{
 				if($i+1 < count($twitch)){
 					displayTwitchStream($twitch[$i+1],"right",$h);

@@ -39,8 +39,12 @@
 		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
 		echo '</div>';
 	}
-	function displayTwitchChat($stream,$h){
-		echo '<div id="stream_right" style="height:'.$h.'%;">';
+	function displayTwitchChat($stream,$h,$d){
+		if($d){
+			echo '<div id="stream_right" style="height:'.$h.'%;">';
+		}else{
+			echo '<div id="streamChat" style="height:'.$h.'%;">';
+		}
 		echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%"></iframe>';
 		echo '</div>';
 	}
@@ -54,9 +58,9 @@
         bgcolor="#000000">
 		<param  name="allowFullScreen" value="true" />
 		<param  name="allowScriptAccess" value="always" />
-		<param  name="allowNetworking"  value="all" />
+		<param  name="allowNetworking"  value="false" />
 		<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
+		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=100" />
 		</object>';
 		echo '</div>';
 	}

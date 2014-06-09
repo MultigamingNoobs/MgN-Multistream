@@ -57,8 +57,12 @@
 		echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
 		echo '</div>';
 	}
-	function displayHitboxChat($stream,$h){
-		echo '<div id="stream_right" style="height:'.$h.'%;">';
+	function displayHitboxChat($stream,$h,$d){
+		if($d){
+			echo '<div id="stream_right" style="height:'.$h.'%;">';
+		}else{
+			echo '<div id="streamChat" style="height:'.$h.'%;">';
+		}
 		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';				
 		echo '</div>';
 		

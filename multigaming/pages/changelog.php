@@ -10,12 +10,19 @@
 	<li><b>Geplante Funktionen</b>
 		<ul>
 		<li>Eingabefeld auf der <b>Startseite</b> zur Suche nach Streams auf Hitbox und Twitch</li>
-		<li>Hitbox-Chat anzeigen (auf eine sch&ouml;nere Art)</li>
 		</ul>
 	</li>
 	<br>
 	<hr>
 	<br>
+	<li><b>BETA v.0.4.0</b>
+		<ul>
+		<li><i>added:</i> Tabbed-Chat-sidebar</li>
+		<li><i>changed:</i> new Header shows online Streams</li>
+		<li><i>added:</i> MGN picture</li>
+		<li><i>removed:</i> IRC</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.3.0</b>
 		<ul>
 		<li><i>added:</i> Twitch suport</li>
