@@ -15,6 +15,17 @@
 	<br>
 	<hr>
 	<br>
+	<li><b>BETA v.0.4.1</b>
+		<ul>
+		<li><i>improvements:</i> faster page loading</li>
+		<li><i>added:</i> header marquee shows name of streamer and game title</li>
+		<li><i>changed:</i> smaler Header</li>
+		<li><i>changed:</i> other MGN picture</li>
+		<li><i>changed:</i> menu now is also tabber menu</li>
+		<li><i>removed:</i> png refresh link</li>
+		<li><i>removed:</i> old and now unused code</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.4.0</b>
 		<ul>
 		<li><i>added:</i> Tabbed-Chat-sidebar</li>

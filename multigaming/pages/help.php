@@ -1,4 +1,4 @@
-<link href="../css/sites.css" type="text/css" rel="stylesheet">
+<link href="multigaming/css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
 	<li><b>Die Hilfe - Inhalt</b>
 		<ul>

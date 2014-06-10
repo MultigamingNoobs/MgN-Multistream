@@ -1,1 +1,0 @@
-<p> Dies ist der Footer! Hier fehlt jedoch noch jeglicher Inhalt :/</p>

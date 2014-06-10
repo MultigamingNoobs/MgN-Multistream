@@ -1,11 +1,8 @@
-<link href="../../css/design.css" type="text/css" rel="stylesheet">
 <?php
-	$hitbox   = array_unique(split(',',$_GET['hitbox']));
-	$twitch   = array_unique(split(',',$_GET['twitch']));
-	$debug = array_unique(split(',',$_GET['debug']));
-	include '../../api/streamApi.php';
-	include '../../api/hitboxApi.php';
-	include '../../api/twitchApi.php';
+	$hitbox = getAllHitboxStreams();
+	$twitch = getAllTwitchStreams();
+	$debug	= array_unique(split(',',$_GET['debug']));
+
 	$hitbox_online = getOnlineHitboxStreams($hitbox);
 	$twitch_online = getOnlineTwitchStreams($twitch);
 	
@@ -79,11 +76,61 @@
 			}
 		}
 	}
-		
-	
-	if(contains($debug,"offline")){
-		displayStreams($hitbox,$twitch,$debug);
-	}else{
-		displayStreams($hitbox_online,$twitch_online,$debug);
-	}
 ?>
+
+
+<div id="head">
+	<div id="headMarquee">
+		<?php
+			if(count($hitbox_online) == 0 and count($twitch_online) == 0){
+				echo '<marquee behavior="alternate">Keiner online :\ </marquee>';
+			}else{
+				$s = '';
+				if(count($twitch_online) > 0){
+					$s = $s.'@Twitch: ' . $twitch_online[0]." - " . getTwitchGame($twitch_online[0]);
+					for($i=1 ; $i < count($twitch_online) ; $i++){
+						$s = $s . ', ' . $twitch_online[$i] . " - " . getTwitchGame($twitch_online[$i]);
+					}
+				}
+				if(count($hitbox_online) > 0){
+					$s = $s.'@Hitbox: ' . $hitbox_online[0]." - " . getHitboxGame($hitbox_online[0]);
+					for($i=1 ; $i < count($hitbox_online) ; $i++){
+						$s = $s . ', ' . $hitbox_online[$i] . " - " . getHitboxGame($hitbox_online[$i]);
+					}
+				}
+				echo '<marquee scrollamount="3" scrolldelay="5">';
+				echo 'Online:'.$s;
+				echo '</marquee>';
+			}
+		?>
+	</div>
+	<div id="upperright">
+		<img src="multigaming/pictures/mgnlogo.jpg" height="100%" width="100%"></img>
+	</div>
+</div>
+<script type="text/javascript"> 
+	document.write('<div id="content" style="height:' + (window.innerHeight-90) + 'px"> ');
+</script> 
+	<div id="streams">
+		<?php 
+			if(contains($debug,"offline")){
+				displayStreams($hitbox,$twitch,$debug);
+			}else{
+				displayStreams($hitbox_online,$twitch_online,$debug);
+			}
+		?>
+	</div>
+	<script type="text/javascript"> 
+		document.write('<div id="chat" style="height:' + (window.innerHeight-125) + 'px"> ');
+	</script> 
+		<div class="tabber">
+			<?php 
+				if(contains($debug,"offline")){
+					displaySidebarChat($twitch,$hitbox);
+				}else{
+					displaySidebarChat($twitch_online,$hitbox_online);
+				}
+			?>
+		</div>
+	</div>
+</div>

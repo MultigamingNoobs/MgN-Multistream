@@ -18,12 +18,17 @@
 			return false;
 		}
 	}
-	function isOnlineHitbox($mediaName)
-	{
+	function isOnlineHitbox($mediaName){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$mediaName)) {
 			$onlineStatus = ($media['media_is_live'] == 1) ? true : false;
 			return $onlineStatus;
+		}
+	}
+	function getHitboxGame($mediaName){
+		$Media = new Media;
+		if ($media = $Media->getMedia('live',$mediaName)) {
+			return $media['media_status'];
 		}
 	}
 	function getAllHitboxStreams(){
