@@ -1,11 +1,16 @@
 <?php
-	function isOnlineTwitch($stream)
-	{
+	function isOnlineTwitch($stream){
 		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
 		if ($array['stream'] != null) {
 			return true;
 		}else{
 			return false;
+		}
+	}
+	function getTwitchGame($stream){
+		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
+		if ($array['stream'] != null) {
+			return $array['stream']['game'];
 		}
 	}
 	function getAllTwitchStreams(){
@@ -60,7 +65,7 @@
 		<param  name="allowScriptAccess" value="always" />
 		<param  name="allowNetworking"  value="false" />
 		<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=100" />
+		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
 		</object>';
 		echo '</div>';
 	}
