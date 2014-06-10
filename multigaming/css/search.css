@@ -1,0 +1,46 @@
+form {
+    margin:15px;
+  padding:5px;
+  border-bottom:1px solid #ddd;
+}
+
+form input[type=submit] {
+    display:none;
+}
+
+div#results{
+    padding:10px 0px 0px 15px;
+}
+
+div#results div.result {
+    padding:10px 0px;
+    margin:10px 0px 10px;
+}
+
+div#results div.result a.readMore {
+    color:green;
+}
+
+div#results div.result h2{
+    font-size:19px;
+    margin:0px 0px 5px;
+    padding:0px;
+    color:#1111CC;
+    font-weight:normal;
+}
+
+div#results div.result h2 a{
+    text-decoration:none;
+    border-bottom:1px solid #1111cc;
+}
+
+div#results div.result p{
+    margin:0;
+    padding:0;
+}
+
+span.highlight{
+    background:#FCFFA3;
+    padding:3px;
+    font-weight:bold;
+}

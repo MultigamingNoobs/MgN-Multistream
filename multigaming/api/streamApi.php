@@ -10,7 +10,7 @@
 		return $t;
 	}
 
-	function displaySidebarChat($twitch,$hitbox){
+	function displaySidebarChat(){
 		for($i=0;$i<count($twitch);$i++){
 			echo '<div class="tabbertab">';
 			echo '<h2>'.$twitch[$i].'</h2>';
@@ -23,9 +23,5 @@
 				displayHitboxChat($hitbox[$i],'100',false);
 			echo '</div>';
 		}
-		echo '<div class="tabbertab">';
-		echo '<h2>Twitter</h2>';
-			include 'multigaming/pages/twitter.php';
-		echo '</div>';
 	}
 ?>

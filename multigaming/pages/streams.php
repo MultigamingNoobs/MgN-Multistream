@@ -1,11 +1,4 @@
 <?php
-	$hitbox = getAllHitboxStreams();
-	$twitch = getAllTwitchStreams();
-	$debug	= array_unique(split(',',$_GET['debug']));
-
-	$hitbox_online = getOnlineHitboxStreams($hitbox);
-	$twitch_online = getOnlineTwitchStreams($twitch);
-	
 	function contains($arr,$str){
 		for($i=0;$i<count($arr);$i++){
 			if($arr[$i] == $str){
@@ -125,11 +118,7 @@
 	</script> 
 		<div class="tabber">
 			<?php 
-				if(contains($debug,"offline")){
-					displaySidebarChat($twitch,$hitbox);
-				}else{
-					displaySidebarChat($twitch_online,$hitbox_online);
-				}
+				displaySidebarChat();
 			?>
 		</div>
 	</div>
