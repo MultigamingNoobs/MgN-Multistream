@@ -10,11 +10,17 @@
 			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 		</script>		
 		<?php
-			$v = "BETA v.0.4.1";
+			$v = "v.1.0.0";
 			include 'multigaming/api/hitboxApi.php';
 			include 'multigaming/api/twitchApi.php';
 			include 'multigaming/api/streamApi.php';
 			include_once("multigaming/analyticstracking.php");
+			$hitbox = getAllHitboxStreams();
+			$twitch = getAllTwitchStreams();
+			$debug	= array_unique(split(',',$_GET['debug']));
+			$tab	= array_unique(split(',',$_GET['tab']));
+			$hitbox_online = getOnlineHitboxStreams($hitbox);
+			$twitch_online = getOnlineTwitchStreams($twitch);
 		?>
 		<title>MultiGaming</title>
 	</head>

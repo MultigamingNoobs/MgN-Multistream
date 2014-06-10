@@ -9,12 +9,18 @@
 	<br>
 	<li><b>Geplante Funktionen</b>
 		<ul>
-		<li>Eingabefeld auf der <b>Startseite</b> zur Suche nach Streams auf Hitbox und Twitch</li>
+		<li>Multilanguage support</li>
 		</ul>
 	</li>
 	<br>
 	<hr>
 	<br>
+	<li><b>v.1.0.0</b>
+		<ul>
+		<li><i>added:</i> Input page with search and suggestion from Twitch and Hitbox</li>
+		<li><i>added:</i> ?tab= loads a specific tab</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.4.1</b>
 		<ul>
 		<li><i>improvements:</i> faster page loading</li>
