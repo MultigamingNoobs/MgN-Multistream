@@ -22,7 +22,7 @@ body{
 }
 #headMarquee{
 	font-size:			2.0em;
-	vertical-align:		top;
+	vertical-align:		middle;
 	float:				left;
 	height:				45px;
 	color:				#33CC33;

@@ -82,4 +82,10 @@
 			Ihre Datenschutzeinstellungen bei Twitter k&ouml;nnen Sie in den Konto-Einstellungen unterhttp://twitter.com/account/settings &auml;ndern.</li>
 		</ul>
 	</li>
+	<li><b>Pace von HubSpot Dev & Design</b>
+		<ul>
+		<li align="justify"><a href="http://github.hubspot.com/pace/docs/welcome/?__hstc=185409212.6fbfd5f25624c222f51c4b27c9668467.1401218829748.1401218829748.1401300442508.2&__hssc=185409212.9.1402399709845&__hsfp=3525055807">Pace</a></li>
+		<li align="justify"><a href="http://dev.hubspot.com/">HubSpot Dev & Design</a></li>
+		</ul>
+	</li>
 </ul>

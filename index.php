@@ -2,6 +2,8 @@
 <html lang="de">
 	<head>
 		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
+		<script src="multigaming/pace/pace.js"></script>
+		<link href="multigaming/pace/pace.css" rel="stylesheet" />
 		<script language="JavaScript" type="text/javascript" src="multigaming/tabber/tabber.js"></script>
 		<link rel="stylesheet" href="multigaming/tabber/example.css" TYPE="text/css" MEDIA="screen">
 		<script type="text/javascript">

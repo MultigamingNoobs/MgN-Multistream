@@ -18,6 +18,8 @@
 	<li><b>BETA v.0.4.1</b>
 		<ul>
 		<li><i>improvements:</i> faster page loading</li>
+		<li><i>added:</i> Pace from HubSpot Dev & Design</li>
+		<li><i>added:</i> Twitter in chat sidebar</li>
 		<li><i>added:</i> header marquee shows name of streamer and game title</li>
 		<li><i>changed:</i> smaler Header</li>
 		<li><i>changed:</i> other MGN picture</li>
