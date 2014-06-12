@@ -80,18 +80,18 @@
 			}else{
 				$s = '';
 				if(count($twitch_online) > 0){
-					$s = $s.'@Twitch: ' . $twitch_online[0]." - " . getTwitchGame($twitch_online[0]);
+					$s = $s.' @Twitch: ' . $twitch_online[0]." - " . getTwitchGame($twitch_online[0]);
 					for($i=1 ; $i < count($twitch_online) ; $i++){
 						$s = $s . ', ' . $twitch_online[$i] . " - " . getTwitchGame($twitch_online[$i]);
 					}
 				}
 				if(count($hitbox_online) > 0){
-					$s = $s.'@Hitbox: ' . $hitbox_online[0]." - " . getHitboxGame($hitbox_online[0]);
+					$s = $s.' @Hitbox: ' . $hitbox_online[0]." - " . getHitboxGame($hitbox_online[0]);
 					for($i=1 ; $i < count($hitbox_online) ; $i++){
 						$s = $s . ', ' . $hitbox_online[$i] . " - " . getHitboxGame($hitbox_online[$i]);
 					}
 				}
-				echo '<marquee scrollamount="3" scrolldelay="5">';
+				echo '<marquee scrollamount="5" scrolldelay="5">';
 				echo 'Online:'.$s;
 				echo '</marquee>';
 			}
@@ -118,7 +118,7 @@
 	</script> 
 		<div class="tabber">
 			<?php 
-				displaySidebarChat();
+				displaySidebarChat($twitch_online,$hitbox_online);
 			?>
 		</div>
 	</div>

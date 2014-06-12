@@ -7,14 +7,43 @@
 			return false;
 		}
 	}
+	function getTwitchStreamer(){
+		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams'), true);
+		$ret;
+		for($i=0;$i<count($arr['streams']);$i++){
+			$ret[] = $arr['streams'][$i]['channel']['name'];
+		}
+		sort($ret);
+		return $ret;
+	}
+	function getTwitchFeatured(){
+		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/games/top?limit=10&offset=0"'), true);
+		$ret[] = $arr['_total'];
+		$s = '';
+		$ii = 0;
+		for($i=0;$i<count($arr['top']);$i++){
+			$game = $arr['top'][$i]['game']['name'];
+			if($ii <= 8){
+				$s = $s . $game . ', ';
+				$ii++;
+			}elseif($ii == 9){
+				$s = $s . $game;
+				$ii++;
+			}
+		}
+		$ret[] = $s;
+		return $ret;
+		
+	}
 	function getTwitchGame($stream){
 		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
 		if ($array['stream'] != null) {
 			return $array['stream']['game'];
 		}
 	}
-	function getAllTwitchStreams(){
-		$teamMembersTwitch = array('marderlp','mindstalker85','tomme9020','pixelkuchentv');
+	function getAllTwitchStreams($team){
+		if($team){$teamMembersTwitch = array('marderlp','mindstalker85','tomme9020','pixelkuchentv');}
+		else{$teamMembersTwitch = array();}
 		$input= split(',',(strtolower($_REQUEST['twitch'])));
 		if($input[0] != ''){
 			$arr = array_unique(array_merge($teamMembersTwitch,$input));
