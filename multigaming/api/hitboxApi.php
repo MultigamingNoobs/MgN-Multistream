@@ -70,11 +70,13 @@
 			return $media['category_name'];
 		}
 	}
-	function getAllHitboxStreams($team){
-		if($team){$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');}
-		else{$teamMembersHitbox = array();}
+	function getAllHitboxStreams($team_bol){
+		$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');
 		$input= split(',',(strtolower($_REQUEST['hitbox'])));
-		if($input[0] != ''){
+		if($team_bol){
+			$arr = $input;
+		}
+		elseif($input[0] != ''){
 			$arr = array_unique(array_merge($teamMembersHitbox,$input));
 		}else{
 			$arr = $teamMembersHitbox;

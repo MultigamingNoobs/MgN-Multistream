@@ -66,16 +66,18 @@
 			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 		</script>		
 		<?php
-			$v = "v.0.5.1";
+			$v = "v.0.5.2";
 			include 'multigaming/api/hitboxApi.php';
 			include 'multigaming/api/twitchApi.php';
 			include 'multigaming/api/streamApi.php';
 			include_once("multigaming/analyticstracking.php");
 			$team = $_GET['team'];
-			if($team=='on'){$team = false;
-			}else{$team = true;}
-			$hitbox = getAllHitboxStreams($team);
-			$twitch = getAllTwitchStreams($team);
+			$team_bol = true;
+			if($team <> nil and $team == "on"){
+				$team_bol = false;
+			}
+			$hitbox = getAllHitboxStreams($team_bol);
+			$twitch = getAllTwitchStreams($team_bol);
 			$debug	= array_unique(split(',',$_GET['debug']));
 			$tab	= array_unique(split(',',$_GET['tab']));
 			$hitbox_online = getOnlineHitboxStreams($hitbox);
