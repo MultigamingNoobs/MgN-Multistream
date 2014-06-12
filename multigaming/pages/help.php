@@ -15,36 +15,32 @@
 	<li><b>Die Idee</b>
 		<ul>
 			<li>Wir sind eine kleine Gruppe von Streamern, die miteinander zocken oder auch bei den anderen zuschauen.</li>
-			<li>Um nun euch unsere Gruppe n&auml;her zu bringen gibt es hier jeden Stream zu sehen, ohne gro&szlig; hin und her zu tabben. Wer online ist wird angezeigt, so einfach ist das!</li>
-			<li>Nat&uuml;rlich ist es auch m&ouml;glich weitere Streamer &uuml;ber diese Seite zu gucken, die nicht in unserer Gruppe sind. Dazu einfach den Abschnitt <b>Adresszeilenkomandos</b> lesen.</li>
+			<li>Um nun euch unsere Gruppe n&auml;her zu bringen gibt es hier jeden Stream zu sehen, ohne gro&szlig; hin und her zu tabben. Wer online ist wird angezeigt, so einfach ist das! (Sofern bei der Startseite nicht das H&auml;kchen bei <i>Keine MGN Streams anzeigen</i> gemacht wurde)</li>
+			<li>Nat&uuml;rlich ist es auch m&ouml;glich weitere Streamer &uuml;ber diese Seite zu gucken, die nicht in unserer Gruppe sind. Dazu einfach auf der Startseite die gewünschtn Streamer eintragen und los geht es! Die Eingabe wird über die Adresszeile ausgewertet, siehe dazu den Abschnitt <b>Adresszeilenkomandos</b>.</li>
 		</ul>
 	</li>
 	<br>
 	<li><b>Das Team</b>
 		<ul>
 			<li>Die Seite wird derzeit von MarderLP betreut und erstellt.</li>
-			<li>Alle die bei diesem Projekt von <i>Gaming ohne Grenzen</i> und <i>Multi Gaming Noobs</i> dabei sind, sind im Kopfbereich durch ein kleines PNG vertreten. Dort k&ouml;nnt ihr ein paar Informationen &uuml;ber den Kanal einsehen und auch direkt zu diesem gelangen.</li>
 		</ul>
 	</li>
 	<br>
 	<li><b>Der Chat</b>
 		<ul>
-			<li>In den IRC m&uuml;sst ihr euch einfach mit eurem hitbox Account einloggen, d.h. mit eurem dortigen Benutzernamen und Passwort.</li>
-			<li>Wenn ein Stream online ist, wird der Hitbox Chat-Raum direkt beim Einloggen betreten. Dies funktioniert nicht, wenn die Streams separat aktualisiert werden, dann m&uuml;sst ihr per IRC Command [/join stream] in den Chanel connecten.</li>
-			<li>Du w&uuml;rdest gerne den Hitbox Chat nutzen, weil du IRC nicht magst, oder Glados nicht im Hitbox Chat des Streamers ist? Geb in die Adresszeile einfach debug=hitboxchat ein. Weitere Informationen und Beispiele dazu findest du unter <b>Adresszeilenkomandos</b></li>
+			<li>Zu jedem Stream der online ist, wird automatisch in der rechten Navigation der dazugeh&ouml;rige Chat in einem Tabbed-Men&uuml; angezeigt.</li>
 		</ul>
 	</li>
 	<br>
 	<li><b>Streams</b>
 		<ul>
-			<li>Alle Streams die durch PNGs vertreten sind, werden angezeigt, wenn sie online sind.</li>
-			<li>Um den die Streams zu aktualisieren kannst du auf <i>Streams refreshen</i> klicken. Wenn du sehen willst, ob sich ein online Status ge&auml;ndert hat, ohne vorher die Streams neu zu laden, kannst du auch auf <i>PNGs refreshen</i> klicken.</li>
+			<li>Alle Streams die werden angezeigt, wenn sie online sind. Bei Hitbox wird ein HTML5 Player eingebunden und bei Twitch (auf Grund von Problemen) der Flash-Player.</li>
 		</ul>
 	</li>
 	<br>
 	<li><b>Adresszeilenkomandos</b>
 		<ul>
-			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet. Darauf folgen ein paar Beispiele.></li>
+			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zurück greift. Darauf folgen ein paar Beispiele.></li>
 			<li><u>debug</u>
 				<ul>
 					<li>chat - zeigt den Chat zum Stream an</li>
@@ -56,6 +52,22 @@
 					<li>twitch - Liste f&uuml;r twitch Streams</li>
 					<li>hitbox - Liste f&uuml;r hitbox Streams</li>
 					<li>hier kann eine durch Kommata getrennte Liste an Streams angegeben werden, die zus&auml;tzlich angezeigt werden sollen. Duplikate werden ignoriert!</li>
+				</ul>
+			</li>
+			<li><u>tab</u>
+				<ul>
+					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gewählt:</li>
+					<li>tab=start - Startseite</li>
+					<li>tab=streams - Streams</li>
+					<li>tab=impressum - Impressum</li>
+					<li>tab=kontakt - Kontakt</li>
+					<li>tab=hilfe - Hilfe</li>
+					<li>tab=changelog - Changelog</li>
+				</ul>
+			</li>
+			<li><u>team</u>
+				<ul>
+					<li>Sobald team=on ist, werden die Streams der MGN nur angezeigt, wenn diese auch gefordert wurden.</li>
 				</ul>
 			</li>
 			<li><u>Beispiele</u>

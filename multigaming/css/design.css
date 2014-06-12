@@ -5,6 +5,13 @@ body{
 	color:white;
     background-color: black;
 }
+legend{
+	color:				#33CC33;
+}
+fieldset{
+    border-color:		#003300;
+    border-style:		solid;
+}
 #noone{
 	color:				red;
 	text-align:			center;
@@ -21,7 +28,7 @@ body{
 	width:				100%;
 }
 #headMarquee{
-	font-size:			2.0em;
+	font-size:			2.2em;
 	vertical-align:		middle;
 	float:				left;
 	height:				45px;

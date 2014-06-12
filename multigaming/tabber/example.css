@@ -26,7 +26,7 @@ ul.tabbernav
 {
  margin:0;
  padding: 3px 0;
- border-bottom: 1px solid #778;
+ border-bottom: 1px solid #003300;
  font: bold 12px Verdana, sans-serif;
 }
 
@@ -41,20 +41,20 @@ ul.tabbernav li a
 {
  padding: 3px 0.5em;
  margin-left: 3px;
- border: 1px solid #778;
+ border: 1px solid #003300;
  border-bottom: none;
- background: #DDE;
+ background: #B8C6B8;
  text-decoration: none;
 }
 
-ul.tabbernav li a:link { color: #448; }
-ul.tabbernav li a:visited { color: #667; }
+ul.tabbernav li a:link { color: #172217; }
+ul.tabbernav li a:visited { color: #172217; }
 
 ul.tabbernav li a:hover
 {
  color: #000;
- background: #AAE;
- border-color: #227;
+ background: #EDF1ED;
+ border-color: #003300;
 }
 
 ul.tabbernav li.tabberactive a

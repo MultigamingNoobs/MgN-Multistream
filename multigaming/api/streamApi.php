@@ -10,7 +10,7 @@
 		return $t;
 	}
 
-	function displaySidebarChat(){
+	function displaySidebarChat($twitch,$hitbox){
 		for($i=0;$i<count($twitch);$i++){
 			echo '<div class="tabbertab">';
 			echo '<h2>'.$twitch[$i].'</h2>';

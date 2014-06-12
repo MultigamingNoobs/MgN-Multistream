@@ -18,6 +18,45 @@
 			return false;
 		}
 	}
+	function getHitboxStreamer(){
+		$Media = new Media;
+		$media = $Media->getMedia('live','list');
+		$ret;
+		for($i=0;$i<count($media);$i++){
+			$ret[] = $media[$i]['media_user_name'];
+		}
+		sort($ret);
+		return $ret;
+	}
+	function getHitboxFeatured(){
+		$Media = new Media;
+		$media = $Media->getMedia('games','list');
+		$ret[] = count(getHitboxStreamer());
+		$g = 0;
+		$c = 0;
+		$s = '';
+		$ii = 0;
+		for($i=0;$i<count($media);$i++){
+			$arri = $media[$i];
+			$game = $arri['category_name'];
+			if($game != null){
+				$g++;
+				if($ii <= 8){
+					$s = $s . $game . ', ';
+					$ii++;
+				}elseif($ii == 9){
+					$s = $s . $game;
+					$ii++;
+				}
+				$c = $c + intval($arri['category_viewers']);	
+			}
+			
+		}
+		$ret[] = $g;
+		$ret[] = $c;
+		$ret[] = $s;
+		return $ret;
+	}
 	function isOnlineHitbox($mediaName){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$mediaName)) {
@@ -28,11 +67,12 @@
 	function getHitboxGame($mediaName){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$mediaName)) {
-			return $media['media_status'];
+			return $media['category_name'];
 		}
 	}
-	function getAllHitboxStreams(){
-		$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');
+	function getAllHitboxStreams($team){
+		if($team){$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');}
+		else{$teamMembersHitbox = array();}
 		$input= split(',',(strtolower($_REQUEST['hitbox'])));
 		if($input[0] != ''){
 			$arr = array_unique(array_merge($teamMembersHitbox,$input));

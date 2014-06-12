@@ -15,10 +15,33 @@
 	<br>
 	<hr>
 	<br>
-	<li><b>v.1.0.0</b>
+	<li><b>BETA v.0.5.1</b>
 		<ul>
-		<li><i>added:</i> Input page with search and suggestion from Twitch and Hitbox</li>
+		<li><i>added:</i> just one missing underscore (now shows number of online Twitch streams)</li>
+		<li><i>fixed:</i> some spelling things</li>
+		</ul>
+	</li>
+	<li><b>v.0.5.0</b>
+		<ul>
+		<li><i>added:</i> Search bar for online Hitbox Streams</li>
+		<li><i>added:</i> Textfield for Hitbox streams</li>
+		<li><i>added:</i> Drag and drop a item from the Hitbox Search to the Hitbox textfield</li>
+		<li><i>added:</i> Search bar for online Twitch Streams</li>
+		<li><i>added:</i> Textfield for Twitch streams</li>
+		<li><i>added:</i> Drag and drop a item from the Twitch Search to the Twitch textfield</li>
+		<li><i>added:</i> startpage selection</li>
+		<li><i>added:</i> search results are arranged alphabetically</li>
 		<li><i>added:</i> ?tab= loads a specific tab</li>
+		<li><i>added:</i> Show MGN Streams option</li>
+		<li><i>added:</i> ?team=on disables the MGN Streams</li>
+		<li><i>added:</i> submit and reset buttons</li>
+		<li><i>added:</i> Hitbox statistics</li>
+		<li><i>added:</i> Twitch statistics</li>
+		<li><i>added:</i> quick help</li>
+		<li><i>changed:</i> Gametitle not Streamtitle when Stream is online</li>
+		<li><i>changed:</i> Tabber colors</li>
+		<li><i>changed:</i> Faster marquee</li>
+		<li><i>changed:</i> Twitter plugin now is on start page not on stream page</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.4.1</b>
@@ -65,20 +88,20 @@
 	</li>
 	<li><b>BETA v.0.2.14</b>
 		<ul>
-		<li><i>fixxed:</i> Kleine &Auml;nderungen, sodass online Streams aktualisiert werden, wenn man die Streamseite neu l&auml;dt.</li>
+		<li><i>fixed:</i> Kleine &Auml;nderungen, sodass online Streams aktualisiert werden, wenn man die Streamseite neu l&auml;dt.</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.13B</b>
 		<ul>
 		<li><i>changed:</i> PNG refresh ist nun im Men&uuml;</li>
-		<li><i>fixxed:</i> ein paar kleine Dinge im Hintergrund</li>
+		<li><i>fixed:</i> ein paar kleine Dinge im Hintergrund</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.13</b>
 		<ul>
-		<li><i>fixxed:</i> Seite ist nun nicht mehr gr&ouml;&szlig;er als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, k&ouml;nnen diese separat gescrollt werden.</li>
-		<li><i>fixxed:</i> Streamgr&ouml;&szlig;e bei 8+ gleichtig</li>
-		<li><i>fixxed:</i> Anzeige bei keiner online</li>
+		<li><i>fixed:</i> Seite ist nun nicht mehr gr&ouml;&szlig;er als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, k&ouml;nnen diese separat gescrollt werden.</li>
+		<li><i>fixed:</i> Streamgr&ouml;&szlig;e bei 8+ gleichtig</li>
+		<li><i>fixed:</i> Anzeige bei keiner online</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.12</b>
