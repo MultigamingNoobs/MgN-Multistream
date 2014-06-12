@@ -15,6 +15,11 @@
 	<br>
 	<hr>
 	<br>
+	<li><b>BETA v.0.5.2</b>
+		<ul>
+		<li><i>fixed:</i> hitbox search now searches for more than 100 streams</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.5.1</b>
 		<ul>
 		<li><i>added:</i> just one missing underscore (now shows number of online Twitch streams)</li>
