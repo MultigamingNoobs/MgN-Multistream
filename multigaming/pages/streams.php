@@ -76,7 +76,7 @@
 	<div id="headMarquee">
 		<?php
 			if(count($hitbox_online) == 0 and count($twitch_online) == 0){
-				echo '<marquee behavior="alternate">Keiner online :\ </marquee>';
+				echo '<marquee behavior="alternate">'.$noOneOnline.' :\ </marquee>';
 			}else{
 				$s = '';
 				if(count($twitch_online) > 0){

@@ -1,36 +1,36 @@
 <link href="multigaming/css/menu.css" type="text/css" rel="stylesheet">
 <?php $t = '"'; ?>
-<?php 	if(strtolower($tab[0])=='start'){$t = ' tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='start' or strtolower($tab[0])=='home'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>Start</h2>';
+		echo '<h2>'.$home.'</h2>';
 		include 'pages/start.php';
 		echo '</div>';
 		$t = '"';
 		?>
-<?php 	if(strtolower($tab[0])=='streams'){$t = ' tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='streams'){$t = 'tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>Streams</h2>';
+		echo '<h2>'.$streams.'</h2>';
 		include 'pages/streams.php';
 		echo '</div>';
 		$t = '"';
 ?>
-<?php 	if(strtolower($tab[0])=='impressum'){$t = ' tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='impressum' or strtolower($tab[0])=='imprint'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>Impressum</h2>';
+		echo '<h2>'.$imprint.'</h2>';
 		include 'pages/impressum.php';
 		echo '</div>';
 		$t = '"';
 ?>
-<?php 	if(strtolower($tab[0])=='kontakt'){$t = ' tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='kontakt' or strtolower($tab[0])=='contact'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>Kontakt</h2>';
+		echo '<h2>'.$contact.'</h2>';
 		include 'pages/contact.php';
 		echo '</div>';
 		$t = '"';		
 ?>
-<?php 	if(strtolower($tab[0])=='hilfe'){$t = ' tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='hilfe' or strtolower($tab[0])=='help'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>Hilfe</h2>';
+		echo '<h2>'.$help.'</h2>';
 		include 'pages/help.php';
 		echo '</div>';
 		$t = '"';		
