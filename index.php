@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-	<link href="https://plus.google.com/110796119525259959832" rel="publisher" />
+		<?php 
+			$lang = 'english';
+			if($_GET['lang'] != null and $_GET['lang'] != ''){
+				$lang = $_GET['lang'];
+			}
+			include 'multigaming/api/language/'.$lang.'.php';
+		?>
+		<link href="https://plus.google.com/110796119525259959832" rel="publisher" />
 		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
-		<script src="multigaming/pace/pace.js"></script>
 		<script>
 			function showHitboxResult(str) {
 				if (str.length==0) { 
@@ -23,7 +29,7 @@
 						document.getElementById("hitboxSearch").style.border="1px solid #003300";
 					}
 				}
-				xmlhttp.open("GET","multigaming/search/hitboxSearch.php?q="+str,true);
+				xmlhttp.open("GET","multigaming/api/search/hitboxSearch.php?q="+str,true);
 				xmlhttp.send();
 			}
 			function showTwitchResult(str) {
@@ -44,7 +50,7 @@
 						document.getElementById("twitchSearch").style.border="1px solid #003300";
 					}
 				}
-				xmlhttp.open("GET","multigaming/search/twitchSearch.php?q="+str,true);
+				xmlhttp.open("GET","multigaming/api/search/twitchSearch.php?q="+str,true);
 				xmlhttp.send();
 			}
 			function allowDrop(ev) {
@@ -59,14 +65,14 @@
 				ev.target.appendChild(document.getElementById(data));
 			}
 		</script>
-		<link href="multigaming/pace/pace.css" rel="stylesheet" />
-		<script language="JavaScript" type="text/javascript" src="multigaming/tabber/tabber.js"></script>
-		<link rel="stylesheet" href="multigaming/tabber/example.css" TYPE="text/css" MEDIA="screen">
+		<link href="multigaming/api/pace/pace.css" rel="stylesheet" />
+		<script language="JavaScript" type="text/javascript" src="multigaming/api/tabber/tabber.js"></script>
+		<link rel="stylesheet" href="multigaming/api/tabber/example.css" TYPE="text/css" MEDIA="screen">
 		<script type="text/javascript">
 			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 		</script>		
 		<?php
-			$v = "v.0.5.2";
+			$v = "v.0.6.0";
 			include 'multigaming/api/hitboxApi.php';
 			include 'multigaming/api/twitchApi.php';
 			include 'multigaming/api/streamApi.php';

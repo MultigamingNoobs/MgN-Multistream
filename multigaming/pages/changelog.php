@@ -1,20 +1,11 @@
 <link href="../css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
-	<li><b>Probleme? Teilt sie mir mit!</b>
+	<li><b>BETA v.0.6.0</b>
 		<ul>
-		<li>Schreib mir eine EMail mit deinen Problemen oder Ideen!</li>
-		<li>Benutze dazu einfach den Link im Men&uuml;.</li>
+		<li><i>added:</i> ?lang= language selection</li>
+		<li><i>removed:</i> planned functions - please follow on twitter @supportmgn</li>
 		</ul>
 	</li>
-	<br>
-	<li><b>Geplante Funktionen</b>
-		<ul>
-		<li>Multilanguage support</li>
-		</ul>
-	</li>
-	<br>
-	<hr>
-	<br>
 	<li><b>BETA v.0.5.2</b>
 		<ul>
 		<li><i>fixed:</i> hitbox search now searches for more than 100 streams</li>
@@ -26,13 +17,13 @@
 		<li><i>fixed:</i> some spelling things</li>
 		</ul>
 	</li>
-	<li><b>v.0.5.0</b>
+	<li><b>BETA v.0.5.0</b>
 		<ul>
 		<li><i>added:</i> Search bar for online Hitbox Streams</li>
-		<li><i>added:</i> Textfield for Hitbox streams</li>
+		<li><i>added:</i> textfield for Hitbox streams</li>
 		<li><i>added:</i> Drag and drop a item from the Hitbox Search to the Hitbox textfield</li>
 		<li><i>added:</i> Search bar for online Twitch Streams</li>
-		<li><i>added:</i> Textfield for Twitch streams</li>
+		<li><i>added:</i> textfield for Twitch streams</li>
 		<li><i>added:</i> Drag and drop a item from the Twitch Search to the Twitch textfield</li>
 		<li><i>added:</i> startpage selection</li>
 		<li><i>added:</i> search results are arranged alphabetically</li>
@@ -81,9 +72,9 @@
 	</li>
 	<li><b>BETA v.0.2.16</b>
 		<ul>
-		<li><i>changed:</i> Startseite umbenannt zu Streams</li>
-		<li><i>changed:</i> Neues Impressum</li>
-		<li><i>fixxed:</i> Umlaut-Fix</li>
+		<li><i>changed:</i> home page renamed to streams</li>
+		<li><i>changed:</i> new imprint</li>
+		<li><i>fixxed:</i> mutated vowel fix</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.15</b>
@@ -93,72 +84,69 @@
 	</li>
 	<li><b>BETA v.0.2.14</b>
 		<ul>
-		<li><i>fixed:</i> Kleine &Auml;nderungen, sodass online Streams aktualisiert werden, wenn man die Streamseite neu l&auml;dt.</li>
+		<li><i>fixed:</i> some small problems fixed</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.13B</b>
 		<ul>
-		<li><i>changed:</i> PNG refresh ist nun im Men&uuml;</li>
-		<li><i>fixed:</i> ein paar kleine Dinge im Hintergrund</li>
+		<li><i>changed:</i> moved PNG refresh from side to head</li>
+		<li><i>fixed:</i> some small background algorithms</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.13</b>
 		<ul>
-		<li><i>fixed:</i> Seite ist nun nicht mehr gr&ouml;&szlig;er als der Sichtbare Fenster bereich. D.h. ab einer Gewissen Anzahl an Streams, k&ouml;nnen diese separat gescrollt werden.</li>
-		<li><i>fixed:</i> Streamgr&ouml;&szlig;e bei 8+ gleichtig</li>
-		<li><i>fixed:</i> Anzeige bei keiner online</li>
+		<li><i>fixed:</i> page height</li>
+		<li><i>fixed:</i> text when no one is online</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.12</b>
 		<ul>
-		<li><i>added:</i> Tooltips bei Men&uuml;links</li>
-		<li><i>fixed:</i> Streamh&ouml;he bei hitboxchat</li>
+		<li><i>added:</i> tool tips</li>
+		<li><i>fixed:</i> stream height</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.11B</b>
 		<ul>
-		<li><i>fixxed:</i> PNG refresh Link-Fehler behoben.<li>
+		<li><i>fixxed:</i> PNG refresh now with functionality<li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.11</b>
 		<ul>
-		<li><i>changed:</i> Struktur der Daten wurde ver&auml;ndert</li>
-		<li><i>changed:</i> Header als IFrame, separates neuladen m&ouml;glich</li>
-		<li><i>changed:</i> Content als IFrame, schnelleres Laden der Seiten, da PNG laden entf&uuml;llt</li>
-		<li><i>changed:</i> ?beta wird zu ?debug, warum auch immer es ?beta war</li>
-		<li><i>added:</i> debug=hitboxchat wurde hinzugef&uuml;gt. Die Anzeige wird sp&auml;ter anders gestaltet</li>
+		<li><i>changed:</i> file structure</li>
+		<li><i>changed:</i> contend is shown in iframes -> faster and separate page loading</li>
+		<li><i>changed:</i> ?beta now called ?debug</li>
+		<li><i>added:</i> debug=hitboxchat</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.10</b>
 		<ul>
-		<li><i>added:</i> Workaround - bei mehr als 2 Streams wird die h&ouml;he nicht auf maximal 100% der Seite angepasst</li>
-		<li><i>changed:</i> bis zu 8 Streams ohne Scrollen, vorher waren es bis zu 10</li>
-		<li><i>added:</i> Link zum EMail schreiben der im Footer war nun in das Kopfmen&uuml; &uuml;bernommen</li>
-		<li><i>added:</i> Geplante Funktionen</li>
+		<li><i>added:</i> page height workaround</li>
+		<li><i>changed:</i> 8 instead of 10 streams without scolling</li>
+		<li><i>added:</i> planned functions</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.9</b>
 		<ul>
-		<li><i>changed:</i> kein Fu&szlig;bereich mehr, daf&uuml;r ein Men&uuml; oberhalb</li>
-		<li><i>changed:</i> ein Stream wir gro&szlig; angezeit, bei mehr werden 2 nebeneinander angezeigt</li>
-		<li><i>changed:</i> es sollten bis zu 10 Streams ohne scollen angezeigt werden k&ouml;nnen (in den besagten 2er-Reihen)</li>
-		<li><i>added:</i> Hilfe und Changelog</li>
+		<li><i>changed:</i> removed footer and added header</li>
+		<li><i>changed:</i>if there is only one stream -> full size, are there two streams -> halfsize</li>
+		<li><i>changed:</i> 10 streams in to rows</li>
+		<li><i>added:</i> help and changelog</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.8</b>
 		<ul>
-		<li><i>fixed:</i> Die R&auml;ume die im IRC eingetragen werden sind nun auch vorhanden</li>
-		<li><i>added:</i> Test Modus, Streams anzeigen, auch wenn diese offline sind (?beta=offline)</li>
+		<li><i>fixed:</i> irc chanels now joinable</li>
+		<li><i>added:</i> debug mode which shows offline streams(?beta=offline)</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.2.0</b>
 		<ul>
-		<li><i>changed:</i> Keine html-Tabellen mehr!</li>
+		<li><i>changed:</i> no html tables any more!</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.1.0</b>
 		<ul>
-		<li>Erste simple Testversion mit html-Tabelle</li>
+		<li>first try with html tables</li>
 		</ul>
 	</li>
 </ul>
