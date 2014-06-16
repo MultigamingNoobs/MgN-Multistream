@@ -4,7 +4,7 @@
 		<?php 
 			$lang = 'english';
 			if($_GET['lang'] != null and $_GET['lang'] != ''){
-				$lang = $_GET['lang'];
+				$lang = strtolower($_GET['lang']);
 			}
 			include 'multigaming/api/language/'.$lang.'.php';
 		?>

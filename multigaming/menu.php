@@ -7,7 +7,7 @@
 		echo '</div>';
 		$t = '"';
 		?>
-<?php 	if(strtolower($tab[0])=='streams'){$t = 'tabbertabdefault"';}
+<?php 	if(strtolower($tab[0])=='streams'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
 		echo '<h2>'.$streams.'</h2>';
 		include 'pages/streams.php';
