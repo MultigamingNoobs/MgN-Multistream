@@ -4,6 +4,7 @@
 		<ul>
 		<li><i>added:</i> ?lang= language selection</li>
 		<li><i>removed:</i> planned functions - please follow on twitter @supportmgn</li>
+		<li><i>changed:</i> path of some files</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.5.2</b>
