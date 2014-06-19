@@ -1,5 +1,18 @@
 <link href="../css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
+	<li><b>BETA v.0.6.1</b>
+		<ul>
+		<li><i>fixed:</i> no game duplicates in Hitbox statistics</li>
+		<li><i>fixed:</i> chat height fixed in ff and ie</li>
+		<li><i>fixed:</i> search not working</li>
+		<li><i>fixed:</i> load animation not working</li>
+		<li><i>added:</i> multi language support for Hitbox and Twitch statistics</li>
+		<li><i>added:</i> MGN tab</li>
+		<li><i>added:</i> separated mgn and other suggestions</li>
+		<li><i>changed:</i> some twitch search improvements - there are now no duplicates</li>
+		<li><i>changed:</i> search just works if there are 3 or more letters</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.0</b>
 		<ul>
 		<li><i>added:</i> ?lang= language selection</li>

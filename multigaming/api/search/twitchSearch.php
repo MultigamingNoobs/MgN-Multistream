@@ -1,6 +1,6 @@
 <?php
 	$q = $_GET['q'];
-	$p = '../';
+	$p = '../../';
 	include $p.'api/twitchApi.php';
 	$twitch = getTwitchStreamer();
 	if($q == ''){

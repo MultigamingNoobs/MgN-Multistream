@@ -8,64 +8,53 @@
 		return false;
 	}
 
-	function displayStreams($hitbox,$twitch,$debug){
+	function displayStreams($hitbox,$twitch){
 		if(count($hitbox)+count($twitch) == 1){
 			if(count($hitbox) == 1){
-				if(contains($debug,"chat")){
-					displayHitboxStream($hitbox[0],"left",100);
-					displayHitboxChat($hitbox[0],100,true);
-				}else{
-					displayHitboxStream($hitbox[0],"",100);
-				}
+				displayHitboxStream($hitbox[0],"",100);
 			}else{
-				if(contains($debug,"chat")){
-					displayTwitchStream($twitch[0],"left",100);
-					displayTwitchChat($twitch[0],100,true);
-				}else{
-					displayTwitchStream($twitch[0],"",100);
-				}
+				displayTwitchStream($twitch[0],"",100);
 			}
-		} else{
+		} elseif(count($hitbox)+count($twitch) == 2){
+			if(count($hitbox) == 2){
+				displayHitboxStream($hitbox[0],"",50);
+				displayHitboxStream($hitbox[1],"",50);
+			}elseif(count($twitch) == 2){
+				displayTwitchStream($twitch[0],"",50);
+				displayTwitchStream($twitch[1],"",50);
+			}else{
+				displayHitboxStream($hitbox[0],"",50);
+				displayTwitchStream($twitch[0],"",50);
+			}
+			
+		}else{
 			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
 			if($h < 25){
 				$h = 25;
 			}
-			$c = 2;
-			if(contains($debug,"chat")){
-				$c = 1;
-				$h = 50;
-			}
-			displayHitboxStreams($hitbox,$debug,$h,$c);
-			displayTwitchStreams($twitch,$debug,$h,$c,count($hitbox));
+			displayHitboxStreams($hitbox,$h);
+			displayTwitchStreams($twitch,$h,count($hitbox));
 		}
 	}
-	function displayHitboxStreams($hitbox,$debug,$h,$c){
-		for($i=0 ; $i < count($hitbox) ; $i = $i + $c){
+	function displayHitboxStreams($hitbox,$h){
+		for($i=0 ; $i < count($hitbox) ; $i = $i + 2){
 			displayHitboxStream($hitbox[$i],"left",$h);
-			if(contains($debug,"chat")){
-				displayHitboxChat($hitbox[$i],$h,true);
-			}else{
-				if($i+1 < count($hitbox)){
-					displayHitboxStream($hitbox[$i+1],"right",$h);
-				}
+			if($i+1 < count($hitbox)){
+				displayHitboxStream($hitbox[$i+1],"right",$h);
 			}
 		}
 	}
-	function displayTwitchStreams($twitch,$debug,$h,$c,$a){
-		if($a % 2 == 0 or contains($debug,"chat")){
+	function displayTwitchStreams($twitch,$h,$a){
+		if($a % 2 == 0){
 			$a=0;
 		}else{
 			$a=1;
-			displayTwitchStream($twitch[0],"right",$h);
+			if($twitch[0] <> ''){displayTwitchStream($twitch[0],"right",$h);}
 		}
-		for($i=0+$a ; $i < count($twitch) ; $i = $i + $c){
+		for($i=0+$a ; $i < count($twitch) ; $i = $i + 2){
 			displayTwitchStream($twitch[$i],"left",$h);
-			if(contains($debug,"chat")){
-				displayTwitchChat($twitch[$i],$h,true);
-			}else{
-				if($i+1 < count($twitch)){
-					displayTwitchStream($twitch[$i+1],"right",$h);
-				}
+			if($i+1 < count($twitch)){
+				displayTwitchStream($twitch[$i+1],"right",$h);
 			}
 		}
 	}
@@ -101,21 +90,11 @@
 		<img src="multigaming/pictures/mgnlogo.jpg" height="100%" width="100%"></img>
 	</div>
 </div>
-<script type="text/javascript"> 
-	document.write('<div id="content" style="height:' + (window.innerHeight-90) + 'px"> ');
-</script> 
+<div id="content">
 	<div id="streams">
-		<?php 
-			if(contains($debug,"offline")){
-				displayStreams($hitbox,$twitch,$debug);
-			}else{
-				displayStreams($hitbox_online,$twitch_online,$debug);
-			}
-		?>
+		<?php displayStreams($hitbox_online,$twitch_online);?>
 	</div>
-	<script type="text/javascript"> 
-		document.write('<div id="chat" style="height:' + (window.innerHeight-125) + 'px"> ');
-	</script> 
+	<div id="chat">
 		<div class="tabber">
 			<?php 
 				displaySidebarChat($twitch_online,$hitbox_online);

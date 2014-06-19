@@ -20,6 +20,7 @@
 			$start++;
 		}
 		sort($ret);
+		$ret = array_unique($ret);
 		return $ret;
 	}
 	function getTwitchFeatured(){
@@ -47,19 +48,19 @@
 			return $array['stream']['game'];
 		}
 	}
-	function getAllTwitchStreams($team_bol){
-		$teamMembersTwitch = array('marderlp','mindstalker85','tomme9020','pixelkuchentv');
+	function getAllTwitchStreams($team_bol,$sug_bol){
+		$teamMembersTwitch = array('marderlp','tomme9020');
+		$sugestionsTwitch = array('mindstalker85');
 		$input= split(',',(strtolower($_REQUEST['twitch'])));
-		if($team_bol){
-			$arr = $input;
+		if($team_bol != true){
+			$input = array_merge($teamMembersTwitch,$input);
 		}
-		elseif($input[0] != ''){
-			$arr = array_unique(array_merge($teamMembersTwitch,$input));
-		}else{
-			$arr = $teamMembersTwitch;
+		if($sug_bol != true){
+			$input = array_merge($sugestionsTwitch,$input);
 		}
-		sort($arr);
-		return $arr;
+		$input = array_unique($input);
+		sort($input);
+		return $input;
 	}
 	function getOnlineTwitchStreams(){
 		$arr = getAllTwitchStreams();
@@ -81,14 +82,8 @@
 		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
 		echo '</div>';
 	}
-	function displayTwitchChat($stream,$h,$d){
-		if($d){
-			echo '<div id="stream_right" style="height:'.$h.'%;">';
-		}else{
-			echo '<div id="streamChat" style="height:'.$h.'%;">';
-		}
+	function displayTwitchChat($stream,$h){
 		echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%"></iframe>';
-		echo '</div>';
 	}
 	
 	function displayTwitchStream($stream,$site,$h){

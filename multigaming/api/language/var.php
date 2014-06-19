@@ -1,4 +1,7 @@
 <?php
+	//index.php
+	$searchToLessLetters = "";
+
 	//menu.php
 	$home = "";
 	$streams = "";
@@ -15,6 +18,7 @@
 	$setLang = "";
 	$startPage = "";
 	$mgnStreams = "";
+	$suggestedStreams = "";
 	
 	$launch = "";
 	$reset = "";
@@ -23,14 +27,13 @@
 	$qickHelp = "";
 	$qickHelpText = "";
 	
-	/*
-	$hitboxStats = "";
+	$hitboxStatistics = "";
 	$hitboxStatsOnline = "";
 	$hitboxStatsPlaying = "";
 	
-	$twitchStats = "";
+	$twitchStatistics = "";
 	
-	*/
+	$topTen = "";
 	
 	//streams.php
 	$noOneOnline = "";

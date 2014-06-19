@@ -3,7 +3,7 @@
 		//default api endpoint
 		const apiUrl = 'http://api.hitbox.tv/';
 		private function apiCall($resource,$options=array()) {
-			$ctx = stream_context_create(array('http' => array('timeout' => 5)));
+			$ctx = stream_context_create(array('http' => array('timeout' => 3)));
 			$query = (!empty($options)) ? '?'.http_build_query($options) : '';
 			$apiUrl = self::apiUrl.$resource.$query;
 			$this->request=$apiUrl;
@@ -18,6 +18,9 @@
 			return false;
 		}
 	}
+	
+	
+	
 	function getHitboxStreamer(){
 		$Media = new Media;
 		$media = $Media->getMedia('live','list');
@@ -39,7 +42,7 @@
 		for($i=0;$i<count($media);$i++){
 			$arri = $media[$i];
 			$game = $arri['category_name'];
-			if($game != null){
+			if($game != null and strpos(strtolower($s),strtolower($game)) === false){
 				$g++;
 				if($ii <= 8){
 					$s = $s . $game . ', ';
@@ -70,21 +73,21 @@
 			return $media['category_name'];
 		}
 	}
-	function getAllHitboxStreams($team_bol){
-		$teamMembersHitbox = array('marderlp','daruuna','nephtis','mindstalker','pixelkuchen','kater','tomme9020','b3rz3rk3r','kurim');
+	function getAllHitboxStreams($team_bol,$sug_bol){
+		$teamMembersHitbox = array('marderlp','daruuna','nephtis','kater','tomme9020','b3rz3rk3r','kurim');
+		$suggestionsHitbox = array('mindstalker','damakash');
 		$input= split(',',(strtolower($_REQUEST['hitbox'])));
-		if($team_bol){
-			$arr = $input;
+		if($team_bol != true){
+			$input = array_merge($teamMembersHitbox,$input);
 		}
-		elseif($input[0] != ''){
-			$arr = array_unique(array_merge($teamMembersHitbox,$input));
-		}else{
-			$arr = $teamMembersHitbox;
+		if($sug_bol != true){
+			$input = array_merge($suggestionsHitbox,$input);
 		}
-		sort($arr);
-		return $arr;
+		$input = array_unique($input);
+		sort($input);
+		return $input;
 	}
-		function getOnlineHitboxStreams(){
+	function getOnlineHitboxStreams(){
 		$arr = getAllHitboxStreams();
 		$ret = array();
 		for($i=0;$i<count($arr);$i++){
@@ -104,14 +107,7 @@
 		echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
 		echo '</div>';
 	}
-	function displayHitboxChat($stream,$h,$d){
-		if($d){
-			echo '<div id="stream_right" style="height:'.$h.'%;">';
-		}else{
-			echo '<div id="streamChat" style="height:'.$h.'%;">';
-		}
+	function displayHitboxChat($stream,$h){
 		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';				
-		echo '</div>';
-		
 	}
 ?>

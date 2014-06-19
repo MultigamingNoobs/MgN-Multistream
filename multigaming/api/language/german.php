@@ -1,4 +1,7 @@
 <?php
+	//index.php
+	$searchToLessLetters = "Bitte geb 3 oder mehr Zeichen ein.";
+
 	//menu.php
 	$home = "Start";
 	$streams = "Streams";
@@ -15,6 +18,7 @@
 	$setLang = "Sprache:";
 	$startPage = "Startseite";
 	$mgnStreams = "Keine MGN Streams anzeigen";
+	$suggestedStreams = "Keine Empfohlenen streams zeigen";
 	
 	$launch = "Streams starten";
 	$reset = "Zur&uuml;cksetzen";
@@ -22,7 +26,14 @@
 	
 	$qickHelp = "Schnelle Hilfe";
 	$qickHelpText = "Geb durch Kommata getrennt die Streams an, die du sehen willst! Wenn du die Suche nutzt, dann die den gew&uuml;nschten Stream per Drag and Drop in die Liste. Zum Schluss drücke Submit und dann viel Spaß beim schauen der Streams,..";
-
+	
+	$hitboxStatistics = "Hitbox Statistiken";
+	$hitboxStatsOnline = "";
+	$hitboxStatsPlaying = "";
+	
+	$twitchStatistics = "Twitch Statistiken";
+	
+	$topTen = "";
 	//streams.php
 	$noOneOnline = "Kein ausgewählter Stream online";
 ?>

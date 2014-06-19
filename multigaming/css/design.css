@@ -26,6 +26,7 @@ fieldset{
 }
 #content{
 	width:				100%;
+	height:				100%;
 }
 #headMarquee{
 	font-size:			2.2em;
@@ -45,7 +46,7 @@ fieldset{
 }
 #streams{
 	float:				left;
-	height: 			100%;
+	height: 			calc(100vh - 93px);
 	width:				70%;
 
 }
@@ -58,7 +59,7 @@ fieldset{
 	width:				50%;
 }
 #chat{
-	height: 			100%;
+	height: 			calc(100vh - 93px);
 	float:				right;
 	width:				30%;
 }
