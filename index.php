@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<?php 
+		<?php
+			$v = "v.0.6.1";	
 			$lang = 'english';
 			if($_GET['lang'] != null and $_GET['lang'] != ''){
 				$lang = strtolower($_GET['lang']);
@@ -10,6 +11,7 @@
 		?>
 		<link href="https://plus.google.com/110796119525259959832" rel="publisher" />
 		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
+		<script src="multigaming/api/pace/pace.js"></script>
 		<script>
 			function showHitboxResult(str) {
 				if (str.length==0) { 
@@ -17,20 +19,26 @@
 					document.getElementById("hitboxSearch").style.border="0px";
 					return;
 				}
-				if (window.XMLHttpRequest) {
-					// code for IE7+, Firefox, Chrome, Opera, Safari
-					xmlhttp=new XMLHttpRequest();
-				} else {  // code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				xmlhttp.onreadystatechange=function() {
-					if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-						document.getElementById("hitboxSearch").innerHTML=xmlhttp.responseText;
-						document.getElementById("hitboxSearch").style.border="1px solid #003300";
+				if(str.length < 3){
+					document.getElementById("hitboxSearch").innerHTML="<p>Please enter 3 or more letters</p>";
+					document.getElementById("hitboxSearch").style.border="1px solid #003300";
+					return;
+				}else {
+					if (window.XMLHttpRequest) {
+						// code for IE7+, Firefox, Chrome, Opera, Safari
+						xmlhttp=new XMLHttpRequest();
+					} else {  // code for IE6, IE5
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 					}
+					xmlhttp.onreadystatechange=function() {
+						if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+							document.getElementById("hitboxSearch").innerHTML=xmlhttp.responseText;
+							document.getElementById("hitboxSearch").style.border="1px solid #003300";
+						}
+					}
+					xmlhttp.open("GET","multigaming/api/search/hitboxSearch.php?q="+str,true);
+					xmlhttp.send();
 				}
-				xmlhttp.open("GET","multigaming/api/search/hitboxSearch.php?q="+str,true);
-				xmlhttp.send();
 			}
 			function showTwitchResult(str) {
 				if (str.length==0) { 
@@ -38,20 +46,26 @@
 					document.getElementById("twitchSearch").style.border="0px";
 					return;
 				}
-				if (window.XMLHttpRequest) {
-					// code for IE7+, Firefox, Chrome, Opera, Safari
-					xmlhttp=new XMLHttpRequest();
-				} else {  // code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				xmlhttp.onreadystatechange=function() {
-					if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-						document.getElementById("twitchSearch").innerHTML=xmlhttp.responseText;
-						document.getElementById("twitchSearch").style.border="1px solid #003300";
+				if(str.length < 3){
+					document.getElementById("twitchSearch").innerHTML="<p>Please enter 3 or more letters</p>";
+					document.getElementById("twitchSearch").style.border="1px solid #003300";
+					return;
+				}else {
+					if (window.XMLHttpRequest) {
+						// code for IE7+, Firefox, Chrome, Opera, Safari
+						xmlhttp=new XMLHttpRequest();
+					} else {  // code for IE6, IE5
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 					}
+					xmlhttp.onreadystatechange=function() {
+						if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+							document.getElementById("twitchSearch").innerHTML=xmlhttp.responseText;
+							document.getElementById("twitchSearch").style.border="1px solid #003300";
+						}
+					}
+					xmlhttp.open("GET","multigaming/api/search/twitchSearch.php?q="+str,true);
+					xmlhttp.send();
 				}
-				xmlhttp.open("GET","multigaming/api/search/twitchSearch.php?q="+str,true);
-				xmlhttp.send();
 			}
 			function allowDrop(ev) {
 				ev.preventDefault();
@@ -72,7 +86,6 @@
 			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 		</script>		
 		<?php
-			$v = "v.0.6.0";
 			include 'multigaming/api/hitboxApi.php';
 			include 'multigaming/api/twitchApi.php';
 			include 'multigaming/api/streamApi.php';
@@ -82,8 +95,13 @@
 			if($team <> nil and $team == "on"){
 				$team_bol = false;
 			}
-			$hitbox = getAllHitboxStreams($team_bol);
-			$twitch = getAllTwitchStreams($team_bol);
+			$suggestions = $_GET['suggestions'];
+			$suggestions_bol = true;
+			if($suggestions <> nil and $suggestions == "on"){
+				$suggestions_bol = false;
+			}
+			$hitbox = getAllHitboxStreams($team_bol,$suggestions_bol);
+			$twitch = getAllTwitchStreams($team_bol,$suggestions_bol);
 			$debug	= array_unique(split(',',$_GET['debug']));
 			$tab	= array_unique(split(',',$_GET['tab']));
 			$hitbox_online = getOnlineHitboxStreams($hitbox);

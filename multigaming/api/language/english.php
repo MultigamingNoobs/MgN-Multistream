@@ -1,4 +1,7 @@
 <?php
+	//index.php
+	$searchToLessLetters = "Please enter 3 or more characters.";
+
 	//menu.php
 	$home = "Home";
 	$streams = "Streams";
@@ -15,14 +18,22 @@
 	$setLang = "Language:";
 	$startPage = "home page";
 	$mgnStreams = "Hide MGN streams";
+	$suggestedStreams = "Hide other suggestions";
 	
 	$launch = "Launch streams";
 	$reset = "Reset";
 	$submit ="Submit";
 	
-	$qickHelp = "quick help";
+	$qickHelp = "Quick-Help";
 	$qickHelpText = "Input your streams separated by comma. You can use the search line to find online streams. Drag and drop them in the field. Last press submit to watch the streams.";
+		
+	$hitboxStatistics = "Hitbox Statistics";
+	$hitboxStatsOnline = "";
+	$hitboxStatsPlaying = "";
 	
+	$twitchStatistics = "Twitch Statistics";
+	
+	$topTen = "";
 	
 	//streams.php
 	$noOneOnline = "No selected stream online";
