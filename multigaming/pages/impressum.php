@@ -1,4 +1,3 @@
-<link href="multigaming/css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
 	<li><b>Impressum</b>
 		<ul>
@@ -12,7 +11,7 @@
 	<li><b>Kontakt</b>
 		<ul>
 		<li>Telefon: 015738765236</li>
-		<li>E-Mail: Marder001@gmail.com</li>
+		<li>E-Mail: <a href="mailto:marder001+multigaming@gmail.com">marder001+multigaming@gmail.com</a></li>
 		</ul>
 	</li>
 	<br>
@@ -89,3 +88,4 @@
 		</ul>
 	</li>
 </ul>
+<br><br>

@@ -83,23 +83,27 @@
 		echo '</div>';
 	}
 	function displayTwitchChat($stream,$h){
-		echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%"></iframe>';
+		if($stream <> '' and $stream <> null){	
+			echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%"></iframe>';
+		}
 	}
 	
 	function displayTwitchStream($stream,$site,$h){
-		echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
-		echo '<object type="application/x-shockwave-flash" 
-        height="100%" width="100%" 
-        id="live_embed_player_flash" 
-        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel='.$stream.'" 
-        bgcolor="#000000">
-		<param  name="allowFullScreen" value="true" />
-		<param  name="allowScriptAccess" value="always" />
-		<param  name="allowNetworking"  value="false" />
-		<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
-		</object>';
-		echo '</div>';
+		if($stream <> '' and $stream <> null){
+			echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
+			echo '<object type="application/x-shockwave-flash" 
+			height="100%" width="100%" 
+			id="live_embed_player_flash" 
+			data="http://www.twitch.tv/widgets/live_embed_player.swf?channel='.$stream.'" 
+			bgcolor="#000000">
+			<param  name="allowFullScreen" value="true" />
+			<param  name="allowScriptAccess" value="always" />
+			<param  name="allowNetworking"  value="false" />
+			<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+			<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
+			</object>';
+			echo '</div>';
+		}
 	}
 	
 	

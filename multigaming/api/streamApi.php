@@ -11,17 +11,21 @@
 	}
 
 	function displaySidebarChat($twitch,$hitbox){
-		for($i=0;$i<count($twitch);$i++){
-			echo '<div class="tabbertab">';
-			echo '<h2>'.$twitch[$i].'</h2>';
-				displayTwitchChat($twitch[$i],'100');
-			echo '</div>';
+		if($twitch[0] <> ''){
+			for($i=0;$i<count($twitch);$i++){
+				echo '<div class="tabbertab">';
+				echo '<h2>'.$twitch[$i].'</h2>';
+					displayTwitchChat($twitch[$i],'100');
+				echo '</div>';
+			}
 		}
-		for($i=0;$i<count($hitbox);$i++){
-			echo '<div class="tabbertab">';
-			echo '<h2>'.$hitbox[$i].'</h2>';
-				displayHitboxChat($hitbox[$i],'100');
-			echo '</div>';
+		if($hitbox[0] <> ''){
+			for($i=0;$i<count($hitbox);$i++){
+				echo '<div class="tabbertab">';
+				echo '<h2>'.$hitbox[$i].'</h2>';
+					displayHitboxChat($hitbox[$i],'100');
+				echo '</div>';
+			}
 		}
 	}
 ?>

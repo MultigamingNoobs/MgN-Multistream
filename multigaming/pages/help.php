@@ -1,4 +1,3 @@
-<link href="multigaming/css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
 	<li><b>Die Hilfe - Inhalt</b>
 		<ul>
@@ -16,7 +15,7 @@
 		<ul>
 			<li>Wir sind eine kleine Gruppe von Streamern, die miteinander zocken oder auch bei den anderen zuschauen.</li>
 			<li>Um nun euch unsere Gruppe n&auml;her zu bringen gibt es hier jeden Stream zu sehen, ohne gro&szlig; hin und her zu tabben. Wer online ist wird angezeigt, so einfach ist das! (Sofern bei der Startseite nicht das H&auml;kchen bei <i>Keine MGN Streams anzeigen</i> gemacht wurde)</li>
-			<li>Nat&uuml;rlich ist es auch m&ouml;glich weitere Streamer &uuml;ber diese Seite zu gucken, die nicht in unserer Gruppe sind. Dazu einfach auf der Startseite die gewünschtn Streamer eintragen und los geht es! Die Eingabe wird über die Adresszeile ausgewertet, siehe dazu den Abschnitt <b>Adresszeilenkomandos</b>.</li>
+			<li>Nat&uuml;rlich ist es auch m&ouml;glich weitere Streamer &uuml;ber diese Seite zu gucken, die nicht in unserer Gruppe sind. Dazu einfach auf der Startseite die gew&uuml;nschtn Streamer eintragen und los geht es! Die Eingabe wird &uuml;ber die Adresszeile ausgewertet, siehe dazu den Abschnitt <b>Adresszeilenkomandos</b>.</li>
 		</ul>
 	</li>
 	<br>
@@ -40,7 +39,7 @@
 	<br>
 	<li><b>Adresszeilenkomandos</b>
 		<ul>
-			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zurück greift. Darauf folgen ein paar Beispiele.></li>
+			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zur&uuml;ck greift. Darauf folgen ein paar Beispiele.></li>
 			<li><u>debug</u>
 				<ul>
 					<li>chat - zeigt den Chat zum Stream an</li>
@@ -56,7 +55,7 @@
 			</li>
 			<li><u>tab</u>
 				<ul>
-					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gewählt:</li>
+					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gew&uuml;hlt:</li>
 					<li>tab=start - Startseite</li>
 					<li>tab=streams - Streams</li>
 					<li>tab=impressum - Impressum</li>
@@ -81,3 +80,4 @@
 		</ul>
 	</li>
 </ul>
+<br><br>
