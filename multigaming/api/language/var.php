@@ -37,4 +37,9 @@
 	
 	//streams.php
 	$noOneOnline = "";
+	
+	$btnReload = "";
+	$btnPopout = "";
+	$btnHideShow = "";
+	$btnShowChat = "";
 ?>

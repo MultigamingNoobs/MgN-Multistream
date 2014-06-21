@@ -1,5 +1,13 @@
-<link href="../css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
+	<li><b>BETA v.0.6.2</b>
+		<ul>
+		<li><i>fixed:</i> MGN to MgN</li>
+		<li><i>added:</i> translated imprint from German to English</li>
+		<li><i>added:</i> stream reload, chat popout, chat hide/show buttons</li>
+		<li><i>changed:</i> functions and calls to popout chat and reload streams</li>
+		<li><i>changed:</i> renamed Multigaming to MgN-Multistream</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.1</b>
 		<ul>
 		<li><i>fixed:</i> no game duplicates in Hitbox statistics</li>
@@ -7,8 +15,8 @@
 		<li><i>fixed:</i> search not working</li>
 		<li><i>fixed:</i> load animation not working</li>
 		<li><i>added:</i> multi language support for Hitbox and Twitch statistics</li>
-		<li><i>added:</i> MGN tab</li>
-		<li><i>added:</i> separated mgn and other suggestions</li>
+		<li><i>added:</i> MgN tab</li>
+		<li><i>added:</i> separated MgN and other suggestions</li>
 		<li><i>changed:</i> some twitch search improvements - there are now no duplicates</li>
 		<li><i>changed:</i> search just works if there are 3 or more letters</li>
 		</ul>
@@ -42,8 +50,8 @@
 		<li><i>added:</i> startpage selection</li>
 		<li><i>added:</i> search results are arranged alphabetically</li>
 		<li><i>added:</i> ?tab= loads a specific tab</li>
-		<li><i>added:</i> Show MGN Streams option</li>
-		<li><i>added:</i> ?team=on disables the MGN Streams</li>
+		<li><i>added:</i> Show MgN Streams option</li>
+		<li><i>added:</i> ?team=on disables the MgN Streams</li>
 		<li><i>added:</i> submit and reset buttons</li>
 		<li><i>added:</i> Hitbox statistics</li>
 		<li><i>added:</i> Twitch statistics</li>
@@ -61,7 +69,7 @@
 		<li><i>added:</i> Twitter in chat sidebar</li>
 		<li><i>added:</i> header marquee shows name of streamer and game title</li>
 		<li><i>changed:</i> smaler Header</li>
-		<li><i>changed:</i> other MGN picture</li>
+		<li><i>changed:</i> other MgN picture</li>
 		<li><i>changed:</i> menu now is also tabber menu</li>
 		<li><i>removed:</i> png refresh link</li>
 		<li><i>removed:</i> old and now unused code</li>
@@ -71,7 +79,7 @@
 		<ul>
 		<li><i>added:</i> Tabbed-Chat-sidebar</li>
 		<li><i>changed:</i> new Header shows online Streams</li>
-		<li><i>added:</i> MGN picture</li>
+		<li><i>added:</i> MgN picture</li>
 		<li><i>removed:</i> IRC</li>
 		</ul>
 	</li>

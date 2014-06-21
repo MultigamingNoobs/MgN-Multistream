@@ -17,7 +17,7 @@
 	$settings = "Settings";
 	$setLang = "Language:";
 	$startPage = "home page";
-	$mgnStreams = "Hide MGN streams";
+	$mgnStreams = "Hide MgN streams";
 	$suggestedStreams = "Hide other suggestions";
 	
 	$launch = "Launch streams";
@@ -38,4 +38,8 @@
 	//streams.php
 	$noOneOnline = "No selected stream online";
 
+	$btnReload = "reload Streams";
+	$btnPopout = "popout Chat";
+	$btnHideChat = "hide Chat";
+	$btnShowChat = "show Chat";
 ?>

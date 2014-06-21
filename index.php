@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
+		<meta charset="utf-8" />
 		<?php
-			$v = "v.0.6.1";	
+			$v = "v.0.6.2";	
 			$lang = 'english';
 			if($_GET['lang'] != null and $_GET['lang'] != ''){
 				$lang = strtolower($_GET['lang']);
 			}
 			include 'multigaming/api/language/'.$lang.'.php';
 		?>
+		<script src="multigaming/api/jquery.js"></script>
 		<link href="https://plus.google.com/110796119525259959832" rel="publisher" />
-		<link href="multigaming/css/design.css" type="text/css" rel="stylesheet">
+		<link href="multigaming/css/menu.css" type="text/css" rel="stylesheet">
+		<link href="multigaming/css/start.css" type="text/css" rel="stylesheet">
+		<link href="multigaming/css/sites.css" type="text/css" rel="stylesheet">
+		<link href="multigaming/css/stream.css" type="text/css" rel="stylesheet">
 		<script src="multigaming/api/pace/pace.js"></script>
 		<script>
 			function showHitboxResult(str) {
@@ -108,7 +113,7 @@
 			$twitch_online = getOnlineTwitchStreams($twitch);
 
 		?>
-		<title>MultiGaming</title>
+		<title>MgN-Multistream</title>
 	</head>
 	<body>
 		<div class="tabber">

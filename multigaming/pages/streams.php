@@ -1,104 +1,31 @@
-<?php
-	function contains($arr,$str){
-		for($i=0;$i<count($arr);$i++){
-			if($arr[$i] == $str){
-				return true;
-			}
-		}
-		return false;
-	}
-
-	function displayStreams($hitbox,$twitch){
-		if(count($hitbox)+count($twitch) == 1){
-			if(count($hitbox) == 1){
-				displayHitboxStream($hitbox[0],"",100);
-			}else{
-				displayTwitchStream($twitch[0],"",100);
-			}
-		} elseif(count($hitbox)+count($twitch) == 2){
-			if(count($hitbox) == 2){
-				displayHitboxStream($hitbox[0],"",50);
-				displayHitboxStream($hitbox[1],"",50);
-			}elseif(count($twitch) == 2){
-				displayTwitchStream($twitch[0],"",50);
-				displayTwitchStream($twitch[1],"",50);
-			}else{
-				displayHitboxStream($hitbox[0],"",50);
-				displayTwitchStream($twitch[0],"",50);
-			}
-			
-		}else{
-			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
-			if($h < 25){
-				$h = 25;
-			}
-			displayHitboxStreams($hitbox,$h);
-			displayTwitchStreams($twitch,$h,count($hitbox));
-		}
-	}
-	function displayHitboxStreams($hitbox,$h){
-		for($i=0 ; $i < count($hitbox) ; $i = $i + 2){
-			displayHitboxStream($hitbox[$i],"left",$h);
-			if($i+1 < count($hitbox)){
-				displayHitboxStream($hitbox[$i+1],"right",$h);
-			}
-		}
-	}
-	function displayTwitchStreams($twitch,$h,$a){
-		if($a % 2 == 0){
-			$a=0;
-		}else{
-			$a=1;
-			if($twitch[0] <> ''){displayTwitchStream($twitch[0],"right",$h);}
-		}
-		for($i=0+$a ; $i < count($twitch) ; $i = $i + 2){
-			displayTwitchStream($twitch[$i],"left",$h);
-			if($i+1 < count($twitch)){
-				displayTwitchStream($twitch[$i+1],"right",$h);
-			}
-		}
-	}
-?>
-
-
-<div id="head">
-	<div id="headMarquee">
-		<?php
-			if(count($hitbox_online) == 0 and count($twitch_online) == 0){
-				echo '<marquee behavior="alternate">'.$noOneOnline.' :\ </marquee>';
-			}else{
-				$s = '';
-				if(count($twitch_online) > 0){
-					$s = $s.' @Twitch: ' . $twitch_online[0]." - " . getTwitchGame($twitch_online[0]);
-					for($i=1 ; $i < count($twitch_online) ; $i++){
-						$s = $s . ', ' . $twitch_online[$i] . " - " . getTwitchGame($twitch_online[$i]);
-					}
-				}
-				if(count($hitbox_online) > 0){
-					$s = $s.' @Hitbox: ' . $hitbox_online[0]." - " . getHitboxGame($hitbox_online[0]);
-					for($i=1 ; $i < count($hitbox_online) ; $i++){
-						$s = $s . ', ' . $hitbox_online[$i] . " - " . getHitboxGame($hitbox_online[$i]);
-					}
-				}
-				echo '<marquee scrollamount="5" scrolldelay="5">';
-				echo 'Online:'.$s;
-				echo '</marquee>';
-			}
-		?>
+<div id="buttons">
+	<button id="buttonLoad" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnReload;?></button>
+	<button id="chatPopout" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnPopout;?></button>
+	<button id="hideShowChat" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnHideChat;?></button>
 	</div>
-	<div id="upperright">
-		<img src="multigaming/pictures/mgnlogo.jpg" height="100%" width="100%"></img>
-	</div>
-</div>
-<div id="content">
-	<div id="streams">
-		<?php displayStreams($hitbox_online,$twitch_online);?>
-	</div>
-	<div id="chat">
-		<div class="tabber">
-			<?php 
-				displaySidebarChat($twitch_online,$hitbox_online);
-			?>
-		</div>
-	</div>
-</div>
+<div id="streams"></div>
+<div id="chat"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
+<script type="text/javascript">
+<?php $string = 'lang='.$lang.'&hitbox='.makeList($hitbox_online).'&twitch='.makeList($twitch_online);?>
+	$(document).ready(function(){
+		$("#buttonLoad").click(function(){
+			$('#streams').load('multigaming/pages/showStreams.php?<?php echo $string;?>'); // Der gesamte Inhalt von #container wird durch den Inhalt der Datei "ajax/content.html" ersetzt.
+		});
+	});
+	$(document).ready(function(){
+		$("#chatPopout").click(function(){
+			window.open(href='multigaming/pages/showChat.php?<?php echo $string;?>', "_blank", "toolbar=no, menubar=no")
+			$("#hideShowChat").text('<?php echo $btnShowChat;?>');
+			//$('#chat').width(1);
+		});
+	});
+	$(document).ready(function(){
+		$("#hideShowChat").click(function(){
+			//$("#hideShowChat").text('<?php echo $btnShowChat;?>');
+			//alert($(this).val());
+		});
+	});
+	$('#streams').load('multigaming/pages/showStreams.php?<?php echo $string;?>');
+	$('#chat').load('multigaming/pages/showChat.php?<?php echo $string;?>');
+</script>

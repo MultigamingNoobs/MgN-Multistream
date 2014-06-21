@@ -1,4 +1,3 @@
-<link href="multigaming/css/sites.css" type="text/css" rel="stylesheet">
 <ul id="sites">
 	<li><b>Kontakt</b>
 		<ul>
