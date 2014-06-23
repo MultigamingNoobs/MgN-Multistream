@@ -9,7 +9,7 @@ p{text-align:justify;}
 #left{position:absolute;left:1%;top:65px;float:left;width:34%;}
 #center{position:absolute;top:65px;left:36%;width:34%;}
 #right{position:absolute;top:65px;right:1%;float:right;width:28%;}
-ul.sites{color:#000;width:99%;background-color:#E3E3E3;margin:0;}
+ul.sites{color:#000;background-color:#E3E3E3;margin:0;}
 * html ul.sites{font:bold;width:1em;}
 ul.sites li{font:bold;list-style:none;margin:.4em;padding:0;}
 ul.sites li ul{margin:0 0 0 1em;padding:0;}
