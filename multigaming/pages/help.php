@@ -1,4 +1,4 @@
-<ul id="sites">
+<ul class="sites">
 	<li><b>Die Hilfe - Inhalt</b>
 		<ul>
 			<li>Die Idee</li>
@@ -8,9 +8,11 @@
 			<li>Adresszeilenkomandos</li>
 		</ul>
 	</li>
-	<br>
-	<hr>
-	<br>
+	<li></li>
+</ul>
+<br>
+<ul class="sites">
+	<li></li>
 	<li><b>Die Idee</b>
 		<ul>
 			<li>Wir sind eine kleine Gruppe von Streamern, die miteinander zocken oder auch bei den anderen zuschauen.</li>
@@ -18,25 +20,25 @@
 			<li>Nat&uuml;rlich ist es auch m&ouml;glich weitere Streamer &uuml;ber diese Seite zu gucken, die nicht in unserer Gruppe sind. Dazu einfach auf der Startseite die gew&uuml;nschtn Streamer eintragen und los geht es! Die Eingabe wird &uuml;ber die Adresszeile ausgewertet, siehe dazu den Abschnitt <b>Adresszeilenkomandos</b>.</li>
 		</ul>
 	</li>
-	<br>
+	<li></li>
 	<li><b>Das Team</b>
 		<ul>
 			<li>Die Seite wird derzeit von MarderLP betreut und erstellt.</li>
 		</ul>
 	</li>
-	<br>
+	<li></li>
 	<li><b>Der Chat</b>
 		<ul>
 			<li>Zu jedem Stream der online ist, wird automatisch in der rechten Navigation der dazugeh&ouml;rige Chat in einem Tabbed-Men&uuml; angezeigt.</li>
 		</ul>
 	</li>
-	<br>
+	<li></li>
 	<li><b>Streams</b>
 		<ul>
 			<li>Alle Streams die werden angezeigt, wenn sie online sind. Bei Hitbox wird ein HTML5 Player eingebunden und bei Twitch (auf Grund von Problemen) der Flash-Player.</li>
 		</ul>
 	</li>
-	<br>
+	<li></li>
 	<li><b>Adresszeilenkomandos</b>
 		<ul>
 			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zur&uuml;ck greift. Darauf folgen ein paar Beispiele.></li>
@@ -72,12 +74,11 @@
 			<li><u>Beispiele</u>
 				<ul>
 					<li>?hitbox=user,user1,user2 - Zeigt zus&auml;tzlich die Streams der Streamer user, user1 und user2 von Hitbox an.</li>
-					<li>?twitch=user&debug=offline - zeigt alle Streams an, sowie den des Streamer user auf Twitch.</li>
-					<li>?hitbox=user&debug=chat - zeigt Streams an, sofern diese online sind. Au&szlig;erdem wird der Hitbox/Twitch Chat des Streams angezeigt.</li>
-					<li>?hitbox=user,user2&twitch=user3,user4&debug=hitboxchat,offline - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein und verbunden sind.</li>
+					<li>?twitch=user&amp;debug=offline - zeigt alle Streams an, sowie den des Streamer user auf Twitch.</li>
+					<li>?hitbox=user&amp;debug=chat - zeigt Streams an, sofern diese online sind. Au&szlig;erdem wird der Hitbox/Twitch Chat des Streams angezeigt.</li>
+					<li>?hitbox=user,user2&amp;twitch=user3,user4&amp;debug=hitboxchat,offline - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein und verbunden sind.</li>
 				</ul>
 			</li>
 		</ul>
 	</li>
 </ul>
-<br><br>

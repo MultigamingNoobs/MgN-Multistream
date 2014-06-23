@@ -25,7 +25,7 @@
 	$submit ="Absenden";
 	
 	$qickHelp = "Schnelle Hilfe";
-	$qickHelpText = "Geb durch Kommata getrennt die Streams an, die du sehen willst! Wenn du die Suche nutzt, dann die den gew&uuml;nschten Stream per Drag and Drop in die Liste. Zum Schluss drücke Submit und dann viel Spaß beim schauen der Streams,..";
+	$qickHelpText = "Geb durch Kommata getrennt die Streams an, die du sehen willst! Wenn du die Suche nutzt, dann die den gew&uuml;nschten Stream per Drag and Drop in die Liste. Zum Schluss dr&uuml;cke Submit und dann viel Spa&szlig; beim schauen der Streams,..";
 	
 	$hitboxStatistics = "Hitbox Statistiken";
 	$hitboxStatsOnline = "";
@@ -35,10 +35,10 @@
 	
 	$topTen = "";
 	//streams.php
-	$noOneOnline = "Kein ausgewählter Stream online";
+	$noOneOnline = "Kein ausgew&auml;hlter Stream online";
 	
 	$btnReload = "Streams neu laden";
 	$btnPopout = "Popout Chat";
-	$btnHideShow = "verstecke Chat";
+	$btnHideChat = "verstecke Chat";
 	$btnShowChat = "zeige Chat";
 ?>
