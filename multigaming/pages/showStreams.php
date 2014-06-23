@@ -3,6 +3,7 @@
 	$hitbox = split(',',$_GET['hitbox']);
 	$twitch = split(',',$_GET['twitch']);
 	if($twitch[0] == ''){$twitch = array();}
+	if($hitbox[0] == ''){$hitbox = array();}
 	$lang = 'english';
 	if($_GET['lang'] != null and $_GET['lang'] != ''){
 		$lang = strtolower($_GET['lang']);

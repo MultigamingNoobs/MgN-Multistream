@@ -48,22 +48,19 @@
 			return $array['stream']['game'];
 		}
 	}
-	function getAllTwitchStreams($team_bol,$sug_bol){
-		$teamMembersTwitch = array('marderlp','tomme9020');
-		$sugestionsTwitch = array('mindstalker85');
+	function getAllTwitchStreams($team_bol,$sug_bol,$teamMembersTwitch,$sugestionsTwitch){
 		$input= split(',',(strtolower($_REQUEST['twitch'])));
-		if($team_bol != true){
+		if($team_bol){
 			$input = array_merge($teamMembersTwitch,$input);
 		}
-		if($sug_bol != true){
+		if($sug_bol){
 			$input = array_merge($sugestionsTwitch,$input);
 		}
 		$input = array_unique($input);
 		sort($input);
 		return $input;
 	}
-	function getOnlineTwitchStreams(){
-		$arr = getAllTwitchStreams();
+	function getOnlineTwitchStreams($arr){
 		$ret = array();
 		for($i=0;$i<count($arr);$i++){
 			if(isOnlineTwitch($arr[$i])){

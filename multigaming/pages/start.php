@@ -3,21 +3,21 @@
 		<?php	echo '<form action="http://'.$_SERVER['SERVER_NAME'].$_SERVER[REQUEST_URI].'" method="get">';?>	
 		<fieldset>
 			<legend>Twitch</legend>
-			<p>
+			
 				<?php echo '<input type="search" size="30" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
 					<div id="twitchSearch" style="width=50%">
 					</div>						
-				<?php echo '<input type="search" name="twitch" size="30" id="twitch" placeholder="'.$dnd.'"></p>' ;?>
-			</p>
+				<?php echo '<textarea name="twitch" rows="5" cols="30" id="twitch" placeholder="'.$dnd.'"></textarea>' ;?>
+			
 		</fieldset>	
 		<fieldset>
 			<legend>Hitbox</legend>
-			<p>
+			
 				<?php echo '<input type="search" size="30" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
 				<div id="hitboxSearch" style="width=50%">
 				</div>
-				<?php echo '<input type="search" name="hitbox" size="30" id="hitbox" placeholder="'.$dnd.'"></p>' ;?>
-			</p>
+				<?php echo '<textarea rows="5" cols="30" name="hitbox" id="hitbox" placeholder="'.$dnd.'"></textarea>' ;?>
+			
 		</fieldset>
 		<fieldset>
 			<?php echo '<legend>'.$settings.'</legend>';?>
@@ -44,7 +44,7 @@
 			</p><p>	
 				<?php echo '<label>'.$mgnStreams.'</label>';?>	
 				<input type = "checkbox" name="team" id = "team"/>	
-				</p><p>
+			</p><p>
 				<?php echo '<label>'.$suggestedStreams.'</label>';?>	
 				<input type = "checkbox" name="suggestions" id = "suggestions"/>
 			</p>

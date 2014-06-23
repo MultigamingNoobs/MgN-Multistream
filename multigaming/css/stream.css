@@ -39,3 +39,10 @@
 	float:				right;
 	width:				30%;
 }
+#MgNchat{
+	position:			fixed;
+	right:				0px;
+	height: 			calc(100vh - 53px);
+	float:				right;
+	width:				30%;
+}

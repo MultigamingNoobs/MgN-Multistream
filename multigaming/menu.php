@@ -8,7 +8,7 @@
 	if(strtolower($tab[0])=='mgn'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
 		echo '<h2>MgN</h2>';
-		//include 'pages/streams.php';
+		include 'pages/mgn.php';
 		echo '</div>';
 		$t = '"';
 	if(strtolower($tab[0])=='streams'){$t = ' tabbertabdefault"';}

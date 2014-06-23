@@ -12,6 +12,9 @@ fieldset{
     border-color:		#003300;
     border-style:		solid;
 }
+p{
+	text-align:			justify;
+}
 #head{
 	position:			fixed;
 	height: 			45px;
@@ -30,17 +33,22 @@ fieldset{
 #center{
 	position:			absolute;
 	top:				65px;
-	left:				35%;
+	left:				36%;
 	width:				34%;
 }
 #right{
-	position:			fixed;
+	position:			absolute;
 	top:				65px;
 	right:				1%;
 	float:				right;
-	width:				29%;
+	width:				28%;
 }
 #buttons{
+	position:			fixed;
+	top:				10px;
+	right:				10px;
+}
+#MgNbuttons{
 	position:			fixed;
 	top:				10px;
 	right:				10px;

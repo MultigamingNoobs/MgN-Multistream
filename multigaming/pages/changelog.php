@@ -1,4 +1,24 @@
-<ul id="sites">
+<ul class="sites">
+	<li><b>BETA v.0.6.3.1</b>
+		<ul>
+		<li><i>fixed:</i> some error that are caused by the new chat behaviour</li>
+		<li><i>fixed:</i> some css and js fixes</li>
+		</ul>
+	</li>
+	<li><b>BETA v.0.6.3</b>
+		<ul>
+		<li><i>changed:</i> bigger textfield for stream input</li>
+		<li><i>changed:</i> MgN tab now with functionality</li>
+		</ul>
+	</li>
+	<li><b>BETA v.0.6.2B</b>
+		<ul>
+		<li><i>fixed:</i> some evil mutated vowels</li>
+		<li><i>fixed:</i> some html errors</li>
+		<li><i>fixed:</i> some php array problems</li>
+		<li><i>removed:</i> some lines from German imprint</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.2</b>
 		<ul>
 		<li><i>fixed:</i> MGN to MgN</li>
