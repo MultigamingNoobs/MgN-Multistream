@@ -8,10 +8,7 @@ function showHitboxResult(str)
     }
     if (str.length < 3)
     {
-        document.getElementById("hitboxSearch").innerHTML = "
-Please enter 3 or more letters
-
-";
+        document.getElementById("hitboxSearch").innerHTML = "Please enter 3 or more letters";
         document.getElementById("hitboxSearch").style.border = "1px solid #003300";
         return;
     }
@@ -49,10 +46,7 @@ function showTwitchResult(str)
     }
     if (str.length < 3)
     {
-        document.getElementById("twitchSearch").innerHTML = "
-Please enter 3 or more letters
-
-";
+        document.getElementById("twitchSearch").innerHTML = "Please enter 3 or more letters";
         document.getElementById("twitchSearch").style.border = "1px solid #003300";
         return;
     }
