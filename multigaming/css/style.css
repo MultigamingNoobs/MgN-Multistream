@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* start.css */
+body {
+	color: white;
+	background-color: black;
+}
+
+h2 {
+	color: blue;
+}
+
+legend {
+	color: #33CC33;
+}
+
+fieldset {
+	border-color: #003300;
+	border-style: solid;
+}
+
+p {
+	text-align: justify;
+}
+
+#head {
+	position: fixed;
+	height: 45px;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+}
+
+#left {
+	position: absolute;
+	left: 1%;
+	top: 65px;
+	float: left;
+	width: 34%;
+}
+
+#center {
+	position: absolute;
+	top: 65px;
+	left: 36%;
+	width: 34%;
+}
+
+#right {
+	position: absolute;
+	top: 65px;
+	right: 1%;
+	float: right;
+	width: 28%;
+}
+
+#buttons {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+#MgNbuttons {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+/* sites.css */
+ul.sites {
+	color: black;
+	width: 99%;
+	margin: 0;
+	background-color: #E3E3E3;
+}
+
+* html ul.sites {
+	font: bold;
+	width: 2.6em;
+	width: 1em;
+}
+
+ul.sites li {
+	font: bold;
+	list-style: none;
+	margin: 0.4em;
+	padding: 0;
+}
+
+ul.sites li ul {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+
+ul.sites li ul li {
+	margin: 0.1em 0;
+}
+
+/* menu.css */
+
+#menu {
+	position: fixed;
+	height: 30px;
+	width: 100%;
+}
+
+ul#menu {
+	padding: 0px;
+	position: relative;
+	margin: 0;
+}
+
+ul#menu li {
+	display: inline;
+	background-color: #ffffff;
+	padding: 0px 10px;
+	text-decoration: none;
+	line-height: 2.8em;
+	color: #33CC33;
+	border-radius: 5px 5px 0 0;
+}
+
+ul#menu li a {
+	color: #034af3;
+}
+
+ul#menu li a:hover {
+	background-color: #e8eef4;
+}
+
+/* stream.css */
+
+#streamHead {
+	width: 70%;
+}
+
+#headMarquee {
+	font-size: 2.2em;
+	vertical-align: middle;
+	float: left;
+	height: 45px;
+	color: #33CC33;
+	width: 70%;
+	background-color: white;
+}
+
+#upperright {
+	vertical-align: middle;
+	height: 45px;
+	float: right;
+	width: 30%;
+	text-align: center;
+}
+
+#streamContent {
+	top: 85px;
+	float: left;
+	height: calc(100vh - 93px);
+	width: 70%;
+}
+
+#stream_left {
+	float: left;
+	width: 50%;
+}
+
+#stream_right {
+	float: right;
+	width: 50%;
+}
+
+#chat {
+	position: fixed;
+	right: 0px;
+	height: calc(100vh - 53px);
+	float: right;
+	width: 30%;
+}
+
+#MgNchat {
+	position: fixed;
+	right: 0px;
+	height: calc(100vh - 53px);
+	float: right;
+	width: 30%;
+}
+
+/* search.css */
+form {
+	margin: 15px;
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+form input[type=submit] {
+	display: none;
+}
+
+div#results {
+	padding: 10px 0px 0px 15px;
+}
+
+div#results div.result {
+	padding: 10px 0px;
+	margin: 10px 0px 10px;
+}
+
+div#results div.result a.readMore {
+	color: green;
+}
+
+div#results div.result h2 {
+	font-size: 19px;
+	margin: 0px 0px 5px;
+	padding: 0px;
+	color: #1111CC;
+	font-weight: normal;
+}
+
+div#results div.result h2 a {
+	text-decoration: none;
+	border-bottom: 1px solid #1111cc;
+}
+
+div#results div.result p {
+	margin: 0;
+	padding: 0;
+}
+
+span.highlight {
+	background: #FCFFA3;
+	padding: 3px;
+	font-weight: bold;
+}
