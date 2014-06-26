@@ -185,11 +185,6 @@ ul#menu li a:hover {
 }
 
 /* search.css */
-form {
-	margin: 15px;
-	padding: 5px;
-	border-bottom: 1px solid #ddd;
-}
 
 form input[type=submit] {
 	display: none;
