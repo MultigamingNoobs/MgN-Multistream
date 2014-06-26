@@ -1,4 +1,13 @@
 <ul class="sites">
+	<li><b>BETA v.0.6.K</b>
+		<ul>
+		<li><i>the K update:</i> thanks a lot Kurim!</li>
+		<li><i>improvements:</i> some (many) improvements on js and css</li>
+		<li><i>changed:</i> .js to .min.js</li>
+		<li><i>changed:</i> many .css to .min.css</li>
+		<li><i>changed:</i> structure of code</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.3.1</b>
 		<ul>
 		<li><i>fixed:</i> some error that are caused by the new chat behaviour</li>

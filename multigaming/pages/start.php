@@ -51,10 +51,9 @@
 		</fieldset>	
 		<fieldset>
 			<?php echo '<legend>'.$launch.'</legend>';?>
-			<p>	
-				<?php echo '<input type ="reset" value="'.$reset.'" />';?>
-				<?php echo '<input type ="submit" value="'.$submit.'" />';?>
-			</p> 
+				<?php echo '<button type ="reset">'.$reset.'</button>';?>
+				<?php echo '<button type ="submit">'.$submit.'</button>';?>
+	
 			</fieldset>
 		</form>
 	</div>
