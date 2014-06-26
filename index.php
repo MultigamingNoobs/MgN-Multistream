@@ -3,7 +3,7 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<?php
-		$v = "v.0.6.3.1";	
+		$v = "v.0.6.K";	
 		$lang = 'english';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){
 			$lang = strtolower($_GET['lang']);
