@@ -25,7 +25,6 @@ ul#menu li a:hover{background-color:#e8eef4;}
 #streamContent{top:85px;float:left;height:calc(100vh-93px);width:70%;}
 #stream_left{float:left;width:50%;}
 #stream_right{float:right;width:50%;}
-form{border-bottom:1px solid #ddd;margin:15px;padding:5px;}
 form input[type=submit]{display:none;}
 div#results{padding:10px 0 0 15px;}
 div#results div.result{margin:10px 0;padding:10px 0;}
