@@ -42,12 +42,6 @@
 	<li><b>Adresszeilenkomandos</b>
 		<ul>
 			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zur&uuml;ck greift. Darauf folgen ein paar Beispiele.></li>
-			<li><u>debug</u>
-				<ul>
-					<li>chat - zeigt den Chat zum Stream an</li>
-					<li>offline - zeigt alle Streams an, auch wenn diese gerade nicht online sind.</li>
-				</ul>
-			</li>
 			<li><u>streams</u>
 				<ul>
 					<li>twitch - Liste f&uuml;r twitch Streams</li>
@@ -73,10 +67,7 @@
 			</li>
 			<li><u>Beispiele</u>
 				<ul>
-					<li>?hitbox=user,user1,user2 - Zeigt zus&auml;tzlich die Streams der Streamer user, user1 und user2 von Hitbox an.</li>
-					<li>?twitch=user&amp;debug=offline - zeigt alle Streams an, sowie den des Streamer user auf Twitch.</li>
-					<li>?hitbox=user&amp;debug=chat - zeigt Streams an, sofern diese online sind. Au&szlig;erdem wird der Hitbox/Twitch Chat des Streams angezeigt.</li>
-					<li>?hitbox=user,user2&amp;twitch=user3,user4&amp;debug=hitboxchat,offline - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein und verbunden sind.</li>
+					<li>?hitbox=user,user2&amp;twitch=user3,user4&amp;tab=streams - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein &amp; verbunden sind.</li>
 				</ul>
 			</li>
 		</ul>
