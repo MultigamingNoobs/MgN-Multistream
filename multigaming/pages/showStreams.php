@@ -11,101 +11,77 @@
 	include '../api/hitboxApi.php';
 	include '../api/twitchApi.php';
 	include '../api/streamApi.php';
-
-	function contains($arr,$str){
-		for($i=0;$i<count($arr);$i++){
-			if($arr[$i] == $str){
-				return true;
-			}
-		}
-		return false;
+	
+	function displayHitboxStreamInfo($stream){
+		echo '<td>';
+			echo '<table id="middleTable">';
+				echo '<tr>';
+					echo '<td>';
+						echo '<img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35; width:35"></img>';
+					echo '</td>';
+					echo '<td>';
+						echo '<table id="innerTable">';
+							echo '<tr>';
+								echo '<td>'.$stream.' - '.getHitboxGame($stream).'</td>';
+							echo '</tr>';
+							echo '<tr>';
+								echo '<td>'.getHitboxDescription($stream).'</td>';
+							echo '</tr>';
+						echo '</table>';
+					echo '</td>';		
+				echo '</tr>';
+			echo '</table>';
+		echo '</td>';
 	}
-
-	function displayStreams($hitbox,$twitch){
-		if(count($hitbox)+count($twitch) == 1){
-			if(count($hitbox) == 1){
-				displayHitboxStream($hitbox[0],"",100);
-			}else{
-				displayTwitchStream($twitch[0],"",100);
-			}
-		} elseif(count($hitbox)+count($twitch) == 2){
-			if(count($hitbox) == 2){
-				displayHitboxStream($hitbox[0],"",50);
-				displayHitboxStream($hitbox[1],"",50);
-			}elseif(count($twitch) == 2){
-				displayTwitchStream($twitch[0],"",50);
-				displayTwitchStream($twitch[1],"",50);
-			}else{
-				displayHitboxStream($hitbox[0],"",50);
-				displayTwitchStream($twitch[0],"",50);
-			}
-			
-		}else{
-			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
-			if($h < 25){
-				$h = 25;
-			}
-			displayHitboxStreams($hitbox,$h);
-			displayTwitchStreams($twitch,$h,count($hitbox));
-		}
-	}
-	function displayHitboxStreams($hitbox,$h){
-		for($i=0 ; $i < count($hitbox) ; $i = $i + 2){
-			displayHitboxStream($hitbox[$i],"left",$h);
-			if($i+1 < count($hitbox)){
-				displayHitboxStream($hitbox[$i+1],"right",$h);
-			}
-		}
-	}
-	function displayTwitchStreams($twitch,$h,$a){
-		if($a % 2 == 0){
-			$a=0;
-		}else{
-			$a=1;
-			if($twitch[0] <> ''){displayTwitchStream($twitch[0],"right",$h);}
-		}
-		for($i=0+$a ; $i < count($twitch) ; $i = $i + 2){
-			displayTwitchStream($twitch[$i],"left",$h);
-			if($i+1 < count($twitch)){
-				displayTwitchStream($twitch[$i+1],"right",$h);
-			}
-		}
+	
+	function displayTwitchStreamInfo($stream){
+		echo '<td>';
+			echo '<table id="middleTable">';
+				echo '<tr>';
+					echo '<td>';
+						//echo '<img src='.getTwitchImage($stream).' alt="user_logo" style="height:35; width:35"></img>';
+					echo '</td>';
+					echo '<td>';
+						echo '<table id="innerTable">';
+							echo '<tr>';
+								echo '<td>'.$stream.' - '.getTwitchGame($stream).'</td>';
+							echo '</tr>';
+						echo '</table>';
+					echo '</td>';		
+				echo '</tr>';
+			echo '</table>';
+		echo '</td>';
 	}
 ?>
-
+<!-- the head-->
 <div id="streamHead">
-	<div id="headMarquee">
-		<?php
-			if(count($hitbox) == 0 and count($twitch) == 0){
-				echo '<marquee behavior="alternate">'.$noOneOnline.' :\ </marquee>';
-			}else{
-				$s = '';
-				if(count($twitch) > 0){
-					$s = $s.' @Twitch: ' . $twitch[0]." - " . getTwitchGame($twitch[0]);
-					for($i=1 ; $i < count($twitch) ; $i++){
-						$s = $s . ', ' . $twitch[$i] . " - " . getTwitchGame($twitch[$i]);
+	<div id="upperLeft">
+		<table id="outerTable">
+			<tr>
+			<?php
+				if(count($hitbox) == 0 and count($twitch) == 0){
+					echo '<td><p id="noOne">'.$noOneOnline.' :\ </p></td>';
+				}else{
+					for($i=0 ; $i < count($twitch) ; $i++){
+						displayTwitchStreamInfo($twitch[$i]);
+					}
+					for($i=0 ; $i < count($hitbox) ; $i++){
+						displayHitboxStreamInfo($hitbox[$i]);
 					}
 				}
-				if(count($hitbox) > 0){
-					$s = $s.' @Hitbox: ' . $hitbox[0]." - " . getHitboxGame($hitbox[0]);
-					for($i=1 ; $i < count($hitbox) ; $i++){
-						$s = $s . ', ' . $hitbox[$i] . " - " . getHitboxGame($hitbox[$i]);
-					}
-				}
-				echo '<marquee scrollamount="5" scrolldelay="5">';
-				echo 'Online:'.$s;
-				echo '</marquee>';
-			}
-		?>
+			?>
+			</tr>
+		</table>
 	</div>
-	<div id="upperright">
+	<div id="upperRight">
 		<img src="multigaming/pictures/mgnlogo.jpg" height="100%" width="100%"></img>
 	</div>
 </div>
-
+<!-- the streams-->
 <div id="streamContent">
 	<?php displayStreams($hitbox,$twitch);?>
 </div>
+<!-- the sidebar chat-->
 <div id="chat">
 	<div class="tabber">
 		<?php displaySidebarChat($twitch,$hitbox);?>

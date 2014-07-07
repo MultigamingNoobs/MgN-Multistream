@@ -1,4 +1,13 @@
 <?php
+	function displayHitboxStreams($hitbox,$h){
+		for($i=0 ; $i < count($hitbox) ; $i = $i + 2){
+			displayHitboxStream($hitbox[$i],"left",$h);
+			if($i+1 < count($hitbox)){
+				displayHitboxStream($hitbox[$i+1],"right",$h);
+			}
+		}
+	}
+
 	class Media {
 		//default api endpoint
 		const apiUrl = 'http://api.hitbox.tv/';
@@ -65,6 +74,24 @@
 			return $onlineStatus;
 		}
 	}
+	
+	function getHitboxDescription($stream){
+		$Media = new Media;
+		if ($media = $Media->getMedia('live',$stream)) {
+			return $media['media_status'];
+		}
+	}
+	
+	function getHitboxImage($stream){
+		$Media = new Media;
+		if ($media = $Media->getMedia('live',$stream)) {
+			$str = $media['channel']['user_logo'];
+			$pos = strrpos($str,"/");
+			$str_= substr($str,$pos,strlen($str)-$pos);
+			return "http://edge.vie.hitbox.tv/static/img/channel".$str_;
+		}
+	}
+	
 	function getHitboxGame($stream){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$stream)) {
@@ -90,10 +117,6 @@
 			}
 		}
 		return $ret;
-	}
-	
-	function getHitboxStreamString(){
-		return makeList(getAllHitboxStreams());
 	}
 	
 	function displayHitboxStream($stream,$site,$h){

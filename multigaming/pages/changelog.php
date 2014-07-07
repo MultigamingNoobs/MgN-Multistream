@@ -1,4 +1,11 @@
 <ul class="sites">
+	<li><b>BETA v.0.7.0</b>
+		<ul>
+		<li><i>changed:</i> header - removed ugly marquee</li>
+		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
+		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.K.1</b>
 		<ul>
 		<li><i>changed:</i> added some more MgN people</li>

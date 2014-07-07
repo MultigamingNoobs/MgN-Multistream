@@ -1,4 +1,42 @@
 <?php
+	
+	
+	function contains($arr,$str){
+		for($i=0;$i<count($arr);$i++){
+			if($arr[$i] == $str){
+				return true;
+			}
+		}
+		return false;
+	}
+	function displayStreams($hitbox,$twitch){
+		if(count($hitbox)+count($twitch) == 1){
+			if(count($hitbox) == 1){
+				displayHitboxStream($hitbox[0],"",100);
+			}else{
+				displayTwitchStream($twitch[0],"",100);
+			}
+		} elseif(count($hitbox)+count($twitch) == 2){
+			if(count($hitbox) == 2){
+				displayHitboxStream($hitbox[0],"left",50);
+				displayHitboxStream($hitbox[1],"right",50);
+			}elseif(count($twitch) == 2){
+				displayTwitchStream($twitch[0],"left",50);
+				displayTwitchStream($twitch[1],"right",50);
+			}else{
+				displayHitboxStream($hitbox[0],"left",50);
+				displayTwitchStream($twitch[0],"right",50);
+			}
+			
+		}else{
+			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
+			if($h < 25){
+				$h = 25;
+			}
+			displayHitboxStreams($hitbox,$h);
+			displayTwitchStreams($twitch,$h,count($hitbox));
+		}
+	}
 	function makeList($inp){
 		$t='';
 		if(count($inp) > 0){

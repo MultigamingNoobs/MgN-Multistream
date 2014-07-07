@@ -1,4 +1,19 @@
 <?php
+	function displayTwitchStreams($twitch,$h,$a){
+		if($a % 2 == 0){
+			$a=0;
+		}else{
+			$a=1;
+			if($twitch[0] <> ''){displayTwitchStream($twitch[0],"right",$h);}
+		}
+		for($i=0+$a ; $i < count($twitch) ; $i = $i + 2){
+			displayTwitchStream($twitch[$i],"left",$h);
+			if($i+1 < count($twitch)){
+				displayTwitchStream($twitch[$i+1],"right",$h);
+			}
+		}
+	}
+
 	function isOnlineTwitch($stream){
 		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
 		if ($array['stream'] != null) {
@@ -41,6 +56,15 @@
 		return $ret;
 		
 	}
+	
+	function getTwitchImage($stream){
+		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
+		if ($array['stream'] != null) {
+			debug_to_console($array['stream']['logo']);
+			return $array['stream']['logo'];
+		}
+	}
+	
 	function getTwitchGame($stream){
 		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
 		if ($array['stream'] != null) {
@@ -69,10 +93,6 @@
 		return $ret;
 	}
 
-	function getTwitchStreamString(){
-		return  makeList(getAllTwitchStreams());
-	}
-	
 	function displayTwitchStreamHTML5($stream,$site,$h){
 		echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
 		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
