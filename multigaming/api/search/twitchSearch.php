@@ -1,18 +1,29 @@
 <?php
 	$q = $_GET['q'];
+	$q = strtolower($q);
 	$p = '../../';
 	include $p.'api/twitchApi.php';
 	$twitch = getTwitchStreamer();
-	if($q == ''){
-		echo 'no result';
-	}
+
+	$contains;
 	for($i=0;$i<count($twitch);$i++){
 		$usr = $twitch[$i];
-		if (strpos(strtolower($usr),strtolower($q)) !== false) {
-
-			echo '<label id="'.$usr.'," draggable="true" ondragstart="drag(event)">'.$usr.'</label>';
+		$usr = strtolower($usr);
+		strtolower($usr);
+		if (strpos($usr,$q) !== false) {
+			$contains[] = $usr;
+		}
+	}
+	if(count($contains) > 0){
+		if(count($contains) <= 100){
+			sort($contains);
+		}
+		for($i=0;$i<count($contains);$i++){
+			echo '<label id="'.$contains[$i].'," draggable="true" ondragstart="drag(event)">'.$contains[$i].'</label>';
 			echo "<br>";
 		}
+	}else{
+		echo 'no result';
 	}
 	
 ?>

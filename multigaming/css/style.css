@@ -155,7 +155,7 @@ ul#menu li a:hover {
 	top: 85px;
 	float: left;
 	height: calc(100vh - 93px);
-	width: 70%;
+	width: 75%;
 }
 
 #stream_left {
@@ -173,7 +173,7 @@ ul#menu li a:hover {
 	right: 0px;
 	height: calc(100vh - 53px);
 	float: right;
-	width: 30%;
+	width: 25%;
 }
 
 #MgNchat {

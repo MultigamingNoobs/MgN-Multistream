@@ -5,8 +5,10 @@
 			<legend>Twitch</legend>
 			
 				<?php echo '<input type="search" size="30" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
+					<p></p>
 					<div id="twitchSearch" style="width=50%">
-					</div>						
+					</div>
+					<br>					
 				<?php echo '<textarea name="twitch" rows="5" cols="30" id="twitch" placeholder="'.$dnd.'"></textarea>' ;?>
 			
 		</fieldset>	
@@ -14,8 +16,10 @@
 			<legend>Hitbox</legend>
 			
 				<?php echo '<input type="search" size="30" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
+				<p></p>
 				<div id="hitboxSearch" style="width=50%">
 				</div>
+				<br>
 				<?php echo '<textarea rows="5" cols="30" name="hitbox" id="hitbox" placeholder="'.$dnd.'"></textarea>' ;?>
 			
 		</fieldset>

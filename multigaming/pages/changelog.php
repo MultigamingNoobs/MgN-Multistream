@@ -1,4 +1,12 @@
 <ul class="sites">
+	<li><b>BETA v.0.6.K.1</b>
+		<ul>
+		<li><i>changed:</i> added some more MgN people</li>
+		<li><i>changed:</i> structure of code</li>
+		<li><i>changed:</i> chat width now is 25% instead of 30%</li>
+		<li><i>fixed:</i> Hitbox and Twitch search - now much faster but some cache problems</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.6.K</b>
 		<ul>
 		<li><i>the K update:</i> thanks a lot Kurim!</li>

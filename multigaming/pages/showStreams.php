@@ -1,4 +1,3 @@
-
 <?php
 	$hitbox = split(',',$_GET['hitbox']);
 	$twitch = split(',',$_GET['twitch']);
@@ -109,8 +108,6 @@
 </div>
 <div id="chat">
 	<div class="tabber">
-		<?php 
-			displaySidebarChat($twitch,$hitbox);
-		?>
+		<?php displaySidebarChat($twitch,$hitbox);?>
 	</div>
 </div>

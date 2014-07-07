@@ -26,7 +26,7 @@
 		for($i=0;$i<count($media);$i++){
 			$ret[] = $media[$i]['media_user_name'];
 		}
-		sort($ret);
+		$ret = array_unique($ret);
 		return $ret;
 	}
 	function getHitboxFeatured(){
@@ -80,7 +80,6 @@
 			$input = array_merge($suggestionsHitbox,$input);
 		}
 		$input = array_unique($input);
-		sort($input);
 		return $input;
 	}
 	function getOnlineHitboxStreams($arr){

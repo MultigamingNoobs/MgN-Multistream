@@ -19,7 +19,6 @@
 			}
 			$start++;
 		}
-		sort($ret);
 		$ret = array_unique($ret);
 		return $ret;
 	}
