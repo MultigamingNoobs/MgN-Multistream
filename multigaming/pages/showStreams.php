@@ -17,7 +17,7 @@
 			echo '<table id="middleTable">';
 				echo '<tr>';
 					echo '<td>';
-						echo '<img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35; width:35"></img>';
+						echo '<img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35px; width:35px"></img>';
 					echo '</td>';
 					echo '<td>';
 						echo '<table id="innerTable">';
