@@ -75,13 +75,6 @@
 		}
 	}
 	
-	function getHitboxDescription($stream){
-		$Media = new Media;
-		if ($media = $Media->getMedia('live',$stream)) {
-			return $media['media_status'];
-		}
-	}
-	
 	function getHitboxImage($stream){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$stream)) {
@@ -121,8 +114,8 @@
 	
 	function displayHitboxStream($stream,$site,$h){
 		if($stream <> '' and $stream <> null){
-			echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
-			echo '<iframe width=100% height=99% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
+			echo '<div id="stream_'.$site.'" style="height:calc(100vh/'.$h.');">';
+			echo '<iframe width=100% height=100% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
 			echo '</div>';
 		}
 	}

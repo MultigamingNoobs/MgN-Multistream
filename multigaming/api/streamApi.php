@@ -10,27 +10,28 @@
 	function displayStreams($hitbox,$twitch){
 		if(count($hitbox)+count($twitch) == 1){
 			if(count($hitbox) == 1){
-				displayHitboxStream($hitbox[0],"",100);
+				displayHitboxStream($hitbox[0],"",1);
 			}else{
-				displayTwitchStream($twitch[0],"",100);
+				displayTwitchStream($twitch[0],"",1);
 			}
 		} elseif(count($hitbox)+count($twitch) == 2){
 			if(count($hitbox) == 2){
-				displayHitboxStream($hitbox[0],"",50);
-				displayHitboxStream($hitbox[1],"",50);
+				displayHitboxStream($hitbox[0],"",2);
+				displayHitboxStream($hitbox[1],"",2);
 			}elseif(count($twitch) == 2){
-				displayTwitchStream($twitch[0],"",50);
-				displayTwitchStream($twitch[1],"",50);
+				displayTwitchStream($twitch[0],"",2);
+				displayTwitchStream($twitch[1],"",2);
 			}else{
-				displayHitboxStream($hitbox[0],"",50);
-				displayTwitchStream($twitch[0],"",50);
+				displayHitboxStream($hitbox[0],"",2);
+				displayTwitchStream($twitch[0],"",2);
 			}
 			
 		}else{
-			$h = ceil(100 / (count($hitbox)+count($twitch)));
-			if($h < 25){
-				$h = 25;
+			$h = ceil((count($hitbox)+count($twitch))/2);
+			if($h > 4){
+				$h = 4;
 			}
+			$h = (string) $h;
 			displayHitboxStreams($hitbox,$h);
 			displayTwitchStreams($twitch,$h,count($hitbox));
 		}

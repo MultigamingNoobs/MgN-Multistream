@@ -22,10 +22,10 @@
 					echo '<td>';
 						echo '<table id="innerTable">';
 							echo '<tr>';
-								echo '<td>'.$stream.' - '.getHitboxGame($stream).'</td>';
+								echo '<td>'.$stream.'</td>';
 							echo '</tr>';
 							echo '<tr>';
-								echo '<td>'.getHitboxDescription($stream).'</td>';
+								echo '<td>'.getHitboxGame($stream).'</td>';
 							echo '</tr>';
 						echo '</table>';
 					echo '</td>';		
@@ -44,7 +44,10 @@
 					echo '<td>';
 						echo '<table id="innerTable">';
 							echo '<tr>';
-								echo '<td>'.$stream.' - '.getTwitchGame($stream).'</td>';
+								echo '<td>'.$stream.'</td>';
+							echo '</tr>';
+							echo '<tr>';
+								echo '<td>'.getTwitchGame($stream).'</td>';
 							echo '</tr>';
 						echo '</table>';
 					echo '</td>';		
@@ -55,27 +58,22 @@
 ?>
 <!-- the head-->
 <div id="streamHead">
-	<div id="upperLeft">
-		<table id="outerTable">
-			<tr>
-			<?php
-				if(count($hitbox) == 0 and count($twitch) == 0){
-					echo '<td><p id="noOne">'.$noOneOnline.' :\ </p></td>';
-				}else{
-					for($i=0 ; $i < count($twitch) ; $i++){
-						displayTwitchStreamInfo($twitch[$i]);
-					}
-					for($i=0 ; $i < count($hitbox) ; $i++){
-						displayHitboxStreamInfo($hitbox[$i]);
-					}
+	<table id="outerTable">
+		<tr>
+		<?php
+			if(count($hitbox) == 0 and count($twitch) == 0){
+				echo '<td><p id="noOne">'.$noOneOnline.' :\ </p></td>';
+			}else{
+				for($i=0 ; $i < count($twitch) ; $i++){
+					displayTwitchStreamInfo($twitch[$i]);
 				}
-			?>
-			</tr>
-		</table>
-	</div>
-	<div id="upperRight">
-		<img src="multigaming/pictures/mgnlogo.jpg" height="100%" width="100%"></img>
-	</div>
+				for($i=0 ; $i < count($hitbox) ; $i++){
+					displayHitboxStreamInfo($hitbox[$i]);
+				}
+			}
+		?>
+		</tr>
+	</table>
 </div>
 <!-- the streams-->
 <div id="streamContent">
@@ -83,7 +81,5 @@
 </div>
 <!-- the sidebar chat-->
 <div id="chat">
-	<div class="tabber">
-		<?php displaySidebarChat($twitch,$hitbox);?>
-	</div>
+	
 </div>

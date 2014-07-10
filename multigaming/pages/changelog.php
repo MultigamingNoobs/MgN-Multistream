@@ -4,6 +4,7 @@
 		<ul>
 		<li><i>changed:</i> header - removed ugly marquee</li>
 		<li><i>changed:</i> page color is now black-red instead of black-green</li>
+		<li><i>changed:</i> stream height calculation</li>
 		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
 		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
 		<li><i>fixed:</i> stream height when there are hitbox and twitch chats</li>
