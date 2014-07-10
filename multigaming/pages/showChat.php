@@ -9,7 +9,7 @@
 	include '../api/hitboxApi.php';
 	include '../api/twitchApi.php';
 	include '../api/streamApi.php';
-	echo '<div id="chat">';
+	echo '<div id="chat_">';
 		echo '<div class="tabber">';
 			displaySidebarChat($twitch,$hitbox);
 		echo '</div>';

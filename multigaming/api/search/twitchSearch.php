@@ -9,14 +9,16 @@
 		$usr = $twitch[$i];
 		$usr = strtolower($usr);
 		for($j=0;$j<count($q);$j++){
-			if (fnmatch($usr,$q[$j])) {
+			if(fnmatch($q[$j],$usr)){
+					$contains[] = $usr;
+			}elseif (strpos($usr,$q[$j]) !== false){
 				$contains[] = $usr;
-			}
+			}				
 		}
 	}
 	if(count($contains) > 0){
+		$contains = array_unique($contains);
 		if(count($contains) <= 100){
-			$contains = array_unique($contains);
 			sort($contains);
 		}
 		for($i=0;$i<count($contains);$i++){

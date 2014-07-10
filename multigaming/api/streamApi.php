@@ -1,6 +1,4 @@
 <?php
-	
-	
 	function contains($arr,$str){
 		for($i=0;$i<count($arr);$i++){
 			if($arr[$i] == $str){
@@ -18,18 +16,18 @@
 			}
 		} elseif(count($hitbox)+count($twitch) == 2){
 			if(count($hitbox) == 2){
-				displayHitboxStream($hitbox[0],"left",50);
-				displayHitboxStream($hitbox[1],"right",50);
+				displayHitboxStream($hitbox[0],"",50);
+				displayHitboxStream($hitbox[1],"",50);
 			}elseif(count($twitch) == 2){
-				displayTwitchStream($twitch[0],"left",50);
-				displayTwitchStream($twitch[1],"right",50);
+				displayTwitchStream($twitch[0],"",50);
+				displayTwitchStream($twitch[1],"",50);
 			}else{
-				displayHitboxStream($hitbox[0],"left",50);
-				displayTwitchStream($twitch[0],"right",50);
+				displayHitboxStream($hitbox[0],"",50);
+				displayTwitchStream($twitch[0],"",50);
 			}
 			
 		}else{
-			$h = ceil(100 / ceil(((count($hitbox)+count($twitch))/2)));
+			$h = ceil(100 / (count($hitbox)+count($twitch)));
 			if($h < 25){
 				$h = 25;
 			}

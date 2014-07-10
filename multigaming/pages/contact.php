@@ -1,3 +1,4 @@
+<div id="content">
 <ul class="sites">
 	<li><b>Kontakt</b>
 		<ul>
@@ -5,3 +6,4 @@
 		</ul>
 	</li>
 </ul>
+</div>

@@ -1,3 +1,4 @@
+<div id="content">
 <ul class="sites">
 	<li><b>Die Hilfe - Inhalt</b>
 		<ul>
@@ -73,3 +74,4 @@
 		</ul>
 	</li>
 </ul>
+</div>

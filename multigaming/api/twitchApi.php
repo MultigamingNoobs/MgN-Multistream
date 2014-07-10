@@ -58,10 +58,9 @@
 	}
 	
 	function getTwitchImage($stream){
-		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams/'.$stream), true);
+		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/channel/'.$stream), true);
 		if ($array['stream'] != null) {
-			debug_to_console($array['stream']['logo']);
-			return $array['stream']['logo'];
+			return $array['logo'];
 		}
 	}
 	

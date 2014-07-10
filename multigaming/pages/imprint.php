@@ -1,3 +1,4 @@
+<div id="content">
 <ul class="sites">
 	<li><b>Legal Disclosure</b>
 		<ul>
@@ -53,3 +54,4 @@
 		</ul>
 	</li>
 </ul>
+</div>

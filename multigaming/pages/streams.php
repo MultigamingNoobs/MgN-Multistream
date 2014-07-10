@@ -15,7 +15,7 @@
 	$(document).ready(function(){
 		$("#chatPopout").click(function(){
 			window.open(href='multigaming/pages/popoutChat.php?<?php echo $streamsConditions;?>', "_blank", "toolbar=no, menubar=no")
-			$("#hideShowChat").text('<?php echo $btnShowChat;?>');
+			//$("#hideShowChat").text('<?php echo $btnShowChat;?>');
 			//$('#chat').width(1);
 		});
 	});
