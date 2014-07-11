@@ -5,6 +5,9 @@
 		<li><i>changed:</i> header - removed ugly marquee</li>
 		<li><i>changed:</i> page color is now black-red instead of black-green</li>
 		<li><i>changed:</i> stream height calculation</li>
+		<li><i>changed:</i> shows 10 search results and a scrollbar</li>
+		<li><i>changed:</i> search just needs 2 or more signs</li>
+		<li><i>added:</i> second submit form on home at the top</li>
 		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
 		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
 		<li><i>fixed:</i> stream height when there are hitbox and twitch chats</li>

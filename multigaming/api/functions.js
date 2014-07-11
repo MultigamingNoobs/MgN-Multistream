@@ -6,10 +6,12 @@ function showHitboxResult(str)
         document.getElementById("hitboxSearch").style.border = "0px";
         return;
     }
-    if (str.length < 3)
+    if (str.length < 2)
     {
-        document.getElementById("hitboxSearch").innerHTML = "Please enter 3 or more letters";
-        document.getElementById("hitboxSearch").style.border = "1px solid #003300";
+        document.getElementById("hitboxSearch").innerHTML = "Please enter 2 or more letters";
+        document.getElementById("hitboxSearch").style.border = "1px solid #330000";
+		document.getElementById("hitboxSearch").style.overflowY = "scroll";
+		document.getElementById("hitboxSearch").style.height = "11em";
         return;
     }
     else
@@ -28,7 +30,7 @@ function showHitboxResult(str)
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
             {
                 document.getElementById("hitboxSearch").innerHTML = xmlhttp.responseText;
-                document.getElementById("hitboxSearch").style.border = "1px solid #003300";
+                document.getElementById("hitboxSearch").style.border = "1px solid #330000";document.getElementById("hitboxSearch").style.overflowY = "scroll";document.getElementById("hitboxSearch").style.height = "11em";
             }
         }
         xmlhttp.open("GET", "multigaming/api/search/hitboxSearch.php?q=" + str, true);
@@ -44,10 +46,10 @@ function showTwitchResult(str)
         document.getElementById("twitchSearch").style.border = "0px";
         return;
     }
-    if (str.length < 3)
+    if (str.length < 2)
     {
-        document.getElementById("twitchSearch").innerHTML = "Please enter 3 or more letters";
-        document.getElementById("twitchSearch").style.border = "1px solid #003300";
+        document.getElementById("twitchSearch").innerHTML = "Please enter 2 or more letters";
+        document.getElementById("twitchSearch").style.border = "1px solid #330000";document.getElementById("twitchSearch").style.overflowY = "scroll";document.getElementById("twitchSearch").style.height = "11em";
         return;
     }
     else
@@ -66,7 +68,9 @@ function showTwitchResult(str)
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
             {
                 document.getElementById("twitchSearch").innerHTML = xmlhttp.responseText;
-                document.getElementById("twitchSearch").style.border = "1px solid #003300";
+                document.getElementById("twitchSearch").style.border = "1px solid #330000";
+				document.getElementById("twitchSearch").style.overflowY = "scroll";
+				document.getElementById("twitchSearch").style.height = "11em";
             }
         }
         xmlhttp.open("GET", "multigaming/api/search/twitchSearch.php?q=" + str, true);
