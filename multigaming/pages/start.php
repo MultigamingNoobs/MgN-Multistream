@@ -97,6 +97,8 @@
 				<legend>MgN Communities</legend>		
 				<a href="https://plus.google.com/u/0/communities/110109481253283166036" target="_blank"><img src="multigaming/pictures/g+.png"></img></a>
 				<a href="http://steamcommunity.com/groups/multinoobs" target="_blank"><img src="multigaming/pictures/steam.png"></img></a>
+				<a href="http://www.facebook.com/MultigamingNoobs" target="_blank"><img src="multigaming/pictures/facebook.png"></img></a>
+				<a href="https://twitter.com/mgnmultistream" target="_blank"><img src="multigaming/pictures/twitter.png"></img></a>
 			</fieldset>
 			<fieldset>		
 				<legend>Twitter</legend>		
