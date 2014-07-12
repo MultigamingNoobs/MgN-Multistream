@@ -12,23 +12,41 @@
 	include '../api/twitchApi.php';
 	include '../api/streamApi.php';
 	
+	function displayStreamInfo($hitbox,$twitch){
+		//how many streams to show?
+		$c = count($hitbox)+count($twitch);
+		$max = 7;
+		//loop to show the stream informations
+		for($i=1;$i<$c+1;$i++){
+			//check weather a new row has to be inserted to the table
+			if($i % $max === 0){echo '<tr>';}
+			echo '<td style="width:'.(100/$max).'%">';
+				echo '<table id="middleTable">';
+					echo '<tr>';
+						if($i<count($hitbox)+1){
+							//show hitbox stream info
+							displayHitboxStreamInfo($hitbox[$i-1]);
+						}else{
+							//show twitch stream info
+							displayTwitchStreamInfo($twitch[$i-1]);
+						}
+					echo '</tr>';
+				echo '</table>';
+			echo '</td>';
+			if($i % $max === 0){echo '</tr>';}
+		}
+	}
 	function displayHitboxStreamInfo($stream){
 		echo '<td>';
-			echo '<table id="middleTable">';
+			echo '<img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35px; width:35px"></img>';
+		echo '</td>';
+		echo '<td>';
+			echo '<table id="innerTable">';
 				echo '<tr>';
-					echo '<td>';
-						echo '<img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35px; width:35px"></img>';
-					echo '</td>';
-					echo '<td>';
-						echo '<table id="innerTable">';
-							echo '<tr>';
-								echo '<td>'.$stream.'</td>';
-							echo '</tr>';
-							echo '<tr>';
-								echo '<td>'.getHitboxGame($stream).'</td>';
-							echo '</tr>';
-						echo '</table>';
-					echo '</td>';		
+					echo '<td>'.$stream.'</td>';
+				echo '</tr>';
+				echo '<tr>';
+					echo '<td>'.getHitboxGame($stream).'</td>';
 				echo '</tr>';
 			echo '</table>';
 		echo '</td>';
@@ -36,21 +54,15 @@
 	
 	function displayTwitchStreamInfo($stream){
 		echo '<td>';
-			echo '<table id="middleTable">';
+			echo '<img src="'.getTwitchImage($stream).'" alt="user_logo" style="height:35; width:35"></img>';
+		echo '</td>';
+		echo '<td>';
+			echo '<table id="innerTable">';
 				echo '<tr>';
-					echo '<td>';
-						echo '<img src="'.getTwitchImage($stream).'" alt="user_logo" style="height:35; width:35"></img>';
-					echo '</td>';
-					echo '<td>';
-						echo '<table id="innerTable">';
-							echo '<tr>';
-								echo '<td>'.$stream.'</td>';
-							echo '</tr>';
-							echo '<tr>';
-								echo '<td>'.getTwitchGame($stream).'</td>';
-							echo '</tr>';
-						echo '</table>';
-					echo '</td>';		
+					echo '<td>'.$stream.'</td>';
+				echo '</tr>';
+				echo '<tr>';
+					echo '<td>'.getTwitchGame($stream).'</td>';
 				echo '</tr>';
 			echo '</table>';
 		echo '</td>';
@@ -64,12 +76,7 @@
 			if(count($hitbox) == 0 and count($twitch) == 0){
 				echo '<td><p id="noOne">'.$noOneOnline.' :\ </p></td>';
 			}else{
-				for($i=0 ; $i < count($twitch) ; $i++){
-					displayTwitchStreamInfo($twitch[$i]);
-				}
-				for($i=0 ; $i < count($hitbox) ; $i++){
-					displayHitboxStreamInfo($hitbox[$i]);
-				}
+				displayStreamInfo($hitbox,$twitch);
 			}
 		?>
 		</tr>
