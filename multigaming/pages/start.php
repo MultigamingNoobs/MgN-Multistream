@@ -74,6 +74,7 @@
 	<div id="center">
 		<fieldset>			
 			<?php echo '<legend>'.$qickHelp.'</legend>';
+			echo '<video controls><source src="multigaming/pictures/quickhelp.mp4" type="video/mp4";>Your browser does not support the video tag.</video>';
 			echo '<p>'.$qickHelpText.'</p>';?>
 		</fieldset>	
 		<fieldset>		
