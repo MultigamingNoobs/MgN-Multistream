@@ -11,6 +11,7 @@
 		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
 		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
 		<li><i>added:</i> links to our MgN Communities</li>
+		<li><i>added:</i> new quick help html5 video to show search functionality</li>
 		<li><i>fixed:</i> stream height when there are hitbox and twitch streams</li>
 		</ul>
 	</li>
