@@ -1,19 +1,20 @@
 @charset utf-8;
 body{color:#FFF;background-color:#100;}
 legend{color:#EE1111;}
-fieldset{border-color:#200;border-style:solid;}
+fieldset{border-color:#300;border-style:solid;}
 p{text-align:justify;}
 #content{position:relative;top:30px;width:100%;height:100%;}
 #left{position:absolute;left:1%;float:left;width:34%;}
 #center{position:absolute;left:36%;width:34%;}
 #right{position:absolute;right:1%;float:right;width:28%;}
-ul.sites{color:#000;background-color:#E3E3E3;margin:0;}
+#right img{width:49%;}
+ul.sites{color:#300;background-color:#B3A3A3;margin:0;}
 * html ul.sites{font:bold;width:1em;}
 ul.sites li{font:bold;list-style:none;margin:.4em;padding:0;}
 ul.sites li ul{margin:0 0 0 1em;padding:0;}
 ul.sites li ul li{margin:.1em 0;}
 #streamHead{overflow-y:scroll;position:fixed;top:37px;z-index:2;width:75%;height:45px;vertical-align:middle;color:#C33;background-color:#FFF;}
-#noOne{position:relative; top:-20px; left:5px;vertical-align:top;font-size:1.5em;}
+#noOne{position:relative; left:5px;vertical-align:middle;font-size:1.5em;margin-top: 0;margin-bottom: 0;}
 #outerTable{height:40px;width:100%;}
 #middleTable{height:40px;}
 #innerTable{height:35px;font-size:0.8em;}
