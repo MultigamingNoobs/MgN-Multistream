@@ -10,6 +10,7 @@
 		<li><i>added:</i> second submit form on home at the top</li>
 		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
 		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
+		<li><i>added:</i> links to our MgN Communities</li>
 		<li><i>fixed:</i> stream height when there are hitbox and twitch chats</li>
 		</ul>
 	</li>
