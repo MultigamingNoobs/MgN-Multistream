@@ -92,8 +92,17 @@
 		</fieldset>		
 	</div>	<div id="right">	
 		<fieldset>		
-			<legend>Social</legend>		
-			<?php	include 'multigaming/pages/twitter.php';?>	
+			<legend>Social</legend>	
+			<fieldset>		
+				<legend>MgN Communities</legend>		
+				<a href="https://plus.google.com/u/0/communities/110109481253283166036" target="_blank"><img src="multigaming/pictures/g+.png"></img></a>
+				<a href="http://steamcommunity.com/groups/multinoobs" target="_blank"><img src="multigaming/pictures/steam.png"></img></a>
+			</fieldset>
+			<fieldset>		
+				<legend>Twitter</legend>		
+				<?php	include 'multigaming/pages/twitter.php';?>	
+			</fieldset>
 		</fieldset>
+		
 	</div>
 </div>
