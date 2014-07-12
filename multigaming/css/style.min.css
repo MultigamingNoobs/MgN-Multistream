@@ -13,7 +13,7 @@ ul.sites{color:#300;background-color:#B3A3A3;margin:0;}
 ul.sites li{font:bold;list-style:none;margin:.4em;padding:0;}
 ul.sites li ul{margin:0 0 0 1em;padding:0;}
 ul.sites li ul li{margin:.1em 0;}
-#streamHead{overflow-y:scroll;position:fixed;top:37px;z-index:2;width:74.5%;height:50px;vertical-align:middle;color:#C33;background-color:#FFF;}
+#streamHead{overflow-y:auto;position:fixed;top:37px;z-index:2;width:74.5%;height:50px;vertical-align:middle;color:#C33;background-color:#FFF;}
 #outerTable tbody tr td{padding-top:0px;padding-bottom:0px;}
 #noOne{text-align:center;vertical-align:middle;font-size:2em;margin-top: 0;margin-bottom: 0;}
 #outerTable{height:40px;width:100%;}
@@ -22,7 +22,6 @@ ul.sites li ul li{margin:.1em 0;}
 #streamContent{position:relative;top:75px;float:left;height:calc(100%-93px);width:75%;}
 #stream_left{float:left;width:50%;}
 #stream_right{float:right;width:50%;}
-#stream_{height:calc(70vw*16/18);}
 form input[type=submit]{display:none;}
 div#results{padding:10px 0 0 15px;}
 div#results div.result{margin:10px 0;padding:10px 0;}

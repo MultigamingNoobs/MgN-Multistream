@@ -105,7 +105,7 @@
 	
 	function displayTwitchStream($stream,$site,$h){
 		if($stream <> '' and $stream <> null){
-			echo '<div id="stream_'.$site.'" style="height:calc(100vh/'.$h.');">';
+			echo '<div id="stream_'.$site.'" style="height:calc(95vh/'.$h.');">';
 			echo '<object type="application/x-shockwave-flash" 
 			height="100%" width="100%" 
 			id="live_embed_player_flash" 
