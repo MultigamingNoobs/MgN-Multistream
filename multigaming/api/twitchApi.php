@@ -99,7 +99,7 @@
 	}
 	function displayTwitchChat($stream,$h){
 		if($stream <> '' and $stream <> null){	
-			echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%"></iframe>';
+			echo '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel='.$stream.'&amp;popout_chat=true" height="100%" width="100%" style="display: inline;margin-top: 21px;"></iframe>';
 		}
 	}
 	
