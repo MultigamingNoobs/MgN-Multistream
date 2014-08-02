@@ -6,7 +6,7 @@
 <div id="MgNstreams"></div>
 <div id="MgNchat"></div>
 <script type="text/javascript">
-<?php $MgMConditions = 'lang='.$lang.'&hitbox='.makeList(getOnlineHitboxStreams($teamMembersHitbox)).'&twitch='.makeList(getOnlineTwitchStreams($teamMembersTwitch));?>
+<?php $MgMConditions = 'lang='.$lang.'&hitbox='.makeList($teamMembersHitbox).'&twitch='.makeList($teamMembersTwitch);?>
 	$(document).ready(function(){
 		$("#MgNbuttonLoad").click(function(){
 			$('#MgNstreams').load('multigaming/pages/showStreams.php?<?php echo $MgMConditions;?>'); // Der gesamte Inhalt von #container wird durch den Inhalt der Datei "ajax/content.html" ersetzt.
@@ -15,7 +15,7 @@
 	$(document).ready(function(){
 		$("#MgNchatPopout").click(function(){
 			window.open(href='multigaming/pages/popoutChat.php?<?php echo $MgMConditions;?>', "_blank", "toolbar=no, menubar=no")
-			$("#MgNhideShowChat").text('<?php echo $btnShowChat;?>');
+			//$("#MgNhideShowChat").text('<?php echo $btnShowChat;?>');
 			//$('#MgNchat').width(1);
 		});
 	});

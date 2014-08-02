@@ -17,8 +17,8 @@
 	$settings = "Einstellungen";
 	$setLang = "Sprache:";
 	$startPage = "Startseite";
-	$mgnStreams = "Keine MgN Streams anzeigen";
-	$suggestedStreams = "Keine Empfohlenen streams zeigen";
+	$mgnStreams = "MgN Streams anzeigen";
+	$suggestedStreams = "Empfohlenen streams zeigen";
 	
 	$launch = "Streams starten";
 	$reset = "Zur&uuml;cksetzen";

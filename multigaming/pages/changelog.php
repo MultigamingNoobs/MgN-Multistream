@@ -1,15 +1,23 @@
 <div id="content">
 <ul class="sites">
+	<li><b>BETA v.0.7.1</b>
+		<ul>
+		<li><i>fixed:</i> position of streamHead</li>
+		<li><i>fixed:</i> improvements and fixed some style issues</li>
+		<li><i>changed:</i> hide MgN and suggested streams by default on stream page</li>
+		<li><i>added:</i> the picture in the head now contains a link to the channel</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.0</b>
 		<ul>
 		<li><i>changed:</i> header - removed ugly marquee</li>
-		<li><i>changed:</i> page color is now black-red instead of black-green</li>
+		<li><i>changed:</i> page colour is now black-red instead of black-green</li>
 		<li><i>changed:</i> stream height calculation</li>
 		<li><i>changed:</i> shows 10 search results and a scrollbar</li>
 		<li><i>changed:</i> search just needs 2 or more signs</li>
 		<li><i>added:</i> second submit form on home at the top</li>
 		<li><i>added:</i> you can search with more parameters like param1, param2 ,param3</li>
-		<li><i>added:</i> search accepts wildcards like: *gaming* or g[a4]ming</li>
+		<li><i>added:</i> search accepts wild cards like: *gaming* or g[a4]ming</li>
 		<li><i>added:</i> links to our MgN Communities</li>
 		<li><i>added:</i> new quick help html5 video to show search functionality</li>
 		<li><i>fixed:</i> stream height when there are hitbox and twitch streams</li>
@@ -40,7 +48,7 @@
 	</li>
 	<li><b>BETA v.0.6.3</b>
 		<ul>
-		<li><i>changed:</i> bigger textfield for stream input</li>
+		<li><i>changed:</i> bigger text field for stream input</li>
 		<li><i>changed:</i> MgN tab now with functionality</li>
 		</ul>
 	</li>
@@ -121,7 +129,7 @@
 		<li><i>added:</i> Pace from HubSpot Dev & Design</li>
 		<li><i>added:</i> Twitter in chat sidebar</li>
 		<li><i>added:</i> header marquee shows name of streamer and game title</li>
-		<li><i>changed:</i> smaler Header</li>
+		<li><i>changed:</i> smaller Header</li>
 		<li><i>changed:</i> other MgN picture</li>
 		<li><i>changed:</i> menu now is also tabber menu</li>
 		<li><i>removed:</i> png refresh link</li>
@@ -138,7 +146,7 @@
 	</li>
 	<li><b>BETA v.0.3.0</b>
 		<ul>
-		<li><i>added:</i> Twitch suport</li>
+		<li><i>added:</i> Twitch support</li>
 		<li><i>changed:</i> height = 50% when debug chat is activated</li>
 		<li><i>added:</i> TwitchBox in menu indicates that hitbox and twitch streams are possible</li>
 		<li><i>changed:</i> new commands for input line actions</li>
@@ -196,7 +204,7 @@
 	<li><b>BETA v.0.2.10</b>
 		<ul>
 		<li><i>added:</i> page height workaround</li>
-		<li><i>changed:</i> 8 instead of 10 streams without scolling</li>
+		<li><i>changed:</i> 8 instead of 10 streams without scrolling</li>
 		<li><i>added:</i> planned functions</li>
 		</ul>
 	</li>
@@ -210,7 +218,7 @@
 	</li>
 	<li><b>BETA v.0.2.8</b>
 		<ul>
-		<li><i>fixed:</i> irc chanels now joinable</li>
+		<li><i>fixed:</i> irc channels now joinable</li>
 		<li><i>added:</i> debug mode which shows offline streams(?beta=offline)</li>
 		</ul>
 	</li>

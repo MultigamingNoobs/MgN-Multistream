@@ -56,10 +56,10 @@
 					</datalist>	
 				</p><p>	
 					<?php echo '<label>'.$mgnStreams.'</label>';?>	
-					<input type = "checkbox" name="team" id = "team"/>	
+					<input type = "checkbox" checked name="team" id = "team"/>	
 				</p><p>
 					<?php echo '<label>'.$suggestedStreams.'</label>';?>	
-					<input type = "checkbox" name="suggestions" id = "suggestions"/>
+					<input type = "checkbox" checked name="suggestions" id = "suggestions"/>
 				</p>
 			</fieldset>	
 			<fieldset>

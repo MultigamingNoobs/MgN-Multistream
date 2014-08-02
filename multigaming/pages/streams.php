@@ -6,7 +6,7 @@
 <div id="streams"></div>
 <div id="chat"></div>
 <script type="text/javascript">
-<?php $streamsConditions = 'lang='.$lang.'&hitbox='.makeList($hitbox_online).'&twitch='.makeList($twitch_online);?>
+<?php $streamsConditions = 'lang='.$lang.'&hitbox='.makeList($hitbox).'&twitch='.makeList($twitch);?>
 	$(document).ready(function(){
 		$("#buttonLoad").click(function(){
 			$('#streams').load('multigaming/pages/showStreams.php?<?php echo $streamsConditions;?>'); // Der gesamte Inhalt von #container wird durch den Inhalt der Datei "ajax/content.html" ersetzt.

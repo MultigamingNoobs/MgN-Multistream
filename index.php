@@ -9,7 +9,7 @@
 	<script src="multigaming/api/jquery.js"></script>
 	<?php
 		//version of MgN-Multistream aka Multigaming
-		$v = "v.0.7.0";
+		$v = "v.0.7.1";
 		//contains arrays of team members and suggestions on hitbox and twitch
 		include ('multigaming/api/teamVars.php');
 		//apis to show statistics, chat, stream etc
