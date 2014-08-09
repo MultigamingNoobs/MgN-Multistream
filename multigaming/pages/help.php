@@ -61,9 +61,9 @@
 					<li>tab=changelog - Changelog</li>
 				</ul>
 			</li>
-			<li><u>team</u>
+			<li><u>Team und Empfehlungen</u>
 				<ul>
-					<li>Sobald team=on ist, werden die Streams der MGN nur angezeigt, wenn diese auch gefordert wurden.</li>
+					<li>Sobald team=on oder suggestions=on ist, werden die Streams der MgN bzw. Empfehlungen im Streams Tab angezeigt.</li>
 				</ul>
 			</li>
 			<li><u>Beispiele</u>
