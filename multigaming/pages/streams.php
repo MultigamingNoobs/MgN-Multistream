@@ -9,7 +9,8 @@
 <?php $streamsConditions = 'lang='.$lang.'&hitbox='.makeList($hitbox).'&twitch='.makeList($twitch);?>
 	$(document).ready(function(){
 		$("#buttonLoad").click(function(){
-			$('#streams').load('multigaming/pages/showStreams.php?<?php echo $streamsConditions;?>'); // Der gesamte Inhalt von #container wird durch den Inhalt der Datei "ajax/content.html" ersetzt.
+			$('#streams').load('multigaming/pages/showStreams.php?<?php echo $streamsConditions;?>');
+			$('#chat').load('multigaming/pages/showChat.php?<?php echo $streamsConditions;?>');
 		});
 	});
 	$(document).ready(function(){

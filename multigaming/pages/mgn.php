@@ -9,7 +9,8 @@
 <?php $MgMConditions = 'lang='.$lang.'&hitbox='.makeList($teamMembersHitbox).'&twitch='.makeList($teamMembersTwitch);?>
 	$(document).ready(function(){
 		$("#MgNbuttonLoad").click(function(){
-			$('#MgNstreams').load('multigaming/pages/showStreams.php?<?php echo $MgMConditions;?>'); // Der gesamte Inhalt von #container wird durch den Inhalt der Datei "ajax/content.html" ersetzt.
+			$('#MgNstreams').load('multigaming/pages/showStreams.php?<?php echo $MgMConditions;?>');
+			$('#MgNchat').load('multigaming/pages/showChat.php?<?php echo $MgMConditions;?>');
 		});
 	});
 	$(document).ready(function(){
