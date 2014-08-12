@@ -21,8 +21,6 @@
 	
 	echo '<div id="chat_">';
 		echo '<div class="tabber">';
-			echo count($hitboxOnline);
-			echo $hitboxOnline[0];
 			displaySidebarChat($twitchOnline,$hitboxOnline);
 		echo '</div>';
 	echo '</div>';
