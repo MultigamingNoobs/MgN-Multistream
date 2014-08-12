@@ -47,7 +47,7 @@
 		return $t;
 	}
 
-	function displaySidebarChat($twitch,$hitbox){
+	function displaySidebarChat($hitbox,$twitch){
 		if($twitch[0] <> ''){
 			for($i=0;$i<count($twitch);$i++){
 				echo '<div class="tabbertab">';
