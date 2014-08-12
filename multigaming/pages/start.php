@@ -11,7 +11,7 @@
 			<fieldset>
 				<legend>Twitch</legend>
 				
-					<?php echo '<input type="search" size="30" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
+					<?php echo '<input type="text" size="30" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
 						<p></p>
 						<div id="twitchSearch" style="width=50%">
 						</div>
@@ -22,7 +22,7 @@
 			<fieldset>
 				<legend>Hitbox</legend>
 				
-					<?php echo '<input type="search" size="30" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
+					<?php echo '<input type="text" size="30" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
 					<p></p>
 					<div id="hitboxSearch" style="width=50%">
 					</div>
@@ -95,11 +95,10 @@
 		<fieldset>		
 			<legend>Social</legend>	
 			<fieldset>		
-				<legend>MgN Communities</legend>		
-				<a href="https://plus.google.com/u/0/communities/110109481253283166036" target="_blank"><img src="multigaming/pictures/g+.png"></img></a>
-				<a href="http://steamcommunity.com/groups/multinoobs" target="_blank"><img src="multigaming/pictures/steam.png"></img></a>
-				<a href="http://www.facebook.com/MultigamingNoobs" target="_blank"><img src="multigaming/pictures/facebook.png"></img></a>
-				<a href="https://twitter.com/mgnmultistream" target="_blank"><img src="multigaming/pictures/twitter.png"></img></a>
+				<legend>MgN Communities</legend>	
+				<a href="http://steamcommunity.com/groups/multinoobs" target="_blank"><img width="100%" src="multigaming/pictures/steam.png"></img></a>
+				<a href="https://plus.google.com/u/0/communities/110109481253283166036" target="_blank"><img width="49%" src="multigaming/pictures/g+.png"></img></a>
+				<a href="https://twitter.com/mgnmultistream" target="_blank"><img width="49%" src="multigaming/pictures/twitter.png"></img></a>
 			</fieldset>
 			<fieldset>		
 				<legend>Twitter</legend>		
