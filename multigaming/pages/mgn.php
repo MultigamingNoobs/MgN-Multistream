@@ -2,7 +2,7 @@
 	<button id="MgNbuttonLoad" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnReload;?></button>
 	<button id="MgNchatPopout" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnPopout;?></button>
 	<button id="MgNhideShowChat" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnHideChat;?></button>
-	</div>
+</div>
 <div id="MgNstreams"></div>
 <div id="MgNchat"></div>
 <script type="text/javascript">

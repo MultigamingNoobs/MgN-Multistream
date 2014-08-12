@@ -32,4 +32,4 @@ div#results div.result p{margin:0;padding:0;}
 span.highlight{background:#FCFFA3;font-weight:700;padding:3px;}
 #buttons,#MgNbuttons{position:fixed;top:10px;right:10px;}
 #chat_{height:100%;width:100%}
-#chat,#MgNchat{position:fixed;top:65px;right:0;margin-top:3px;height:calc(100vh-53px);float:right;width:25%;}
+#streamsChat,#mgnChat{position:fixed;top:65px;right:0;margin-top:3px;height:calc(100vh-53px);float:right;width:25%;}
