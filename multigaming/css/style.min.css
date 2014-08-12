@@ -4,10 +4,9 @@ legend{color:#EE1111;}
 fieldset{border-color:#300;border-style:solid;}
 p{text-align:justify;}
 #content{position:relative;top:30px;width:100%;height:100%;}
-#left{position:absolute;left:1%;float:left;width:34%;}
-#center{position:absolute;left:36%;width:34%;}
-#right{position:absolute;right:1%;float:right;width:28%;}
-#right img{width:49%;}
+#left{position:absolute;left:0.5%;float:left;width:40%;}
+#center{position:absolute;left:42%;width:36%;}
+#right{position:absolute;right:0.5%;float:right;width:20%;}
 ul.sites{color:#300;background-color:#B3A3A3;margin:0;}
 * html ul.sites{font:bold;width:1em;}
 ul.sites li{font:bold;list-style:none;margin:.4em;padding:0;}
