@@ -114,7 +114,8 @@
 	
 	function displayHitboxStream($stream,$site,$h){
 		if($stream <> '' and $stream <> null){
-			echo '<div id="stream_'.$site.'" style="height:calc(95vh/'.$h.');">';
+			$hh = 100/$h;
+			echo '<div id="stream_'.$site.'" style="height:'$hh'%);">';
 			echo '<iframe width=100% height=100% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
 			echo '</div>';
 		}

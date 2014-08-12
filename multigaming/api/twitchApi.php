@@ -70,13 +70,13 @@
 			return $array['stream']['game'];
 		}
 	}
-	function getAllTwitchStreams($team_bol,$sug_bol,$teamMembersTwitch,$sugestionsTwitch){
+	function getAllTwitchStreams($team_bol,$sug_bol,$teamMembersTwitch,$suggestionsTwitch){
 		$input= split(',',(strtolower($_REQUEST['twitch'])));
 		if($team_bol){
 			$input = array_merge($teamMembersTwitch,$input);
 		}
 		if($sug_bol){
-			$input = array_merge($sugestionsTwitch,$input);
+			$input = array_merge($suggestionsTwitch,$input);
 		}
 		$input = array_unique($input);
 		sort($input);
@@ -93,7 +93,8 @@
 	}
 
 	function displayTwitchStreamHTML5($stream,$site,$h){
-		echo '<div id="stream_'.$site.'" style="height:'.$h.'%;">';
+		$hh = 100/$h;
+		echo '<div id="stream_'.$site.'" style="height:'$hh'%);">';
 		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
 		echo '</div>';
 	}
@@ -105,7 +106,8 @@
 	
 	function displayTwitchStream($stream,$site,$h){
 		if($stream <> '' and $stream <> null){
-			echo '<div id="stream_'.$site.'" style="height:calc(95vh/'.$h.');">';
+			$hh = 100/$h;
+			echo '<div id="stream_'.$site.'" style="height:'$hh'%);">';
 			echo '<object type="application/x-shockwave-flash" 
 			height="100%" width="100%" 
 			id="live_embed_player_flash" 
