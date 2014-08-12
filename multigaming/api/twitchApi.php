@@ -94,7 +94,7 @@
 
 	function displayTwitchStreamHTML5($stream,$site,$h){
 		$hh = 100/$h;
-		echo '<div id="stream_'.$site.'" style="height:'$hh'%);">';
+		echo '<div id="stream_'.$site.'" style="height:'.$hh.'%);">';
 		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
 		echo '</div>';
 	}
@@ -107,7 +107,7 @@
 	function displayTwitchStream($stream,$site,$h){
 		if($stream <> '' and $stream <> null){
 			$hh = 100/$h;
-			echo '<div id="stream_'.$site.'" style="height:'$hh'%);">';
+			echo '<div id="stream_'.$site.'" style="height:'.$hh.'%);">';
 			echo '<object type="application/x-shockwave-flash" 
 			height="100%" width="100%" 
 			id="live_embed_player_flash" 
