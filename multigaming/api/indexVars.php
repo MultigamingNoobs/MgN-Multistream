@@ -16,7 +16,7 @@
 		$suggestions_bol = true;
 	}
 	$hitbox = getAllHitboxStreams($team_bol,$suggestions_bol,$teamMembersHitbox,$suggestionsHitbox);
-	$twitch = getAllTwitchStreams($team_bol,$suggestions_bol,$teamMembersTwitch,$sugestionsTwitch);
+	$twitch = getAllTwitchStreams($team_bol,$suggestions_bol,$teamMembersTwitch,$suggestionsTwitch);
 	$debug	= array_unique(split(',',$_GET['debug']));
 	$tab	= array_unique(split(',',$_GET['tab']));
 ?>
