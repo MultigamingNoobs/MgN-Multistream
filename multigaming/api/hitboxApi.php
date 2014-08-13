@@ -76,13 +76,8 @@
 	}
 	
 	function getHitboxImage($stream){
-		$Media = new Media;
-		if ($media = $Media->getMedia('live',$stream)) {
-			$str = $media['channel']['user_logo'];
-			$pos = strrpos($str,"/");
-			$str_= substr($str,$pos,strlen($str)-$pos);
-			return "http://edge.vie.hitbox.tv/static/img/channel".$str_;
-		}
+		$array = json_decode(file_get_contents('http://api.hitbox.tv/user/'.$stream), true);
+		return $array['user_logo'];
 	}
 	
 	function getHitboxGame($stream){
