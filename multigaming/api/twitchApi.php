@@ -92,8 +92,8 @@
 
 	function displayTwitchStreamHTML5($stream,$site,$h){
 		$hh = 100/$h;
-		echo '<div id="stream_'.$site.'" style="height:'.$hh.'%);">';
-		echo '<iframe id="player" type="text/html" width=100% height=99%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
+		echo '<div id="stream_'.$site.'" style="height:'.$hh.'%;">';
+		echo '<iframe id="player" type="text/html" width=100% height=100%  src="http://www.twitch.tv/'.$stream.'/hls"  frameborder="0"></iframe>';
 		echo '</div>';
 	}
 	function displayTwitchChat($stream,$h){
@@ -103,22 +103,20 @@
 	}
 	
 	function displayTwitchStream($stream,$site,$h){
-		if($stream <> '' and $stream <> null){
-			$hh = 100/$h;
-			echo '<div id="stream_'.$site.'" style="height:'.$hh.'%);">';
-			echo '<object type="application/x-shockwave-flash" 
-			height="100%" width="100%" 
-			id="live_embed_player_flash" 
-			data="http://www.twitch.tv/widgets/live_embed_player.swf?channel='.$stream.'" 
-			bgcolor="#000000">
-			<param  name="allowFullScreen" value="true" />
-			<param  name="allowScriptAccess" value="always" />
-			<param  name="allowNetworking"  value="false" />
-			<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-			<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
-			</object>';
-			echo '</div>';
-		}
+		$hh = 100/$h;
+		echo '<div id="stream_'.$site.'" style="height:'.$hh.'%;">';
+		echo '<object type="application/x-shockwave-flash" 
+		height="100%" width="100%" 
+		id="live_embed_player_flash" 
+		data="http://www.twitch.tv/widgets/live_embed_player.swf?channel='.$stream.'" 
+		bgcolor="#000000">
+		<param  name="allowFullScreen" value="true" />
+		<param  name="allowScriptAccess" value="always" />
+		<param  name="allowNetworking"  value="false" />
+		<param  name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+		<param  name="flashvars"  value="hostname=www.twitch.tv&channel='.$stream.'&auto_play=true&start_volume=25" />
+		</object>';
+		echo '</div>';
 	}
 	
 	

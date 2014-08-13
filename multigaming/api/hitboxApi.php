@@ -113,12 +113,10 @@
 	}
 	
 	function displayHitboxStream($stream,$site,$h){
-		if($stream <> '' and $stream <> null){
-			$hh = 100/$h;
-			echo '<div id="stream_'.$site.'" style="height:'.$hh.'%);">';
-			echo '<iframe width=100% height=100% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
-			echo '</div>';
-		}
+		$hh = 100/$h;
+		echo '<div id="stream_'.$site.'" style="height:'.$hh.'%;">';
+		echo '<iframe width=100% height=100% src="http://hitbox.tv/#!/embed/'.$stream.'" frameborder="0" seamless allowfullscreen></iframe>';
+		echo '</div>';
 	}
 	function displayHitboxChat($stream,$h){
 		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;margin-top: 4px;"></iframe>';				
