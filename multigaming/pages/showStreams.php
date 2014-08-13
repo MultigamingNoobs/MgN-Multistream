@@ -1,12 +1,8 @@
 <?php
 	$hitbox = split(',',$_GET['hitbox']);
 	$twitch = split(',',$_GET['twitch']);
-
-	if($twitch[0] == ''){$twitch = array();}
-	if($hitbox[0] == ''){$hitbox = array();}
 	
 	$lang = 'english';
-	
 	if($_GET['lang'] != null and $_GET['lang'] != ''){
 		$lang = strtolower($_GET['lang']);
 	}
@@ -61,7 +57,7 @@
 	
 	function displayTwitchStreamInfo($stream){
 		echo '<td>';
-			echo '<a href="http://www.twitch.tv/'.$stream.'" target="_blank"><img src="'.getTwitchImage($stream).'" alt="user_logo" style="height:35; width:35"></img></a>';
+			echo '<a href="http://www.twitch.tv/'.$stream.'" target="_blank"><img height="30px" src="'.getTwitchImage($stream).'" alt="user_logo" style="height:35; width:35"></img></a>';
 		echo '</td>';
 		echo '<td>';
 			echo '<table id="innerTable">';
@@ -76,12 +72,17 @@
 	}
 ?>
 <!-- the head-->
+<?php $c = count($hitboxOnline) + count($twitchOnline);?>
 <div id="streamHead">
 	<table id="outerTable">
 		<tr>
 		<?php
-			if(count($hitboxOnline) == 0 and count($twitchOnline) == 0){
+			if($c == 0){
 				echo '<td><p id="noOne">'.$noOneOnline.' :-\ </p></td>';
+				echo '$twitch:';
+				print_r($twitch);
+				echo '$twitchOnline:';
+				print_r($twitchOnline);
 			}else{
 				displayStreamInfo($hitboxOnline,$twitchOnline);
 			}
@@ -91,5 +92,9 @@
 </div>
 <!-- the streams-->
 <div id="streamContent">
-	<?php displayStreams($hitboxOnline,$twitchOnline);?>
+	<?php 
+		if($c != 0){
+			displayStreams($hitboxOnline,$twitchOnline);
+		}
+	?>
 </div>

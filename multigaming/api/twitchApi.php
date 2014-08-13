@@ -58,10 +58,8 @@
 	}
 	
 	function getTwitchImage($stream){
-		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/channel/'.$stream), true);
-		if ($array['stream'] != null) {
-			return $array['logo'];
-		}
+		$array = json_decode(file_get_contents('https://api.twitch.tv/kraken/users/'.$stream), true);
+		return $array['logo'];
 	}
 	
 	function getTwitchGame($stream){
