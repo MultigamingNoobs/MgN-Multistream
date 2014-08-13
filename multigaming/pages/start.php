@@ -49,7 +49,6 @@
 							echo '<option value="MgN">';
 							echo '<option value="'.$streams.'">';
 							echo '<option value="'.$imprint.'">';
-							echo '<option value="'.$contact.'">';
 							echo '<option value="'.$help.'">';
 						?>	
 					<option value="Changelog">
