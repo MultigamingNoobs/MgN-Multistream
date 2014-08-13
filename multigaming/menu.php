@@ -24,13 +24,7 @@
 		echo '<h2>'.$imprint.'</h2>';
 		include 'pages/'.$imp.'.php';
 		echo '</div>';
-		$t = '"';
-	if(strtolower($tab[0])=='kontakt' or strtolower($tab[0])=='contact'){$t = ' tabbertabdefault"';}
-		echo '<div class="tabbertab'.$t.'>';
-		echo '<h2>'.$contact.'</h2>';
-		include 'pages/contact.php';
-		echo '</div>';
-		$t = '"';		
+		$t = '"';	
 	if(strtolower($tab[0])=='hilfe' or strtolower($tab[0])=='help'){$t = ' tabbertabdefault"';}
 		echo '<div class="tabbertab'.$t.'>';
 		echo '<h2>'.$help.'</h2>';
