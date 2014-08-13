@@ -18,7 +18,7 @@ ul.sites li ul li{margin:.1em 0;}
 #outerTable{height:40px;width:100%;margin-top:1.5px;}
 #middleTable{height:40px;}
 #innerTable{height:35px;font-size:0.8em;}
-#streamContent{position:relative;top:75px;float:left;height:calc(100%-93px);width:75%;}
+#streamContent{position:relative;top:75px;float:left;height:90vh;width:75%;}
 #stream_left{float:left;width:50%;}
 #stream_right{float:right;width:50%;}
 form input[type=submit]{display:none;}
