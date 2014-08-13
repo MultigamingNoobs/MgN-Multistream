@@ -31,7 +31,7 @@
 							displayHitboxStreamInfo($hitboxOnline[$i-1]);
 						}else{
 							//show twitchOnline stream info
-							displayTwitchStreamInfo($twitchOnline[$i-1]);
+							displayTwitchStreamInfo($twitchOnline[$i-1-count($hitboxOnline)]);
 						}
 					echo '</tr>';
 				echo '</table>';
@@ -41,7 +41,7 @@
 	}
 	function displayHitboxStreamInfo($stream){
 		echo '<td>';
-			echo '<a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="'.getHitboxImage($stream).'" alt="user_logo" style="height:35px; width:35px"></img></a>';
+			echo '<a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="'.getHitboxImage($stream).'" title="http://www.hitbox.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img></a>';
 		echo '</td>';
 		echo '<td>';
 			echo '<table id="innerTable">';
@@ -57,7 +57,7 @@
 	
 	function displayTwitchStreamInfo($stream){
 		echo '<td>';
-			echo '<a href="http://www.twitch.tv/'.$stream.'" target="_blank"><img height="30px" src="'.getTwitchImage($stream).'" alt="user_logo" style="height:35; width:35"></img></a>';
+			echo '<a href="http://www.twitch.tv/'.$stream.'" target="_blank"><img src="'.getTwitchImage($stream).'" title="http://www.twitch.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img></a>';
 		echo '</td>';
 		echo '<td>';
 			echo '<table id="innerTable">';
@@ -79,10 +79,6 @@
 		<?php
 			if($c == 0){
 				echo '<td><p id="noOne">'.$noOneOnline.' :-\ </p></td>';
-				echo '$twitch:';
-				print_r($twitch);
-				echo '$twitchOnline:';
-				print_r($twitchOnline);
 			}else{
 				displayStreamInfo($hitboxOnline,$twitchOnline);
 			}
