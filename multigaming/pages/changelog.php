@@ -4,8 +4,10 @@
 		<ul>
 		<li><i>fixed:</i> position of streamHead</li>
 		<li><i>fixed:</i> improvements and fixed some style issues</li>
+		<li><i>fixed:</i> now shows twitch user logo</li>
 		<li><i>changed:</i> hide MgN and suggested streams by default on stream page</li>
-		<li><i>changed:</i> removed facebook-community-banner and resized pictures</li>
+		<li><i>changed:</i> removed facebook-community-banner and resized the other pictures</li>
+		<li><i>added:</i> tooltips to the user pictures</li>
 		<li><i>added:</i> the picture in the head now contains a link to the channel</li>
 		<li><i>added:</i> option to abort search when there are 2 ore less signs</li>
 		</ul>
