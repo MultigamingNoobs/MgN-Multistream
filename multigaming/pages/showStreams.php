@@ -41,7 +41,7 @@
 	}
 	function displayHitboxStreamInfo($stream){
 		echo '<td>';
-			echo '<a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="'.getHitboxImage($stream).'" title="http://www.hitbox.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img></a>';
+			echo '<a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="http://edge.sf.hitbox.tv'.getHitboxImage($stream).'" title="http://www.hitbox.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img></a>';
 		echo '</td>';
 		echo '<td>';
 			echo '<table id="innerTable">';

@@ -5,6 +5,7 @@
 		<li><i>fixed:</i> position of streamHead</li>
 		<li><i>fixed:</i> improvements and fixed some style issues</li>
 		<li><i>fixed:</i> now shows twitch user logo</li>
+		<li><i>fixed:</i> a bug which caused a broken hitbox user logo</li>
 		<li><i>changed:</i> hide MgN and suggested streams by default on stream page</li>
 		<li><i>changed:</i> removed facebook-community-banner and resized the other pictures</li>
 		<li><i>added:</i> tooltips to the user pictures</li>
