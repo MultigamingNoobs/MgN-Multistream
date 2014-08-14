@@ -2,39 +2,58 @@
 <html lang="de">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link href="https://plus.google.com/110796119525259959832" rel="publisher" />
-	<link href="multigaming/css/style.min.css" type="text/css" rel="stylesheet">
-	<link href="multigaming/api/tabber/example.css" TYPE="text/css" rel="stylesheet" MEDIA="screen">
-	<link href="multigaming/api/pace/pace.css" rel="stylesheet" />
-	<script src="multigaming/api/jquery.js"></script>
+	<link href="mg/css/style.min.css" type="text/css" rel="stylesheet">
+	<link href="mg/api/pace/pace.css" rel="stylesheet" />
+	<link href="mg/api/mmenu/menu.css" rel="stylesheet" />
+	<script src="mg/api/jquery.js"></script>
+	<script src="mg/api/mmenu/menu.js"></script>
 	<?php
 		//version of MgN-Multistream aka Multigaming
 		$v = "v.0.7.1";
-		//contains arrays of team members and suggestions on hitbox and twitch
-		include ('multigaming/api/teamVars.php');
-		//apis to show statistics, chat, stream etc
-		include ('multigaming/api/hitboxApi.php');
-		include ('multigaming/api/twitchApi.php');
-		include ('multigaming/api/streamApi.php');
-		//google analytics script
-		include_once('multigaming/analyticstracking.php');
-		//indexVars contains language, and settings
-		include ('multigaming/api/indexVars.php');
+		//language
+		$lang = 'en';
+		if($_GET['lang'] != null and $_GET['lang'] != ''){
+			$lang = strtolower($_GET['lang']);
+		}
+		include 'mg/api/lang/'.$lang.'.php';
+		//page
+		$p = strtolower($_GET['p']);
+		if($p == '' or $p == null){$p=strtolower($home);}
+		
+		include_once('mg/analyticstracking.php');
 	?>
 	<title>MgN-Multistream</title>
 	</head>
 	<body>
-		<div class="tabber">
-			<?php include ('multigaming/menu.php'); ?>
+		<!-- menu /-->
+		<div id="sse1">
+			<div id="sses1">
+				<ul>
+				<?php 
+				$conditions = '';
+				if($lang != 'en'){$conditions=$conditions.'&lang='.$lang;}
+				if($_GET['hitbox'] != null){$conditions=$conditions.'&hitbox='.$_GET['hitbox'];}
+				if($_GET['twitch'] != null){$conditions=$conditions.'&twitch='.$_GET['twitch'];}
+				if($_GET['team'] != null){$conditions=$conditions.'&team='.$_GET['team'];}
+				if($_GET['suggestions'] != null){$conditions=$conditions.'&suggestions='.$_GET['suggestions'];}
+				echo'<li><a href="?p='.$home.$conditions.'">'.$home.'</a></li>'; ?>
+				<li><a href="?p=MgN<?php echo $conditions;?>">MgN</a></li>
+				<li><a href="?p=<?php echo $streams; echo $conditions;?>"><?php echo $streams;?></a></li>
+				<li><a href="?p=<?php echo $imprint; echo $conditions;?>"><?php echo $imprint;?></a></li>
+				<li><a href="?p=<?php echo $help; echo $conditions;?>"><?php echo $help;?></a></li>
+				<li><a href="?p=changelog<?php echo $conditions;?>">Changelog</a></li>
+				</ul>
+			</div>
 		</div>
+		<div id="content">
+			<?php
+				include 'mg/p/'.$lang.'/'.$p.'.php';
+			?>
+		</div>
+		
 		<!-- functions.js contains hitbox and twitch search -->
-		<script src="multigaming/api/functions.min.js"></script>
+		<script src="mg/api/functions.min.js"></script>
 		<!-- pace shows the loading screen -->
-		<script src="multigaming/api/pace/pace.min.js"></script>
-		<!-- tabber-->
-		<script src="multigaming/api/tabber/tabber.min.js"></script>
-		<script>
-			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
-		</script>
+		<script src="mg/api/pace/pace.min.js"></script>
 	</body>
 </html>

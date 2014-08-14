@@ -1,0 +1,1 @@
+<?php include 'mg/p/changelog.php';?>
