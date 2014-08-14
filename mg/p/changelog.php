@@ -1,13 +1,13 @@
 <ul class="sites">
 	<li><b>BETA v.0.7.1</b>
 		<ul>
-		<li><i>fixed:</i> position of streamHead</li>
-		<li><i>fixed:</i> improvements and fixed some style issues</li>
+		<li><i>fixed:</i> improvements and fixed some style issues (also there is a new style)</li>
 		<li><i>fixed:</i> now shows twitch user logo</li>
 		<li><i>fixed:</i> a bug which caused a broken hitbox user logo</li>
 		<li><i>changed:</i> new help page</li>
 		<li><i>changed:</i> hide MgN and suggested streams by default on stream page</li>
 		<li><i>changed:</i> removed facebook-community-banner and resized the other pictures</li>
+		<li><i>changed:</i> new menus! that caused many changes</li>
 		<li><i>added:</i> tooltips to the user pictures</li>
 		<li><i>added:</i> the picture in the head now contains a link to the channel</li>
 		<li><i>added:</i> option to abort search when there are 2 ore less signs</li>
