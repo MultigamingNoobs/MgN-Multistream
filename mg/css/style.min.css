@@ -31,6 +31,5 @@ div#results div.result h2 a{text-decoration:none;border-bottom:1px solid #11c;}
 div#results div.result p{margin:0;padding:0;}
 span.highlight{background:#FCFFA3;font-weight:700;padding:3px;}
 #buttons,#MgNbuttons{position:fixed;top:10px;right:10px;}
-#chat{position: absolute;right: 5px;top: 0px;height:100%;width:25%}
+#chat,#MgNchat{position: absolute;right: 5px;top: 0px;height:100%;width:25%}
 #chat_{height:100%;width:100%;padding-top: 6px;}
-#streamsChat,#mgnChat{position:fixed;top:65px;right:0;margin-top:3px;height:calc(100vh-53px);float:right;width:25%;}
