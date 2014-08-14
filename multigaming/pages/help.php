@@ -55,7 +55,7 @@
 			</li>
 			<li><u>Chat</u>
 				<code>
-					&lt;iframe src=&quot;http://stream.my-mgn.de/multigaming/pages/showChat.php?twitch={twitchstreams}&amp;hitbox={hitboxstreams}&quot; name=&quot;mgnmultistream&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
+					&lt;iframe src=&quot;http://stream.my-mgn.de/multigaming/pages/popoutChat.php?twitch={twitchstreams}&amp;hitbox={hitboxstreams}&quot; name=&quot;mgnmultistream&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
 				</code>
 			</li>
 		</ul>
