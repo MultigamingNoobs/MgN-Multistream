@@ -3,7 +3,7 @@ body{color:#FFF;background-color:#100;}
 legend{color:#EE1111;}
 fieldset{border-color:#300;border-style:solid;}
 p{text-align:justify;}
-code{font-family:monosize;white-space:pre;} 
+code{border: dashed 1px #BCBCCB;font-family: Consolas;background-color: #F3F3F9;font-size: 12px;} 
 #content{position:relative;top:30px;width:100%;height:100%;}
 #left{position:absolute;left:0.5%;float:left;width:40%;}
 #center{position:absolute;left:42%;width:36%;}
