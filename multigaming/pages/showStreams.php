@@ -15,8 +15,9 @@
 	
 	$hitboxOnline = getOnlineHitboxStreams($hitbox);
 	$twitchOnline = getOnlineTwitchStreams($twitch);
-	
-	$c = count($hitboxOnline) + count($twitchOnline);?>
+		
+	$c = count($hitboxOnline) + count($twitchOnline);
+?>
 <!-- the head-->
 <div id="streamHead">
 	<table id="outerTable">
