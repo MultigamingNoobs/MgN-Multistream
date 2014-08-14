@@ -1,7 +1,7 @@
 <?php
 	$hitbox = split(',',$_GET['hitbox']);
 	$twitch = split(',',$_GET['twitch']);
-
+	
 	$lang = 'english';
 	if($_GET['lang'] != null and $_GET['lang'] != ''){
 		$lang = strtolower($_GET['lang']);
@@ -17,7 +17,7 @@
 	
 	echo '<div id="chat_">';
 		echo '<div class="tabber">';
-			displaySidebarChat($twitchOnline,$hitboxOnline);
+			displaySidebarChat($hitboxOnline,$twitchOnline);
 		echo '</div>';
 	echo '</div>';
  ?>
