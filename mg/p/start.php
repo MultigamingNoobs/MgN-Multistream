@@ -1,4 +1,4 @@
-<?php echo '<i style="position:fixed;top:28px;right:50%;"> MgN Multistream '.$v."</i>";?>
+<?php echo '<i style="position:absolute;top:5px;"> MgN Multistream '.$v."</i>";?>
 <div id="left">
 	<?php	
 		include 'mg/api/hitboxApi.php';

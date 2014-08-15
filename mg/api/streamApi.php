@@ -58,12 +58,12 @@
 		echo '</ul>';
 		echo '<div class="tabcontents">';
 			for($i=0;$i<count($hitbox);$i++){
-				echo '<div id="'.$hitbox[$i].'" style="height:94vh;">';
+				echo '<div id="'.$hitbox[$i].'" style="height:93vh;">';
 				displayHitboxChat($hitbox[$i],'100');
 				echo '</div>';
 			}
 			for($i=0;$i<count($twitch);$i++){
-				echo '<div id="'.$twitch[$i].'" style="height:94vh;">';
+				echo '<div id="'.$twitch[$i].'" style="height:93vh;">';
 				displayTwitchChat($twitch[$i],'100');
 				echo '</div>';
 			}
