@@ -13,20 +13,20 @@
 	$streamPage = "stream page";
 	$twitchSearch = "Twitch search";
 	$hitboxSearch = "Hitbox search";
-	$dnd = "drag and drop streams here";
+	$dnd = "drag and drop streams here or click on a search result";
 		
 	$settings = "Settings";
 	$setLang = "Language:";
 	$startPage = "home page";
 	$mgnStreams = "Show MgN streams";
-	$suggestedStreams = "Show other suggestions";
+	$suggestedStreams = "Show suggestions";
 	
 	$launch = "Launch streams";
 	$reset = "Reset";
 	$submit ="Submit";
 	
 	$qickHelp = "Quick-Help";
-	$qickHelpText = "Input your streams separated by comma. You can use the search line to find online streams. Drag and drop them in the field. Last press submit to watch the streams.";
+	$qickHelpText = "Input your streams separated by comma. You can use the search line to find online streams. Drag and drop them in the field or click on a search result. Last press submit to watch the streams.";
 		
 	$hitboxStatistics = "Hitbox Statistics";
 	$hitboxStatsOnline = "";

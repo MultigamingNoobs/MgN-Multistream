@@ -13,20 +13,20 @@
 	$streamPage = "Stream Seite";
 	$twitchSearch = "Twitch Suche";
 	$hitboxSearch = "Hitbox Suche";
-	$dnd = "Drag and Drop Streams hier hin";
+	$dnd = "Drag and Drop Streams hier hin oder klicke auf ein Suchergebnis.";
 	
 	$settings = "Einstellungen";
 	$setLang = "Sprache:";
 	$startPage = "Startseite";
 	$mgnStreams = "MgN Streams anzeigen";
-	$suggestedStreams = "Empfohlenen streams zeigen";
+	$suggestedStreams = "Empfohlenen streams anzeigen";
 	
 	$launch = "Streams starten";
 	$reset = "Zur&uuml;cksetzen";
 	$submit ="Absenden";
 	
 	$qickHelp = "Schnelle Hilfe";
-	$qickHelpText = "Geb durch Kommata getrennt die Streams an, die du sehen willst! Wenn du die Suche nutzt, dann die den gew&uuml;nschten Stream per Drag and Drop in die Liste. Zum Schluss dr&uuml;cke Submit und dann viel Spa&szlig; beim schauen der Streams,..";
+	$qickHelpText = "Geb durch Kommata getrennt die Streams an, die du sehen willst! Wenn du die Suche nutzt, dann zieh den gew&uuml;nschten Stream per Drag and Drop in die Liste, oder klicke auf ein Suchergebnis, um dies hinzu zu fügen. Zum Schluss dr&uuml;cke Submit und dann viel Spa&szlig; beim schauen der Streams,..";
 	
 	$hitboxStatistics = "Hitbox Statistiken";
 	$hitboxStatsOnline = "";
