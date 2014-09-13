@@ -10,6 +10,7 @@
 	$help = "";
 		
 	//start.php
+	$streamPage = "";
 	$twitchSearch = "";
 	$hitboxSearch = "";
 	$dnd = "";

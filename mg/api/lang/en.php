@@ -10,6 +10,7 @@
 	$help = "Help";
 	
 	//start.php
+	$streamPage = "stream page";
 	$twitchSearch = "Twitch search";
 	$hitboxSearch = "Hitbox search";
 	$dnd = "drag and drop streams here";

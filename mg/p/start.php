@@ -14,25 +14,20 @@
 		<fieldset>
 			<?php echo '<legend>'.$settings.'</legend>';?>
 			<p>	
+				<?php echo '<label>'.$streamPage.'</label>';?>	
+				<input list="p" size="10" name="p" value="Streams" required>
+				<datalist id="p">
+					<?php
+						echo '<option value="MgN">';
+						echo '<option value="'.$streams.'">';
+					?>	
+				</datalist>	
+			</p><p>	
 				<?php echo '<label>'.$setLang.'</label>';?>
-					<input list="lang" size="30" name="lang" value="EN" required>
+					<input list="lang" size="10" name="lang" value="EN" required>
 					<datalist id="lang">
 					<option value="EN">
 					<option value="DE">	
-				</datalist>	
-			</p>	
-			<p>	
-				<?php echo '<label>'.$home.'</label>';?>	
-				<input list="tab" size="30" name="p" value="Streams" required>
-				<datalist id="p">
-					<?php
-						echo '<option value="'.$home.'">';	
-						echo '<option value="MgN">';
-						echo '<option value="'.$streams.'">';
-						echo '<option value="'.$imprint.'">';
-						echo '<option value="'.$help.'">';
-					?>	
-				<option value="Changelog">
 				</datalist>	
 			</p><p>	
 				<?php echo '<label>'.$mgnStreams.'</label>';?>	

@@ -1,4 +1,12 @@
 <ul class="sites">
+	<li><b>BETA v.0.7.2</b>
+		<ul>
+		<li><i>changed:</i> order of language and page settings</li>
+		<li><i>changed:</i> size of language and page settings</li>
+		<li><i>removed:</i> unnecessary Stream settings</li>
+		<li><i>fixed:</i> settings dropdown-menu</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.1</b>
 		<ul>
 		<li><i>fixed:</i> improvements and fixed some style issues (also there is a new style)</li>
