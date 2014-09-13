@@ -28,11 +28,17 @@
 		$num = getTwitchFeatured();
 		$max= ceil($num[0]/100);
 		while($start < $max+1){
-			$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams?limit=100&offset='.$start*100), true);
-			for($i=0;$i<count($arr['streams']);$i++){
-				$ret[] = $arr['streams'][$i]['channel']['name'];
-			}
+			getTwitchStreamerOffset($max);
 			$start++;
+		}
+		$ret = array_unique($ret);
+		return $ret;
+	}
+	function getTwitchStreamerOffset($o){
+		$ret;
+		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams?limit=100&offset='.$o*100), true);
+		for($i=0;$i<count($arr['streams']);$i++){
+			$ret[] = $arr['streams'][$i]['channel']['name'];
 		}
 		$ret = array_unique($ret);
 		return $ret;
