@@ -1,25 +1,25 @@
-ul#changes {
+ul#sites {
 	color:				black;
 	width:				99	%;
 	margin: 			0;
 	background-color:	#E3E3E3;
 }
-* html ul#changes {
+* html ul#sites {
 	font:				bold;
 	width: 				2.6em;
 	width: 				1em;
 }
-ul#changes li {
+ul#sites li {
 	font: 				bold;
 	list-style: 		none;
 	margin: 			0.4em;
 	padding: 			0;
 }
 
-ul#changes li ul {
+ul#sites li ul {
 	margin: 			0 0 0 1em;
 	padding: 			0;
 }
-ul#changes li ul li {
+ul#sites li ul li {
 	margin: 			0.1em 0;
 }
