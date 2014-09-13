@@ -40,23 +40,23 @@
 		<fieldset>
 			<legend>Twitch</legend>
 			
-				<?php echo '<input type="text" size="30" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
+				<?php echo '<input id="search" type="search" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
 					<p></p>
 					<div id="twitchSearch" style="width=50%">
 					</div>
 					<br>					
-				<?php echo '<textarea name="twitch" rows="5" cols="30" id="twitch" placeholder="'.$dnd.'"></textarea>' ;?>
+				<?php echo '<textarea name="twitch" rows="5" id="twitch" placeholder="'.$dnd.'"></textarea>' ;?>
 			
 		</fieldset>	
 		<fieldset>
 			<legend>Hitbox</legend>
 			
-				<?php echo '<input type="text" size="30" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
+				<?php echo '<input id="search" type="search" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
 				<p></p>
 				<div id="hitboxSearch" style="width=50%">
 				</div>
 				<br>
-				<?php echo '<textarea rows="5" cols="30" name="hitbox" id="hitbox" placeholder="'.$dnd.'"></textarea>' ;?>
+				<?php echo '<textarea rows="5" name="hitbox" id="hitbox" placeholder="'.$dnd.'"></textarea>' ;?>
 			
 		</fieldset>	
 		<fieldset>
