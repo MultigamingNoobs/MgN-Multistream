@@ -4,6 +4,7 @@
 		<li><i>added:</i> now it's possible to click on the search results (more touch friendly)</li>
 		<li><i>changed:</i> order of language and page settings</li>
 		<li><i>changed:</i> size of language and page settings</li>
+		<li><i>changed:</i> resized search and video components</li>
 		<li><i>removed:</i> unnecessary Stream settings</li>
 		<li><i>fixed:</i> settings dropdown-menu</li>
 		</ul>
