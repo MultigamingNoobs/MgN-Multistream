@@ -1,6 +1,7 @@
 <ul class="sites">
 	<li><b>BETA v.0.7.2</b>
 		<ul>
+		<li><i>added:</i> now it's possible to click on the search results (more touch friendly)</li>
 		<li><i>changed:</i> order of language and page settings</li>
 		<li><i>changed:</i> size of language and page settings</li>
 		<li><i>removed:</i> unnecessary Stream settings</li>

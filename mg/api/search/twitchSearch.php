@@ -22,7 +22,7 @@
 			sort($contains);
 		}
 		for($i=0;$i<count($contains);$i++){
-			echo '<label id="'.$contains[$i].'," draggable="true" ondragstart="drag(event)">'.$contains[$i].'</label>';
+			echo '<label class="draggable" id="'.$contains[$i].'," draggable="true" onclick="addToTwitchList('."'".$contains[$i]."'".')" ondragstart="drag(event)">'.$contains[$i].'</label>';
 			echo "<br>";
 		}
 	}else{

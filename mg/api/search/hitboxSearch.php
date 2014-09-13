@@ -21,7 +21,7 @@
 		$contains = array_unique($contains);
 		sort($contains);
 		for($i=0;$i<count($contains);$i++){
-			echo '<label id="'.$contains[$i].'," draggable="true" ondragstart="drag(event)">'.$contains[$i].'</label>';
+			echo '<label name="'.$contains[$i].'," id="'.$contains[$i].'," draggable="true" onclick="addToHitboxList('."'".$contains[$i]."'".')" ondragstart="drag(event)">'.$contains[$i].'</label>';
 			echo "<br>";
 		}
 	}else{
