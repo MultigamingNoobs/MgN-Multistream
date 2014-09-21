@@ -12,11 +12,10 @@
 			</li>
 			<li><u>Tab</u>
 				<ul>
-					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gew&uuml;hlt:</li>
-					<li>p=start - Startseite</li>
+					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gew&uuml;hlt, die Sprache muss aber auf jeden Fall auf Deutsch gestellt werden!:</li>
+					<li>p=start - Startseite (oder p ungesetzt lassen)</li>
 					<li>p=streams - Streams</li>
 					<li>p=impressum - Impressum</li>
-					<li>p=kontakt - Kontakt</li>
 					<li>p=hilfe - Hilfe</li>
 					<li>p=changelog - Changelog</li>
 				</ul>
@@ -24,8 +23,8 @@
 			<li><u>Sprache</u>
 				<ul>
 					<li>Es stehen folgende Sprachen zur Auswahl, wobei Englisch standart ist:</li>
-					<li>lang=German - Deutsch</li>
-					<li>lang=English - Endlisch</li>
+					<li>lang=de - Deutsch</li>
+					<li>lang=en - Englisch</li>
 				</ul>
 			</li>
 			<li><u>Team und Empfehlungen</u>

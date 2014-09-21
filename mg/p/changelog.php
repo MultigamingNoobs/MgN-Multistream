@@ -1,4 +1,10 @@
 <ul class="sites">
+	<li><b>BETA v.0.7.2b</b>
+		<ul>
+		<li><i>changed:</i> updated a few thing on the help page</li>
+		<li><i>added:</i> English help page</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.2</b>
 		<ul>
 		<li><i>added:</i> now it's possible to click on the search results (more touch friendly)</li>

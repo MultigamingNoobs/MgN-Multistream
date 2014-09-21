@@ -1,52 +1,51 @@
 <ul class="sites">
 	<li></li>
-	<li><b>Adresszeilenkomandos</b>
+	<li><b>Commands</b>
 		<ul>
-			<li>Im Folgenden sind alle unterst&uuml;tzten Eingaben gelistet, auf die die Startseite zur&uuml;ck greift. Darauf folgen ein paar Beispiele.></li>
+			<li>The following commands are used to set the streams, language and other things. The index page needs the commands but if you don't want to write code, you can just click and drag and drop on the home page.></li>
 			<li><u>Streams</u>
 				<ul>
-					<li>twitch - Liste f&uuml;r twitch Streams</li>
-					<li>hitbox - Liste f&uuml;r hitbox Streams</li>
-					<li>hier kann eine durch Kommata getrennte Liste an Streams angegeben werden, die zus&auml;tzlich angezeigt werden sollen. Duplikate werden ignoriert!</li>
+					<li>twitch - list of twitch streams</li>
+					<li>hitbox - list of hitbox streams</li>
+					<li>the command needs a with comma separated list like <i>hitbox=streamA,streamB</i> or <i>twitch=streamA,streamB,..</i>. Duplicates will be deleted and the order will not be changed.</li>
 				</ul>
 			</li>
 			<li><u>Tab</u>
 				<ul>
-					<li>Beim Aufruf der Seite wird automatisch folgender Reiter gew&uuml;hlt:</li>
-					<li>p=start - Startseite</li>
+					<li>When loading this page the following tab will be selected by default:</li>
+					<li>p=home - Index (or easily don't set p)</li>
 					<li>p=streams - Streams</li>
-					<li>p=impressum - Impressum</li>
-					<li>p=kontakt - Kontakt</li>
-					<li>p=hilfe - Hilfe</li>
+					<li>p=imprint - Imprint</li>
+					<li>p=help - Help</li>
 					<li>p=changelog - Changelog</li>
 				</ul>
 			</li>
-			<li><u>Sprache</u>
+			<li><u>Language</u>
 				<ul>
-					<li>Es stehen folgende Sprachen zur Auswahl, wobei Englisch standart ist:</li>
-					<li>lang=German - Deutsch</li>
-					<li>lang=English - Endlisch</li>
+					<li>You can select from the languages below. If no language is set English will be preferred:</li>
+					<li>lang=de - German</li>
+					<li>lang=en - English</li>
 				</ul>
 			</li>
-			<li><u>Team und Empfehlungen</u>
+			<li><u>Team and Suggestions</u>
 				<ul>
-					<li>team - Parameter f&uuml;r MgN Streams</li>
-					<li>suggestions - Parameter f&uuml;r weitere Empfehlungen</li>
-					<li>Sobald team=on oder suggestions=on ist, werden die Streams der MgN bzw. Empfehlungen im Streams Tab angezeigt. Dies hat auf den Tab MgN keinen Einfluss, dort werden immer die MgN Tabs angezeigt.</li>
+					<li>team - Parameter whether MgN Streams should be shown</li>
+					<li>suggestions - Parameter whether other suggestions should be shown</li>
+					<li>If team=on or suggestions=on then Streams from MgN-Members or suggested stream will be shown in the "Streams" tab. The settings has no influence to the MgN tab where only online MgN Streams are shown.</li>
 				</ul>
 			</li>
-			<li><u>Beispiele</u>
+			<li><u>Examples</u>
 				<ul>
-					<li>?hitbox=user,user2&amp;twitch=user3,user4&amp;p=streams - Die Reihenfolge ist egal, wichtig ist, dass am Anfang der Eingabe einmal ein <i>?</i> steht und die verschiedenen Parameter durch ein &amp; verbunden sind.</li>
+					<li>?hitbox=user,user2&amp;twitch=user3,user4&amp;p=streams - There is no correct order but the p (page) parameter should be the first! More important is that the command has to start with a <i>?</i>.Separate the parameter with &amp;!</li>
 				</ul>
 			</li>
 		</ul>
 	</li>
 	<li></li>
-	<li><b>Seite einbetten</b>
+	<li><b>Embed this page</b>
 		<ul>
-			<li>Wenn du Multistream auf deiner Seite einbetten willst, kannst du das wie folgt machen:</li>
-			<li>Dabei sind {twitchstreams} und {hitboxstreams} durch Kommata getrennte Listen wie oben bei den Adresszeilenkommandos</li>
+			<li>If you want to embed this Multistream to you web page you could do it like following:</li>
+			<li><i>keep in mind:</i> {twitchstreams} and {hitboxstreams} are comma separated lists!</li>
 			<li><u>Streams</u>
 				<code>
 					&lt;iframe src=&quot;http://stream.my-mgn.de/mg/p/showStreams.php?twitch={twitchstreams}&amp;hitbox={hitboxstreams}&quot; name=&quot;mgnmultistream&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;

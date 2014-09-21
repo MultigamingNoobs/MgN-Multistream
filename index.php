@@ -9,7 +9,7 @@
 	<script src="mg/api/mmenu/menu.js"></script>
 	<?php
 		//version of MgN-Multistream aka Multigaming
-		$v = "v.0.7.2";
+		$v = "v.0.7.2b";
 		//language
 		$lang = 'en';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){
