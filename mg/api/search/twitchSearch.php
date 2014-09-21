@@ -3,7 +3,7 @@
 	$p = '../../';
 	include $p.'api/twitchApi.php';
 	$twitch = getTwitchStreamer();
-
+	
 	$contains;
 	for($i=0;$i<count($twitch);$i++){
 		$usr = $twitch[$i];
@@ -22,7 +22,7 @@
 			sort($contains);
 		}
 		for($i=0;$i<count($contains);$i++){
-			echo '<label class="draggable" id="'.$contains[$i].'," draggable="true" onclick="addToTwitchList('."'".$contains[$i]."'".')" ondragstart="drag(event)">'.$contains[$i].'</label>';
+			echo '<label name="'.$contains[$i].'," id="'.$contains[$i].'," draggable="true" onclick="addToTwitchList('."'".$contains[$i]."'".')" ondragstart="drag(event)">'.$contains[$i].'</label>';
 			echo "<br>";
 		}
 	}else{

@@ -24,18 +24,18 @@
 	}
 	function getTwitchStreamer(){
 		$start = 0;
-		$ret;
+		$ret = array();
 		$num = getTwitchFeatured();
 		$max= ceil($num[0]/100);
 		while($start < $max+1){
-			getTwitchStreamerOffset($max);
+			$ret = array_merge($ret , getTwitchStreamerOffset($start));
 			$start++;
 		}
 		$ret = array_unique($ret);
 		return $ret;
 	}
 	function getTwitchStreamerOffset($o){
-		$ret;
+		$ret = array();
 		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/streams?limit=100&offset='.$o*100), true);
 		for($i=0;$i<count($arr['streams']);$i++){
 			$ret[] = $arr['streams'][$i]['channel']['name'];

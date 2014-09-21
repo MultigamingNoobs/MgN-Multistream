@@ -1,4 +1,9 @@
 <ul class="sites">
+	<li><b>BETA v.0.7.2c</b>
+		<ul>
+		<li><i>fixxed:</i> twitch search bug</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.2b</b>
 		<ul>
 		<li><i>changed:</i> updated a few thing on the help page</li>

@@ -14,7 +14,6 @@
 			}elseif (strpos($usr,$q[$j]) !== false){
 				$contains[] = $usr;
 			}
-				
 		}
 	}
 	if(count($contains) > 0){
