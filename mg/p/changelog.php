@@ -1,4 +1,9 @@
 <ul class="sites">
+		<li><b>BETA v.0.7.3</b>
+		<ul>
+		<li><i>added:</i> api call to detect MgN Members</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.2c</b>
 		<ul>
 		<li><i>fixxed:</i> twitch search bug</li>
