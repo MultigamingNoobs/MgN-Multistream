@@ -1,5 +1,10 @@
 <ul class="sites">
-		<li><b>BETA v.0.7.3</b>
+	<li><b>BETA v.0.7.4</b>
+		<ul>
+		<li><i>changed:</i> some style changes</li>
+		</ul>
+	</li>
+	<li><b>BETA v.0.7.3</b>
 		<ul>
 		<li><i>added:</i> api call to detect MgN Members</li>
 		</ul>
