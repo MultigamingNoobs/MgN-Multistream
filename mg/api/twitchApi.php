@@ -25,8 +25,8 @@
 	function getTwitchStreamer(){
 		$start = 0;
 		$ret = array();
-		$num = getTwitchFeatured();
-		$max= ceil($num[0]/100);
+		$num = getTwitchStatistics();
+		$max= ceil($num['total']/100);
 		while($start < $max+1){
 			$ret = array_merge($ret , getTwitchStreamerOffset($start));
 			$start++;
@@ -43,6 +43,9 @@
 		$ret = array_unique($ret);
 		return $ret;
 	}
+	/*
+	@deprected
+	*/
 	function getTwitchFeatured(){
 		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/games/top?limit=10&offset=0'), true);
 		$ret[] = $arr['_total'];
@@ -61,6 +64,15 @@
 		$ret[] = $s;
 		return $ret;
 		
+	}
+	function getTwitchStatistics(){
+		$arr = json_decode(file_get_contents('https://api.twitch.tv/kraken/games/top?limit=10&offset=0'), true);
+		$ret['total'] = $arr['_total'];
+		for($i=0;$i<10;$i++){
+			$ret['games'][$i] = $arr['top'][$i]['game']['name'];
+			$ret['viewers'][$i] = $arr['top'][$i]['viewers'];
+		}
+		return $ret;
 	}
 	
 	function getTwitchImage($stream){

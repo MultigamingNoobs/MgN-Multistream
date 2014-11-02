@@ -4,10 +4,10 @@ legend{color:#EE1111;}
 fieldset{border-color:#300;border-style:solid;}
 p{font: normal 12px arial;text-align:justify;}
 code{font-family: Consolas;font-size: 12px;} 
-#content{position: relative;top: 0px;border-radius: 10px;padding: 1px;background-color: #333;}
+#content{position: relative;top: 0px;border-radius: 10px 10px 0px 0px;padding: 1px;background-color: #333;}
 #left{position:absolute;left:0.5%;float:left;width:40%;top: 35px;}
-#center{position:absolute;left:42%;width:36%;top: 35px;}
-#right{position:absolute;right:0.5%;float:right;width:20%;top: 35px;}
+#center{position:absolute;left:42%;width:31%;top: 35px;}
+#right{position:absolute;right:0.5%;float:right;width:25%;top: 35px;}
 ul.sites{margin:0;}
 * html ul.sites{font:bold;width:1em;}
 ul.sites li{font:bold;list-style:none;margin:.4em;padding:0;}
@@ -15,11 +15,12 @@ ul.sites li ul{margin:0 0 0 1em;padding:0;}
 ul.sites li ul li{margin:.1em 0;}
 #streamHead{z-index:2;width:75%;border: #222 solid 1px;border-radius: 10px;background: #2E2B2B;}
 #outerTable tbody tr td{padding-top:0px;padding-bottom:0px;}
-#noOne{text-align:center;font-size:2em;margin-top: 0;margin-bottom: 0;}
-#outerTable{height:40px;width:100%;margin-top:1.5px;}
+#noOne{text-align:center;font-size:3em;margin-top: 10px;}
+#outerTable{height:40px;/*width:100%*/;margin-top:1.5px;}
 #middleTable{height:40px;}
 #innerTable{height:35px;font-size:0.8em;}
-#streamContent{position:relative;top:5px;height:94vh;width:75%;}
+#streamContent{position:relative;top:1px;width:75%;overflow: auto;}
+#stream_{height: 100%;width: 100%;position: absolute;top: -4px;}
 #stream_left{float:left;width:50%;}
 #stream_right{float:right;width:50%;}
 form input[type=submit]{display:none;}
@@ -30,10 +31,16 @@ div#results div.result h2{font-size:19px;color:#11C;font-weight:400;margin:0 0 5
 div#results div.result h2 a{text-decoration:none;border-bottom:1px solid #11c;}
 div#results div.result p{margin:0;padding:0;}
 span.highlight{background:#FCFFA3;font-weight:700;padding:3px;}
-#buttons,#MgNbuttons{position:fixed;top:10px;right:10px;}
-#chat,#MgNchat{position: absolute;right: 5px;top: 1px;height:100%;width:24.5%}
+#streamButtons{float: right;position: relative;top: -31px;right: 5px;}
+#shareButtons{float: right;position: relative;top: -30px;}
+#chat{position:absolute;right:-7px;top:-7px;height:100%;width:25.5%;}
 #chat_{height:100%;width:100%;padding-top: 0px;}
 #twitch{border: 2px solid rgb(51, 0, 0);width: 99%;}
 #hitbox{border: 2px solid rgb(51, 0, 0);width: 99%;}
 #search{border: 2px solid rgb(51, 0, 0);width: 99%;}
 video{width:100%;}
+.fb-like{position: relative;bottom: 5px;}
+#mgncomhead{padding-left: 25px;color: white;}
+#mgncomlink{color: white;font-size: 1.5em;text-decoration: none;}
+#mgncomimg{height: 1.5em;}
+#youtuber{background: #f8f8f8; border: 0px solid #fff; height: 75px; overflow: hidden; width: 31%;}

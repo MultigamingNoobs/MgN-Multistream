@@ -37,11 +37,23 @@
 		}
 	}
 	function makeList($inp){
+		$inp = array_unique($inp);
 		$t='';
 		if(count($inp) > 0){
 			$t=$inp[0];
 			for($i=1;$i<count($inp);$i++){
 				$t = $t . ',' .$inp[$i];
+			}
+		}
+		return $t;
+	}
+	function makeStringList($inp){
+		$inp = array_unique($inp);
+		$t="";
+		if(count($inp) > 0){
+			$t="'".$inp[0]."'";
+			for($i=1;$i<count($inp);$i++){
+				$t = $t . "," ."'".$inp[$i]."'";
 			}
 		}
 		return $t;
@@ -58,12 +70,12 @@
 		echo '</ul>';
 		echo '<div class="tabcontents">';
 			for($i=0;$i<count($hitbox);$i++){
-				echo '<div id="'.$hitbox[$i].'" style="height:96vh;">';
+				echo '<div id="'.$hitbox[$i].'" style="height:95vh;">';
 				displayHitboxChat($hitbox[$i],'100');
 				echo '</div>';
 			}
 			for($i=0;$i<count($twitch);$i++){
-				echo '<div id="'.$twitch[$i].'" style="height:96vh;">';
+				echo '<div id="'.$twitch[$i].'" style="height:95vh;">';
 				displayTwitchChat($twitch[$i],'100');
 				echo '</div>';
 			}

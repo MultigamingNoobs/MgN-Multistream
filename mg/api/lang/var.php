@@ -43,4 +43,11 @@
 	$btnPopout = "";
 	$btnHideShow = "";
 	$btnShowChat = "";
+	
+	//twitchButton
+	$twitchText1 = "";
+	$twitchText2 = "";
+	
+	//mgncommunity
+	$calendar = "";
 ?>

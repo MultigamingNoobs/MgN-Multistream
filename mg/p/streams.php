@@ -1,14 +1,9 @@
-<div id="buttons">
-	<button id="buttonLoad" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnReload;?></button>
-	<button id="chatPopout" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnPopout;?></button>
-	<button id="hideShowChat" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnHideChat;?></button>
-	</div>
-<div id="streams"></div>
 <?php 
-	include 'mg/api/teamVars.php';
-	include 'mg/api/hitboxApi.php';
-	include 'mg/api/twitchApi.php';
-	include 'mg/api/streamApi.php';
+	$lang = 'en';
+	if($_GET['lang'] != null and $_GET['lang'] != ''){
+		$lang = strtolower($_GET['lang']);
+	}
+	include 'mg/api/lang/'.$lang.'.php';
 	
 	$team = $_GET['team'];
 	$team_bol = false;
@@ -24,10 +19,35 @@
 	$twitch = getAllTwitchStreams($team_bol,$suggestions_bol,$teamMembersTwitch,$suggestionsTwitch);
 	
 	$streamsConditions = 'lang='.$lang.'&hitbox='.makeList($hitbox).'&twitch='.makeList($twitch);
-	echo '<div id="chat"><iframe style="border:0px;height:100%;width:100%" src="mg/p/popoutChat.php?'.$streamsConditions.'"></iframe></div>';
 ?>
+<div id="streamButtons">
+	<button id="buttonLoad" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnReload;?></button>
+	<button id="chatPopout" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnPopout;?></button>
+	<button id="hideShowChat" type="button" value="<?php echo $btnHideChat;?>"><?php echo $btnHideChat;?></button>
+</div>
+
+
+<div id="streams"></div>
+
+<?php echo '<div id="chat"><iframe style="border:0px;height:100%;width:100%" src="mg/p/popoutChat.php?'.$streamsConditions.'"></iframe></div>';?>
 
 <script type="text/javascript">
+	var bol_showChat = true;
+	$("#streamButtons").show();
+	function showChat(){
+		bol_showChat = true;
+		$("#chat").show();
+		$("#hideShowChat").text('<?php echo $btnHideChat;?>');
+		$("#streamHead").width("75%");
+		$("#streamContent").width("75%");
+	}
+	function hideChat(){
+		bol_showChat = false;
+		$("#chat").hide();
+		$("#hideShowChat").text('<?php echo $btnShowChat;?>');
+		$("#streamHead").width("100%");
+		$("#streamContent").width("100%");
+	}
 	
 	$(document).ready(function(){
 		$("#buttonLoad").click(function(){
@@ -38,14 +58,13 @@
 	$(document).ready(function(){
 		$("#chatPopout").click(function(){
 			window.open(href='mg/p/popoutChat.php?<?php echo $streamsConditions;?>', "_blank", "toolbar=no, menubar=no")
-			//$("#hideShowChat").text('<?php echo $btnShowChat;?>');
-			//$('#chat').width(1);
+			hideChat();
 		});
 	});
 	$(document).ready(function(){
 		$("#hideShowChat").click(function(){
-			//$("#hideShowChat").text('<?php echo $btnShowChat;?>');
-			alert("Comming soone");
+			if(bol_showChat){hideChat();
+			}else{showChat();}	
 		});
 	});
 	$('#streams').load('mg/p/showStreams.php?<?php echo $streamsConditions;?>');

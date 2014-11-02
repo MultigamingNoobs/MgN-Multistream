@@ -43,4 +43,11 @@
 	$btnPopout = "popout Chat";
 	$btnHideChat = "hide Chat";
 	$btnShowChat = "show Chat";
+	
+	//twitchButton
+	$twitchText1 = "I%20am%20watching";
+	$twitchText2 = "with%20the%20MgN%20Multistream";
+	
+	//mgncommunity
+	$calendar = "Calendar";
 ?>

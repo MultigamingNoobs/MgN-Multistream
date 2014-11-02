@@ -38,6 +38,9 @@
 		$ret = array_unique($ret);
 		return $ret;
 	}
+	/*
+	@deprected
+	*/
 	function getHitboxFeatured(){
 		$Media = new Media;
 		$media = $Media->getMedia('games','list');
@@ -67,6 +70,16 @@
 		$ret[] = $s;
 		return $ret;
 	}
+	function getHitboxStatistics(){
+		$Media = new Media;
+		$media = $Media->getMedia('games','list');
+		for($i=0;$i<100;$i++){
+			$ret['games'][$i] = $media[$i]['category_name'];
+			$ret['viewers'][$i] = $media[$i]['category_viewers'];			
+		}
+		return $ret;
+	}
+	
 	function isOnlineHitbox($stream){
 		$Media = new Media;
 		if ($media = $Media->getMedia('live',$stream)) {

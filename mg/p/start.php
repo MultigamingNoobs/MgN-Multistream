@@ -1,9 +1,9 @@
-<?php echo '<i style="position:absolute;top:5px;"> MgN Multistream '.$v."</i>";?>
+<?php echo '<i style="padding-left:10px;"> MgN Multistream '.$v."</i>";?>
 <div id="left">
 	<?php	
-		include 'mg/api/hitboxApi.php';
-		include 'mg/api/twitchApi.php';
-		echo '<form action="http://'.$_SERVER['SERVER_NAME'].$_SERVER[REQUEST_URI].'" method="get">';?>	
+		include 'mg/api/chartist/generateChart.php';
+		echo '<form action="http://'.$_SERVER['SERVER_NAME'].$_SERVER[REQUEST_URI].'" method="get">';
+	?>	
 		<fieldset>
 			<?php 
 				echo '<legend>'.$launch.'</legend>';
@@ -18,7 +18,6 @@
 				<input list="p" size="10" name="p" value="Streams" required>
 				<datalist id="p">
 					<?php
-						echo '<option value="MgN">';
 						echo '<option value="'.$streams.'">';
 					?>	
 				</datalist>	
@@ -73,7 +72,7 @@
 		<?php echo '<legend>'.$qickHelp.'</legend>';
 		echo '<video controls><source src="mg/pictures/quickhelp.mp4" type="video/mp4";>Your browser does not support the video tag.</video>';
 		echo '<p>'.$qickHelpText.'</p>';?>
-	</fieldset>	
+	</fieldset>
 	<fieldset>		
 		<?php
 			echo '<legend>'.$hitboxStatistics.'</legend>';
@@ -87,16 +86,13 @@
 			$arr = getTwitchFeatured();		
 			echo "<p>".$arr[0].' Streams online.</p><p> The top 10 Games are: '.$arr[1]."</p>";			
 		?>	
+	</fieldset>	
+		<div class="ct-chart ct-perfect-fourth"></div>			
 	</fieldset>		
 </div>	<div id="right">	
 	<fieldset>		
 		<legend>Social</legend>	
-		<fieldset>		
-			<legend>MgN Communities</legend>	
-			<a href="http://steamcommunity.com/groups/multinoobs" target="_blank"><img width="100%" src="mg/pictures/steam.png"></img></a>
-			<a href="https://plus.google.com/u/0/communities/110109481253283166036" target="_blank"><img width="49%" src="mg/pictures/g+.png"></img></a>
-			<a href="https://twitter.com/mgnmultistream" target="_blank"><img width="49%" src="mg/pictures/twitter.png"></img></a>
-		</fieldset>
+		<?php include 'mg/p/communities.php';?>
 		<fieldset>		
 			<legend>Twitter</legend>		
 			<a class="twitter-timeline" href="https://twitter.com/supportmgn" data-widget-id="476331465957863426">Tweets von @supportmgn</a>

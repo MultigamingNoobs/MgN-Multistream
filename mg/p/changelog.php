@@ -1,4 +1,19 @@
 <ul class="sites">
+	<li><b>BETA v.0.8.0</b>
+		<ul>
+		<li><i>added:</i> functional hide/show chat function</li>
+		<li><i>changed:</i> hide chat when popout-chat-button was pressed</li>
+		<li><i>added:</i> Twitter tweet, Facebook like&share and g+ share buttons to all pages</li>
+		<li><i>changed:</i> resized the no one online text</li>
+		<li><i>changed:</i> hiding chat div when no selected stream is online to hid the chat navigation-line</li>
+		<li><i>removed:</i> the old mpg tab</li>
+		<li><i>added:</i> a new mgn community tab which shows ts calendar hitbox channels and youtube accounts</li>
+		<li><i>changed:</i> resized the left-center-right divs on start-tab and the new mgn community tab</li>
+		<li><i>changed:</i> new quick help video =)</li>
+		<li><i>changed:</i> some background code clean-up</li>
+		<li><i>fixed:</i> some more style issues</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.7.4</b>
 		<ul>
 		<li><i>changed:</i> some style changes</li>

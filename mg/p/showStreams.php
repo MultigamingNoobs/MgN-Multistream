@@ -23,6 +23,8 @@
 <?php
 	if($c == 0){
 		echo '<p style="color:#C11;" id="noOne">'.$noOneOnline.' :-\ </p>';
+		echo '<script>$("#chat").hide();</script>';
+		echo '<script>$("#chat").hide();</script>';
 	}else{
 		echo '<div id="streamHead">';
 			echo '<table id="outerTable">';
@@ -35,9 +37,14 @@
 ?>
 <!-- the streams-->
 <div id="streamContent">
+	
 	<?php 
 		if($c != 0){
 			displayStreams($hitboxOnline,$twitchOnline);
 		}
 	?>
+	<script type="text/javascript">
+		$('#streamContent').height($(this).height()-109);
+		$('#Chat0').height($(this).height()-123);
+	</script>
 </div>
