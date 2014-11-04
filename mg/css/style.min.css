@@ -20,7 +20,7 @@ ul.sites li ul li{margin:.1em 0;}
 #middleTable{height:40px;}
 #innerTable{height:35px;font-size:0.8em;}
 #streamContent{position:relative;top:1px;width:75%;overflow: auto;}
-#stream_{height: 100%;width: 100%;position: absolute;top: -4px;}
+#stream_{height: 100%;width: 100%;}
 #stream_left{float:left;width:50%;}
 #stream_right{float:right;width:50%;}
 form input[type=submit]{display:none;}
