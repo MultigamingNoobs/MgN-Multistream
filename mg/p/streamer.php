@@ -1,7 +1,7 @@
 <?php
 	$teamShort = array();
 	for($i=0;$i<count($teamMembersHitbox);$i++){
-		if($teamMembersHitbox[$i] != "Daelach" and $teamMembersHitbox[$i] != "NemesisOne" and $teamMembersHitbox[$i] != "Mexx"){
+		if($teamMembersHitbox[$i] != "Daelach" and $teamMembersHitbox[$i] != "NemesisOne" and $teamMembersHitbox[$i] != "Mexx" and $teamMembersHitbox[$i] !="Kanashii098"){
 			$teamShort[] = $teamMembersHitbox[$i];
 		}
 	}
