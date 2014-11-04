@@ -1,4 +1,10 @@
 <ul class="sites">
+	<li><b>BETA v.0.8.1</b>
+		<ul>
+		<li><i>changed:</i> some more youtube channels on the communities tab</li>
+		<li><i>fixed:</i> a css bug when showing 2 streams</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.8.0</b>
 		<ul>
 		<li><i>added:</i> functional hide/show chat function</li>
