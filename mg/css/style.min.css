@@ -16,7 +16,7 @@ ul.sites li ul li{margin:.1em 0;}
 #streamHead{z-index:2;width:75%;border: #222 solid 1px;border-radius: 10px;background: #2E2B2B;}
 #outerTable tbody tr td{padding-top:0px;padding-bottom:0px;}
 #noOne{text-align:center;font-size:3em;margin-top: 10px;}
-#outerTable{height:40px;/*width:100%*/;margin-top:1.5px;}
+#outerTable{height:40px;}
 #middleTable{height:40px;}
 #innerTable{height:35px;font-size:0.8em;}
 #streamContent{position:relative;top:1px;width:75%;overflow: auto;}
@@ -44,3 +44,12 @@ video{width:100%;}
 #mgncomlink{color: white;font-size: 1.5em;text-decoration: none;}
 #mgncomimg{height: 1.5em;}
 #youtuber{background: #f8f8f8; border: 0px solid #fff; height: 75px; overflow: hidden; width: 31%;}
+#qrcode a {font-family: Arial, Helvectica, serif;font-style: normal;font-size: medium;color: #d2d2d2;text-decoration: none;}
+#qrcode a:hover {font-family: Arial, Helvectica, serif;font-style: normal;font-size: medium;color: #d2d2d2;width: 400px;}
+#qrcode a div {display: none;}
+#qrcode a:hover div {display: block;position: absolute;z-index: 10;}
+#box a {font-family: Arial, Helvectica, serif; font-style: normal;font-size: medium;color: #d2d2d2;text-decoration: none;}
+#box a:hover {font-family: Arial, Helvectica, serif;font-style: normal;font-size: medium;color: #d2d2d2;width: 400px;}
+#box a div {display: none;}
+*#box a:hover div {display: none;}
+/*#box a:hover div {color: white;display: block;position: absolute;padding: 10px;z-index: 1;width: 30%;height: 50%;left: 0px;overflow: auto;border: #222 solid 1px;background: #2E2B2B;}*/
