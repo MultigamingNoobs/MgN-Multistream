@@ -11,7 +11,7 @@
 	<script src="mg/api/mmenu/menu.js"></script>
 	<?php
 		//version of MgN-Multistream aka Multigaming
-		$v = "v.0.8.1";
+		$v = "v.0.8.2";
 		//language
 		$lang = 'en';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){

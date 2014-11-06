@@ -1,4 +1,9 @@
 <ul class="sites">
+	<li><b>BETA v.0.8.2</b>
+		<ul>
+		<li><i>added:</i> QRCode to show the chat quickly on a mobile device</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.8.1</b>
 		<ul>
 		<li><i>changed:</i> some more youtube channels on the communities tab</li>
