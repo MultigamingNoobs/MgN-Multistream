@@ -70,6 +70,14 @@
 		$ret[] = $s;
 		return $ret;
 	}
+	function getHitboxDescription($stream){
+		$Media = new Media;
+		$media = $Media->getMedia('live',$stream);
+		//$description = $media['media_description_md'];
+		$description = '<p></p>';
+		return $description;
+	}
+	
 	function getHitboxStatistics(){
 		$Media = new Media;
 		$media = $Media->getMedia('games','list');
