@@ -2,17 +2,23 @@
 <html lang="de">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--css -->
 	<link href="mg/css/style.min.css" type="text/css" rel="stylesheet">
 	<link href="mg/api/pace/pace.css" rel="stylesheet" />
 	<link href="mg/api/mmenu/menu.css" rel="stylesheet" />
 	<link href="mg/api/chartist/chartist.min.css" rel="stylesheet" />
+	<!-- js -->
 	<script src="mg/api/jquery.js"></script>
 	<script src="mg/api/chartist/chartist.min.js"></script>
 	<script src="mg/api/mmenu/menu.js"></script>
+	<!-- Android 5.0 Chrome-->
+	<meta name="theme-color" content="#330000">
+	<link rel="icon" sizes="192×192" href="ico.png">
+	<!-- important php variables-->
 	<?php
-		//version of MgN-Multistream aka Multigaming
-		$v = "v.0.8.2";
-		//language
+		//version of MgN-Multistream
+		$v = "v.0.8.3";
+		//language settings
 		$lang = 'en';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){
 			$lang = strtolower($_GET['lang']);
@@ -23,9 +29,9 @@
 		if($p == '' or $p == null){
 			$p=strtolower($home);
 		}
-		
+		//google analyticstracking
 		include_once('mg/analyticstracking.php');
-		//shotner api
+		//google url shortner api (goo.gl)
 		include 'mg/api/short.php';
 		include 'mg/api/teamVars.php';
 		include 'mg/api/hitboxApi.php';
