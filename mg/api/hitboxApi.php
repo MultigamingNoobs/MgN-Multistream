@@ -40,6 +40,7 @@
 	}
 	/*
 	@deprected
+	new function getHitboxStatistics()
 	*/
 	function getHitboxFeatured(){
 		$Media = new Media;
@@ -73,8 +74,7 @@
 	function getHitboxDescription($stream){
 		$Media = new Media;
 		$media = $Media->getMedia('live',$stream);
-		//$description = $media['media_description_md'];
-		$description = '<p></p>';
+		$description = "<p>".$media['media_description_md']."</p>";
 		return $description;
 	}
 	

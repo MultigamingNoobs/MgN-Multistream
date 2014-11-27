@@ -21,7 +21,7 @@
 	}
 	function displayHitboxStreamInfo($stream){
 		echo '<td>';
-			echo '<div id="box"><a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="http://edge.sf.hitbox.tv'.getHitboxImage($stream).'" title="http://www.hitbox.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img><div>'.getHitboxDescription($stream).'</div></a></div>';
+			echo '<div id="box"><a href="http://www.hitbox.tv/'.$stream.'" target="_blank"><img src="http://edge.sf.hitbox.tv'.getHitboxImage($stream).'" title="http://www.hitbox.tv/'.$stream.'" alt="'.$stream.'" style="height:35px; width:35px"></img><div id="innerBox"><iframe class="mouseover" src="mg/p/streamerMouseOver.php?hitbox='.$stream.'"></iframe></div></a></div>';
 		echo '</td>';
 		echo '<td>';
 			echo '<table id="innerTable">';

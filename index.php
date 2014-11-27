@@ -13,11 +13,11 @@
 	<script src="mg/api/mmenu/menu.js"></script>
 	<!-- Android 5.0 Chrome-->
 	<meta name="theme-color" content="#330000">
-	<link rel="icon" sizes="192×192" href="ico.png">
+	<link rel="icon" sizes="192×192" href="favicon.ico">
 	<!-- important php variables-->
 	<?php
 		//version of MgN-Multistream
-		$v = "v.0.8.3";
+		$v = "v.0.9.0";
 		//language settings
 		$lang = 'en';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){

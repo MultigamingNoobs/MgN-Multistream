@@ -1,4 +1,14 @@
 <ul class="sites">
+	<li><b>BETA v.0.9.0</b>
+		<ul>
+		<li><i>added:</i> Mouseover-Stream-Info</li>
+		</ul>
+	</li>
+	<li><b>BETA v.0.8.3</b>
+		<ul>
+		<li><i>added:</i> Android 5.0 Chrome meta-tags</li>
+		</ul>
+	</li>
 	<li><b>BETA v.0.8.2</b>
 		<ul>
 		<li><i>added:</i> QRCode to show the chat quickly on a mobile device</li>
