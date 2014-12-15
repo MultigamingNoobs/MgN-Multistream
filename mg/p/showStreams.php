@@ -1,4 +1,5 @@
 <?php
+	//input
 	$hitbox = split(',',$_GET['hitbox']);
 	$twitch = split(',',$_GET['twitch']);
 	
@@ -9,6 +10,7 @@
 	}
 	include '../api/lang/'.$lang.'.php';
 	
+	//apis
 	include '../api/hitboxApi.php';
 	include '../api/twitchApi.php';
 	include '../api/streamApi.php';
@@ -23,7 +25,6 @@
 	//stream head
 	if($c == 0){
 		echo '<p style="color:#C11;" id="noOne">'.$noOneOnline.' :-\ </p>';
-		echo '<script>$("#chat").hide();</script>';
 		echo '<script>$("#chat").hide();</script>';
 	}else{
 		echo '<div id="streamHead">';
@@ -65,7 +66,7 @@
 		}
 	?>
 	<script type="text/javascript">
-		$('#streamContent').height($(this).height()-109);
-		$('#Chat0').height($(this).height()-123);
+		$('#streamContent').height($(this).height()-107);
+		$('#chat').height($(this).height()-123);
 	</script>
 </div>
