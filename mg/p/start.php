@@ -39,7 +39,7 @@
 		<fieldset>
 			<legend>Twitch</legend>
 			
-				<?php echo '<input id="search" type="search" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
+				<?php echo '<input id="search" type="search" pattern="{3}" title="'.$threeSigns.'" onkeyup="showTwitchResult(this.value)" placeholder="'.$twitchSearch.'">' ;?>
 					<p></p>
 					<div id="twitchSearch" style="width=50%">
 					</div>
@@ -50,7 +50,7 @@
 		<fieldset>
 			<legend>Hitbox</legend>
 			
-				<?php echo '<input id="search" type="search" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
+				<?php echo '<input id="search" type="search" pattern="{3}" title="'.$threeSigns.'" onkeyup="showHitboxResult(this.value)" placeholder="'.$hitboxSearch.'">' ;?>
 				<p></p>
 				<div id="hitboxSearch" style="width=50%">
 				</div>

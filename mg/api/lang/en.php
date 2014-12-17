@@ -10,6 +10,8 @@
 	$help = "Help";
 	
 	//start.php
+	$threeSigns = "Please enter 3 or more characters";
+	
 	$streamPage = "stream page";
 	$twitchSearch = "Twitch search";
 	$hitboxSearch = "Hitbox search";
