@@ -2,6 +2,10 @@
 	<li><b>BETA v.0.10.0</b>
 		<ul>
 		<li><i>changed:</i> </li>
+	<li><b>BETA v.0.9.1</b>
+		<ul>
+		<li><i>added:</i> Anonymized GoogleAnalytics</li>
+		<li><i>added:</i> important imprint stuff</li>
 		</ul>
 	</li>
 	<li><b>BETA v.0.9.0</b>
