@@ -17,7 +17,7 @@
 	<!-- important php variables-->
 	<?php
 		//version of MgN-Multistream
-		$v = "v.0.9.0";
+		$v = "v.0.9.1";
 		//language settings
 		$lang = 'en';
 		if($_GET['lang'] != null and $_GET['lang'] != ''){
