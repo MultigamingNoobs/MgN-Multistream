@@ -1,7 +1,6 @@
 <?php echo '<i style="padding-left:10px;"> MgN Multistream '.$v."</i>";?>
 <div id="left">
 	<?php	
-		include 'mg/api/chartist/generateChart.php';
 		echo '<form action="http://'.$_SERVER['SERVER_NAME'].$_SERVER[REQUEST_URI].'" method="get">';
 	?>	
 		<fieldset>
