@@ -66,7 +66,6 @@
 		}
 	?>
 	<script type="text/javascript">
-		$('#streamContent').height($(this).height()-107);
-		$('#chat').height($(this).height()-123);
+		$("#streamContent").height($( window ).height() - 107);
 	</script>
 </div>

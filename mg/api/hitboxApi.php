@@ -135,6 +135,6 @@
 		echo '</div>';
 	}
 	function displayHitboxChat($stream,$h){
-		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '" frameborder="0" style="display: inline;"></iframe>';				
+		echo '<iframe class="ChatBox" id="Chat0" rel="0" width=100% height=100% src ="http://www.hitbox.tv/embedchat/' . $stream . '?autoconnect=true" frameborder="0" style="display: inline;"></iframe>';				
 	}
 ?>
