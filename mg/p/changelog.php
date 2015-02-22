@@ -1,7 +1,9 @@
 <ul class="sites">
 	<li><b>BETA v.0.10.0</b>
 		<ul>
-		<li><i>changed:</i> </li>
+		<li><i>changed:</i> stream width is now smaller and chat bigger (new hitbox chat)</li>
+		<li><i>added:</i> resize functions - calculates the correct size if you resize the browser</li>
+	</li>
 	<li><b>BETA v.0.9.1</b>
 		<ul>
 		<li><i>added:</i> Anonymized GoogleAnalytics</li>
