@@ -10,8 +10,6 @@
 	$help = "";
 		
 	//start.php
-	$threeSigns = "";
-	
 	$streamPage = "";
 	$twitchSearch = "";
 	$hitboxSearch = "";

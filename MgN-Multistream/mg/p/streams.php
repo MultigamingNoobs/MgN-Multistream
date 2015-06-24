@@ -1,4 +1,10 @@
 <?php 
+	$lang = 'en';
+	if($_GET['lang'] != null and $_GET['lang'] != ''){
+		$lang = strtolower($_GET['lang']);
+	}
+	include 'mg/api/lang/'.$lang.'.php';
+	
 	$team = $_GET['team'];
 	$team_bol = false;
 	if($team == "on"){
@@ -32,13 +38,15 @@
 		bol_showChat = true;
 		$("#chat").show();
 		$("#hideShowChat").text('<?php echo $btnHideChat;?>');
-		$("#streams").width(widthStreams);
+		$("#streamHead").width("75%");
+		$("#streamContent").width("75%");
 	}
 	function hideChat(){
 		bol_showChat = false;
 		$("#chat").hide();
 		$("#hideShowChat").text('<?php echo $btnShowChat;?>');
-		$("#streams").width("100%");
+		$("#streamHead").width("100%");
+		$("#streamContent").width("100%");
 	}
 	
 	$(document).ready(function(){
