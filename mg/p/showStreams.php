@@ -33,12 +33,13 @@
 					displayStreamInfo($hitboxOnline,$twitchOnline);
 					//show QRCode if one or more streams are online.
 					$streamsConditions = 'lang='.$lang.'&hitbox='.makeList($hitboxOnline).'&twitch='.makeList($twitchOnline);
-					$qrlink = short('http://'.$_SERVER['HTTP_HOST'].'/mg/p/popoutChat.php?'.$streamsConditions);
+					$qrlink = 'http://'.$_SERVER['HTTP_HOST'].'/mg/p/popoutChat.php?'.$streamsConditions;
+					$qrlink = short($qrlink);
 					echo '<td>';
 						echo '<table id="middleTable">';
 							echo '<tr>';
 								echo '<td>';
-									echo'<div id="qrcode"><a href="#"><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data='.$qrlink.'&amp;qzone=1&amp;margin=0&amp;size=35x35&amp;ecc=L" alt="qr code"></img><div><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data='.$qrlink.'&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code"></img></div></a></div>';
+									echo'<div id="qrcode"><a href="'.$qrlink.'"><img src="http://api.qrserver.com/v1/create-qr-code/?data='.$qrlink.'&size=35x35" alt="qr code"></img><div><img src="http://api.qrserver.com/v1/create-qr-code/?data='.$qrlink.'&size=400x400" alt="qr code"></img></div></a></div>';
 								echo '</td>';
 								echo '<td>';
 									echo '<table id="innerTable">';
