@@ -3,7 +3,7 @@
 	@$longUrl is the url to make short
 	*/
 	function short($longUrl){
-		$apiKey = 'AIzaSyC4l_st7BEMhaeZhvofhwsHmUoVUHsxco4';
+		$apiKey = 'KEY_GOES_HERE';
 		$postData = array('longUrl' => $longUrl, 'key' => $apiKey);
 		$jsonData = json_encode($postData);
 		$curlObj = curl_init();
